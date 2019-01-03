@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-12-2018 a las 12:06:03
+-- Tiempo de generación: 03-01-2019 a las 16:33:44
 -- Versión del servidor: 10.1.34-MariaDB
 -- Versión de PHP: 7.2.7
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `turina`
+-- Base de datos: `arsol`
 --
 
 -- --------------------------------------------------------
@@ -82,14 +82,6 @@ CREATE TABLE `categorias` (
   `titulo` varchar(255) COLLATE utf8mb4_spanish_ci NOT NULL,
   `area` varchar(255) COLLATE utf8mb4_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
-
---
--- Volcado de datos para la tabla `categorias`
---
-
-INSERT INTO `categorias` (`id`, `cod`, `titulo`, `area`) VALUES
-(1, '5e87013e5d', 'Lotes', 'productos'),
-(2, '694999d7d4', 'Actualidad', 'novedades');
 
 -- --------------------------------------------------------
 

@@ -32,7 +32,7 @@ $template->themeInit();
 							<div class="flexslider">
 								<ul class="slides">
 									<li>
-										<img alt="" src="upload/about2.jpg" />
+										<img alt="" src="upload/about.jpg" />
 									</li>
 								</ul>
 							</div>

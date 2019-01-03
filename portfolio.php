@@ -82,7 +82,7 @@ $categoriaArray = $categoria->list($filter, "" , "");
             </div>
         </div>
 
-        <?php/* foreach ($categoriaArray as $key => $valor):*/ ?>
+        <?php /* foreach ($categoriaArray as $key => $valor): */ ?>
             <ul class="filter-items">
             <li><a href="#" class="active" data-filter="*">All</a></li>
             <li><a href="#" data-filter=".web">Web</a></li>
@@ -90,7 +90,7 @@ $categoriaArray = $categoria->list($filter, "" , "");
             <li><a href="#" data-filter=".animation">Animation</a></li>
 
         </ul>
-<?php /*endforeach;*/?>
+<?php /*endforeach;*/ ?>
         <?php /*foreach ($productoArray as $key=>$item): */?>
 
         <div class="projects-container four-columns">

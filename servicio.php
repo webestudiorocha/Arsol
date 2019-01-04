@@ -12,21 +12,21 @@ $servicio = new Clases\Servicios();
 $servicioArray = $servicio->list("", "", "");
 $imagen = new Clases\Imagenes();
 $imagenArray = $imagen->list("", "", "");
-
 ?>
 <!-- Content -->
 <div class="content">
     <div class="banner about-banner">
         <div class="container">
             <h1>Servicios</h1>
-            <p>Suspendisse eu erat quam. Vivamus porttitor eros quis nisi lacinia sed interdum lorem vulputate. </p>
         </div>
     </div>
 </div>
 <div class="container">
     <div class="row-fluid">
         <div class="span7 important-projects">
-            <?php foreach ($servicioArray as $servicio): ?>
+            <?php foreach ($servicioArray
+
+            as $servicio): ?>
             <h2><?php echo $servicio['titulo']; ?></h2>
         </div>
     </div>

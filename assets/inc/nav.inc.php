@@ -33,7 +33,7 @@ $servicioArray = $servicio->list("", "" , "");
 							    	<a id="portfolio-nav" href="<?=URL;?>/portfolio">Portfolio</a>
 							    </li>
 							    <li>
-							    	<a id="contact-nav" href="<?=URL;?>/servicios">Servicios</a>
+							    	<a id="contact-nav">Servicios</a>
                                     <?php foreach ($servicioArray as $servicio): ?>
 							    	<ul class="dropdown">
                                         <li><a href="servicio.php"><?php echo $servicio['titulo'];?></a></li>

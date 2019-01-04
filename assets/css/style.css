@@ -1289,7 +1289,7 @@ footer {
 	position: absolute;
 	width: 34px;
 	height: 24px;
-	background: url('../images/quote-left.png') center center no-repeat;
+	background: url('../assets/images/quote-left.png') center center no-repeat;
 	left: 90px;
 	top: 10px;
 }
@@ -1299,7 +1299,7 @@ footer {
 	position: absolute;
 	width: 34px;
 	height: 24px;
-	background: url('../images/quote-right.png') center center no-repeat;
+	background: url('../assets/images/quote-right.png') center center no-repeat;
 	right: 90px;
 	top: 10px;
 }

@@ -8,6 +8,16 @@ $template->set("description", "");
 $template->set("keywords", "");
 $template->set("imagen", LOGO);
 $template->themeInit();
+
+$id = isset($_GET["id"]) ? $_GET["id"] : '';
+$servicio = new Clases\Servicios();
+$servicio->set("cod", $id);
+$servicioArray = $servicio->list("", "" , "");
+$servicioData = $servicio->view();
+$imagenes = new Clases\Imagenes();
+$filter = array("cod = '$id'");
+$imagenesArray = $imagenes->list("", "", "");
+$medidas = explode("x", $servicioData['var2']);
 ?>
 <!-- Content -->
 <div class="content">
@@ -17,7 +27,7 @@ $template->themeInit();
             <p>Suspendisse eu erat quam. Vivamus porttitor eros quis nisi lacinia sed interdum lorem vulputate. </p>
         </div>
     </div>
-
+</div>
     <div class="container">
 
         <div class="row-fluid">
@@ -40,7 +50,7 @@ $template->themeInit();
                 <span class="published">Published: March 20, 2013</span>
                 <h5>Services:</h5>
                 <ul class="services-list">
-                    <li><a href="#">Graphic Design,</a></li>
+                    <li><a href="#">Servicio1,</a></li>
                     <li><a href="#">UI/UX,</a></li>
                     <li><a href="#">Web Design</a></li>
                 </ul>
@@ -69,8 +79,9 @@ $template->themeInit();
                 <a class="button-link" href="single-project.html">Visit Link</a>
             </div>
         </div>
-        <div class="projects-container three-columns">
-            <div class="project-post web">
+        <div class="projects-container four-columns">
+            <?php foreach ($servicioArray as $servicio):?>
+            <div class="project-post ">
                 <div class="project-photo">
                     <img alt="" src="upload/portfolio1.jpg">
                     <div class="hover-project">
@@ -79,18 +90,14 @@ $template->themeInit();
                         <a class="visit-link" href="single-project.html"></a>
                     </div>
                 </div>
-                <h3>Portfolio Item One</h3>
-                <p>AliquamSuspendisse eu erat quam. Vivamus porttitor eros quis nisi lacinia sed.</p>
-                <ul class="project-tags">
-                    <li><a href="#">Design</a></li>
-                    <li><a href="#">Html</a></li>
-                    <li><a href="#">Css</a></li>
-                </ul>
+                <h3><?php echo $servicio['titulo']; ?></h3>
+                <p><?php echo $servicio['desarrollo'];?></p>
             </div>
         </div>
+        <?php endforeach;?>
         <a class="load-more portfolio-load" href="#">Load More</a>
 
     </div>
-</div>
+
 <!-- End content -->
 <?php $template->themeEnd(); ?>

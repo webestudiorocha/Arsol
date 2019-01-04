@@ -2,7 +2,7 @@
 
 class Conexion
 {
-    private $datos = array("host"=> "localhost","user"=> "root","pass"=> "","db"  => "turina");
+    private $datos = array("host"=> "localhost","user"=> "root","pass"=> "","db"  => "arsol");
 
     private $con;
 

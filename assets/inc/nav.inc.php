@@ -1,4 +1,9 @@
-
+<?php
+$id = isset($_GET["id"]) ? $_GET["id"] : '';
+$servicio = new Clases\Servicios();
+$servicio->set("cod", $id);
+$servicioArray = $servicio->list("", "" , "");
+?>
 	 <div class="navbar navbar-inverse navbar-fixed-top">
 			    <div class="navbar-inner">
 				    <div class="container">
@@ -29,10 +34,12 @@
 							    </li>
 							    <li>
 							    	<a id="contact-nav" href="<?=URL;?>/servicios">Servicios</a>
+                                    <?php foreach ($servicioArray as $servicio): ?>
 							    	<ul class="dropdown">
-
-							    	</ul>
+                                        <li><a href="servicio.php"><?php echo $servicio['titulo'];?></a></li>
+                                    </ul>
 							    </li>
+                                <?php endforeach;?>
 							</ul>
 
 					    </div>

@@ -25,13 +25,13 @@ $imagenArray = $imagen->list("");
     <div class="row-fluid">
         <div class="span7 important-projects">
             <?php foreach ($servicioArray as $servicio): ?>
-                <h2><?php echo $servicio['titulo']; ?></h2>
+                <h2><?=$servicio['titulo']; ?></h2>
         </div>
     </div>
     <div class="row-fluid project-item important">
         <div class="span9 project-item-image">
             <img alt="" src="<?= URL . '/' . $imagenArray[0]['ruta']; ?>">
-            <p><?php echo $servicio['desarrollo']; ?></p>
+            <p><?=$servicio['desarrollo']; ?></p>
         </div>
         <?php endforeach; ?>
     </div>

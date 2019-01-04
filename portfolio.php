@@ -13,7 +13,7 @@ $portfolio = new Clases\Portfolio();
 $portfolio->set("cod", $id);
 $portfolioArray = $portfolio->list("", "" , "");
 $imagenes = new Clases\Imagenes();
-$imagenesArray = $imagenes->list("", "", "");
+$imagenesArray = $imagenes->list("");
 $categoria =  new Clases\Categorias();
 $categoriaArray = $categoria->list("", "" , "");
 ?>
@@ -34,7 +34,7 @@ $categoriaArray = $categoria->list("", "" , "");
         </ul>
         <div class="projects-container four-columns">
             <?php foreach ($portfolioArray as $portfolio): ?>
-            <div class="project-post <?php echo $portfolio['categoria'];?>">
+            <div class="project-post <?=$portfolio['categoria'];?>">
                 <div class="project-photo">
                     <img alt="" src="<?=URL . '/' . $imagenesArray[0]['ruta'];?>">
                     <div class="hover-project">
@@ -43,8 +43,8 @@ $categoriaArray = $categoria->list("", "" , "");
                         <a class="visit-link" href="single-project.html"></a>
                     </div>
                 </div>
-                <h3><?php echo $portfolio['titulo']; ?></h3>
-                <p><?php echo $portfolio['desarrollo']; ?></p>
+                <h3><?=$portfolio['titulo']; ?></h3>
+                <p><?=$portfolio['desarrollo']; ?></p>
             </div>
         <?php endforeach; ?>
     </div>

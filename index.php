@@ -61,8 +61,8 @@ $categoriaArray = $categoria->list("", "" , "");
                                 <a class="visit-link" href="single-project.html"></a>
                             </div>
                         </div>
-                        <h3><?php echo $portfolio['titulo'];?></h3>
-                        <p><?php echo $portfolio['desarrollo'];?></p>
+                        <h3><?=$portfolio['titulo'];?></h3>
+                        <p><?=$portfolio['desarrollo'];?></p>
 
                     </div>
                     <?php endforeach;?>

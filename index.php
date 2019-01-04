@@ -10,7 +10,7 @@ $template->set("imagen", LOGO);
 $template->themeInit();
 ?>
     <div id="slider" class="slider1" align="right">
-        <div class="container" >
+        <div class="container">
             <h1>We Create <br> Awesome Themes</h1>
             <p>Aliquam a orci quis nisi sagittis sagittis. <br> Etiam adipiscing, justo quis feugiat.</p>
             <a href="portfolio.php">LOOK ALL PROJECTS</a>

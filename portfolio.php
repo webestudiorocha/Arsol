@@ -9,14 +9,14 @@ $template->set("description", "");
 $template->themeInit();
 //Clases
 $id = isset($_GET["id"]) ? $_GET["id"] : '';
-$producto = new Clases\Productos();
-$producto->set("cod", $id);
-$productoArray = $producto->list("", "" , "");
-$productoData = $producto->view();
+$portfolio = new Clases\Productos();
+$portfolio->set("cod", $id);
+$portfolioArray = $portfolio->list("", "" , "");
+$portfolioData = $portfolio->view();
 $imagenes = new Clases\Imagenes();
 $filter = array("cod = '$id'");
 $imagenesArray = $imagenes->list("", "", "");
-$medidas = explode("x", $productoData['var2']);
+$medidas = explode("x", $portfolioData['var2']);
 $categoria =  new Clases\Categorias();
 $categoriaArray = $categoria->list("", "" , "");
 ?>
@@ -25,11 +25,11 @@ $categoriaArray = $categoria->list("", "" , "");
     <div class="banner about-banner">
         <div class="container">
             <h1>Portfolio</h1>
-            <p>Suspendisse eu erat quam. Vivamus porttitor eros quis nisi lacinia sed interdum lorem vulputate. </p>
         </div>
     </div>
 </div>
     <div class="container">
+
             <ul class="filter-items">
             <li><a href="#" class="active" data-filter="*">All</a></li>
                 <?php foreach ($categoriaArray as $categoria):  ?>
@@ -37,23 +37,21 @@ $categoriaArray = $categoria->list("", "" , "");
                 <?php endforeach;?>
         </ul>
         <div class="projects-container four-columns">
-            <?php foreach ($productoArray as $producto): ?>
-            <div class="project-post <?php echo $producto['categoria'];?>">
+            <?php foreach ($portfolioArray as $portfolio): ?>
+            <div class="project-post <?php echo $portfolio['categoria'];?>">
                 <div class="project-photo">
                     <img alt="" src="<?=URL . '/' . $imagenesArray[0]['ruta'];?>">
                     <div class="hover-project">
-                        <a class="view-image" href="<?=URL . '/' . $imagenArray[0]['ruta'];?>" title="Image #1"
+                        <a class="view-image" href="upload/portfolio1.jpg" title="Image #1"
                            data-fancybox-group="portfolio"></a>
                         <a class="visit-link" href="single-project.html"></a>
                     </div>
                 </div>
-                <h3><?php echo $producto['titulo']; ?></h3>
-                <p><?php echo $producto['desarrollo']; ?></p>
+                <h3><?php echo $portfolio['titulo']; ?></h3>
+                <p><?php echo $portfolio['desarrollo']; ?></p>
             </div>
         <?php endforeach; ?>
     </div>
-        <a class="load-more portfolio-load" href="#">Load More</a>
-
     </div>
 
 <!-- End content -->

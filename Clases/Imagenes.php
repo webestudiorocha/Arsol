@@ -77,7 +77,7 @@ class Imagenes
         }
     }
 
-    function list($filter,$order,$limit) {
+    function list($filter) {
         $array = array();
         if (is_array($filter)) {
             $filterSql = "WHERE ";
@@ -86,26 +86,17 @@ class Imagenes
             $filterSql = '';
         }
 
-        if ($order != '') {
-            $orderSql = $order;
-        } else {
-            $orderSql = "id DESC";
-        }
+        $sql   = "SELECT * FROM `imagenes` $filterSql  ORDER BY id DESC";
 
-        if ($limit != '') {
-            $limitSql = "LIMIT " . $limit;
-        } else {
-            $limitSql = '';
-        }
-
-        $sql = "SELECT * FROM `imagenes` $filterSql  ORDER BY $orderSql $limitSql";
         $notas = $this->con->sqlReturn($sql);
+
         if ($notas) {
             while ($row = mysqli_fetch_assoc($notas)) {
                 $array[] = $row;
             }
-            return $array ;
+            return $array;
         }
+
     }
 
     function paginador($filter,$cantidad) {

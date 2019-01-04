@@ -9,14 +9,11 @@ $template->set("description", "");
 $template->themeInit();
 //Clases
 $id = isset($_GET["id"]) ? $_GET["id"] : '';
-$portfolio = new Clases\Productos();
+$portfolio = new Clases\Portfolio();
 $portfolio->set("cod", $id);
 $portfolioArray = $portfolio->list("", "" , "");
-$portfolioData = $portfolio->view();
 $imagenes = new Clases\Imagenes();
-$filter = array("cod = '$id'");
 $imagenesArray = $imagenes->list("", "", "");
-$medidas = explode("x", $portfolioData['var2']);
 $categoria =  new Clases\Categorias();
 $categoriaArray = $categoria->list("", "" , "");
 ?>
@@ -29,7 +26,6 @@ $categoriaArray = $categoria->list("", "" , "");
     </div>
 </div>
     <div class="container">
-
             <ul class="filter-items">
             <li><a href="#" class="active" data-filter="*">All</a></li>
                 <?php foreach ($categoriaArray as $categoria):  ?>

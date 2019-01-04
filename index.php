@@ -8,6 +8,14 @@ $template->set("description", "");
 $template->set("keywords", "");
 $template->set("imagen", LOGO);
 $template->themeInit();
+$id = isset($_GET["id"]) ? $_GET["id"] : '';
+$portfolio = new Clases\Portfolio();
+$portfolio->set("cod", $id);
+$portfolioArray = $portfolio->list("", "" , "");
+$imagenes = new Clases\Imagenes();
+$imagenesArray = $imagenes->list("", "", "");
+$categoria =  new Clases\Categorias();
+$categoriaArray = $categoria->list("", "" , "");
 ?>
     <div id="slider" class="slider1" align="right">
         <div class="container">
@@ -27,9 +35,10 @@ $template->themeInit();
                         <p>Suspendisse eu erat quam. Vivamus porttitor eros quis nisi lacinia sed interdum lorem
                             vulputate.</p>
                     </div>
+
                 </div>
 
-                <a class="look-all" href="about.php">Look all features</a>
+                <a class="look-all" href="about.php">Ver mas</a>
             </section>
 
             <section class="portfolio">
@@ -41,7 +50,8 @@ $template->themeInit();
                     </div>
                 </div>
 
-                <div class="row-fluid">
+                <div class="projects-container four-columns">
+                    <?php foreach ($portfolioArray as $portfolio) : ?>
                     <div class="span4 project-post">
                         <div class="project-photo">
                             <img alt="" src="upload/portfolio1.jpg">
@@ -51,40 +61,13 @@ $template->themeInit();
                                 <a class="visit-link" href="single-project.html"></a>
                             </div>
                         </div>
-                        <h3>Portfolio Item One</h3>
-                        <p>AliquamSuspendisse eu erat quam. Vivamus porttitor eros quis nisi lacinia sed.</p>
+                        <h3><?php echo $portfolio['titulo'];?></h3>
+                        <p><?php echo $portfolio['desarrollo'];?></p>
 
                     </div>
-
-                    <div class="span4 project-post">
-                        <div class="project-photo">
-                            <img alt="" src="upload/portfolio3.jpg">
-                            <div class="hover-project">
-                                <a class="view-image" href="upload/portfolio3.jpg" title="Image #2"
-                                   data-fancybox-group="portfolio"></a>
-                                <a class="visit-link" href="single-project.html"></a>
-                            </div>
-                        </div>
-                        <h3>Portfolio Item Two</h3>
-                        <p>AliquamSuspendisse eu erat quam. Vivamus porttitor eros quis nisi lacinia sed.</p>
-
-                    </div>
-
-                    <div class="span4 project-post">
-                        <div class="project-photo">
-                            <img alt="" src="upload/portfolio4.jpg">
-                            <div class="hover-project">
-                                <a class="view-image" href="upload/portfolio4.jpg" title="Image #3"
-                                   data-fancybox-group="portfolio"></a>
-                                <a class="visit-link" href="single-project.html"></a>
-                            </div>
-                        </div>
-                        <h3>Portfolio Item three</h3>
-                        <p>AliquamSuspendisse eu erat quam. Vivamus porttitor eros quis nisi lacinia sed.</p>
-
-                    </div>
+                    <?php endforeach;?>
                 </div>
-                <a class="look-all" href="portfolio.php">Look all projects</a>
+                <a class="look-all" href="portfolio.php">Ver Más</a>
             </section>
 
         </div>
@@ -121,7 +104,7 @@ $template->themeInit();
                         </div>
                     </div>
                 </div>
-                <a class="look-all" href="blog.php">Look all Posts</a>
+                <a class="look-all" href="blog.php">Ver Más</a>
             </section>
         </div>
     </div>

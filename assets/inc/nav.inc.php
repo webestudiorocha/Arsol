@@ -24,7 +24,7 @@ $funciones_nav= new Clases\PublicFunction();
                         <a id="home-nav" href="<?= URL; ?>/index">Inicio</a>
                     </li>
                     <li>
-                        <a id="about-nav" href="<?= URL; ?>/about">Sobre Nosotros</a>
+                        <a id="about-nav" href="<?= URL; ?>/empresa">Sobre Nosotros</a>
                     </li>
                     <li>
                         <a id="blog-nav" href="<?= URL; ?>/blogs">Blog</a>
@@ -35,16 +35,13 @@ $funciones_nav= new Clases\PublicFunction();
                     </li>
                     <li>
                         <a id="contact-nav">Servicios</a>
-                        <?php foreach ($servicioArray as $servicio): ?>
                         <ul class="dropdown">
+                            <?php foreach ($servicioArray as $servicio): ?>
                             <li><a href="<?= URL.'/servicio/'. $funciones_nav->normalizar_link($servicio['titulo']).'/'. $funciones_nav->normalizar_link($servicio['cod'])?>"><?= ucfirst($servicio['titulo']); ?></a></li>
                             <?php endforeach; ?>
                         </ul>
-
                     </li>
-
                 </ul>
-
             </div>
         </div>
     </div>

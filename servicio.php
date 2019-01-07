@@ -11,34 +11,27 @@ $template->themeInit();
 $cod = isset($_GET["cod"]) ? $_GET["cod"] : '';
 $servicio = new Clases\Servicios();
 $servicio->set("cod", $cod);
-$servicioData = $servicio->view();
+$servicio_data = $servicio->view();
 $imagen = new Clases\Imagenes();
-$filter = array('cod='."'".$servicioData['cod']."'");
-$imagenesArray = $imagen->list($filter);
+$imagen->set("cod",$servicio_data['cod']);
+$img = $imagen->view();
 ?>
 <!-- Content -->
 <div class="content">
     <div class="banner about-banner">
         <div class="container">
-            <h1>Servicios</h1>
+            <h1><?= $servicio_data["titulo"];?></h1>
         </div>
     </div>
-</div>
-<div class="container">
-    <div class="row-fluid">
-        <div class="span7 important-projects">
-            <?= $servicioData["titulo"];?>
+    <div class="container">
+        <div class="row-fluid single-project">
+            <div class="span9 single-item-image">
+                <div style=" height: 400px; background: url(<?= URL .'/'. $img['ruta']?>) no-repeat center center/cover;"> </div>
+                <?= ucfirst($servicio_data["desarrollo"]);?>
+            </div>
+            <?php include'assets/inc/side/side.inc.php';?>
         </div>
     </div>
-    <div class="row-fluid project-item important">
-        <div class="span9 project-item-image">
-            <?php foreach ($imagenesArray as $actual):?>
-             <img src="<?=URL?>/<?=$actual['ruta']?>" alt="">
-            <?php endforeach;?>
-         <?= $servicioData["desarrollo"];?>
-        </div>
-    </div>
-
 </div>
 <!-- End content -->
 <?php $template->themeEnd(); ?>

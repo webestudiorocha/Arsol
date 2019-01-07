@@ -14,7 +14,7 @@ $portfolio->set("cod", $cod);
 $portfolioData = $portfolio->view();
 $imagenes = new Clases\Imagenes();
 $imagenes->set("cod", $cod);
-$imagenesArray = $imagenes->view();
+$img = $imagenes->view();
 $categoria = new Clases\Categorias();
 $categoria->set("cod", $portfolioData['categoria']);
 $categoriaData= $categoria->view();
@@ -30,9 +30,9 @@ $categoriaData= $categoria->view();
     <div class="container">
         <div class="row-fluid single-project">
             <div class="span9 single-item-image">
-                <div style=" height: 800px; background: url(<?= URL .'/'. $imagenesArray['ruta']?>) no-repeat center center/cover;"> </div>
+                <div style=" height: 800px; background: url(<?= URL .'/'. $img['ruta']?>) no-repeat center center/cover;"> </div>
             </div>
-
+<!--
             <div class="span3 project-item-content">
                 <h3> <?= ucfirst($portfolioData['titulo']) ;?></h3>
                 <h5>Categoría:</h5>
@@ -50,14 +50,10 @@ $categoriaData= $categoria->view();
                     <li><a class="google-port" href="#"></a></li>
                 </ul>
 
-            </div>
+            </div>-->
+            <?php include'assets/inc/side/side.inc.php';?>
         </div>
     </div>
 </div>
-<!-- End content -->
-
-
-</div>
-<!-- End Container -->
 
 <?php $template->themeEnd(); ?>

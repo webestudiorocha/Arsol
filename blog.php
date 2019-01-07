@@ -17,7 +17,9 @@ $imagenes->set("cod", $cod);
 $imagenesArray = $imagenes->view();
 $categoria = new Clases\Categorias();
 $categoria->set("cod", $novedadesData['categoria']);
-$categoriaData= $categoria->view();
+$filter = array("area= 'novedades'");
+$categoriaArray = $categoria->list($filter, "" , "");
+
 
 ?>
     <!-- Content -->
@@ -42,9 +44,9 @@ $categoriaData= $categoria->view();
                             </ul>
 
                         </div>
+                        <h1><?= ucfirst($novedadesData["titulo"]); ?></h1>
+                        <p><?= ucfirst($novedadesData["desarrollo"]); ?></p>
 
-                        <h1><?php ucfirst($novedadesData["titulo"]); ?></h1>
-                        <p><?php ucfirst($novedadesData["desarrollo"]); ?></p>
                     </div>
                 </section>
 
@@ -52,9 +54,12 @@ $categoriaData= $categoria->view();
                     <ul class="widgets">
                         <li class="category-widget widget">
                             <h2>Categorias</h2>
-                            <ul>
-                                <li><a><?= ucfirst($categoriaData['titulo']);?></a></li>
-                            </ul>
+                            <?php foreach ($categoriaArray as $categoria): ?>
+                                <ul>
+
+                                    <li><a><?= ucfirst($categoria['titulo']); ?></a></li>
+                                </ul>
+                            <?php endforeach; ?>
                         </li>
 
                     </ul>

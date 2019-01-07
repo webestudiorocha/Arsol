@@ -8,10 +8,13 @@ $template->set("keywords", "marca y patente,estudio juridico de marcas y patente
 $template->set("imagen", URL . "/img/logo.png");
 $funciones = new Clases\PublicFunction();
 $template->themeInit();
+$cod = isset($_GET["cod"]) ? $_GET["cod"] : '';
 $servicio = new Clases\Servicios();
-$servicioArray = $servicio->list("", "", "");
+$servicio->set("cod", $cod);
+$servicioData = $servicio->view();
 $imagen = new Clases\Imagenes();
-$imagenArray = $imagen->list("");
+$filter = array('cod='."'".$servicioData['cod']."'");
+$imagenesArray = $imagen->list($filter);
 ?>
 <!-- Content -->
 <div class="content">
@@ -24,17 +27,18 @@ $imagenArray = $imagen->list("");
 <div class="container">
     <div class="row-fluid">
         <div class="span7 important-projects">
-            <?php foreach ($servicioArray as $servicio): ?>
-                <h2><?=$servicio['titulo']; ?></h2>
+            <?= $servicioData["titulo"];?>
         </div>
     </div>
     <div class="row-fluid project-item important">
         <div class="span9 project-item-image">
-            <img alt="" src="<?= URL . '/' . $imagenArray[0]['ruta']; ?>">
-            <p><?=$servicio['desarrollo']; ?></p>
+            <?php foreach ($imagenesArray as $actual):?>
+             <img src="<?=URL?>/<?=$actual['ruta']?>" alt="">
+            <?php endforeach;?>
+         <?= $servicioData["desarrollo"];?>
         </div>
-        <?php endforeach; ?>
     </div>
+
 </div>
 <!-- End content -->
 <?php $template->themeEnd(); ?>

@@ -8,47 +8,56 @@ $template->set("keywords", "");
 $template->set("description", "");
 $template->themeInit();
 //Clases
-$id = isset($_GET["id"]) ? $_GET["id"] : '';
+$cod = isset($_GET["cod"]) ? $_GET["cod"] : '';
 $portfolio = new Clases\Portfolio();
-$portfolio->set("cod", $id);
-$portfolioArray = $portfolio->list("", "" , "");
+$portfolio->set("cod", $cod);
+$portfolioData = $portfolio->view();
 $imagenes = new Clases\Imagenes();
-$imagenesArray = $imagenes->list("");
-$categoria =  new Clases\Categorias();
-$categoriaArray = $categoria->list("", "" , "");
-?>
-<!-- Content -->
+$imagenes->set("cod", $cod);
+$imagenesArray = $imagenes->view();
+$categoria = new Clases\Categorias();
+$categoria->set("cod", $portfolioData['categoria']);
+$categoriaData= $categoria->view();
+
+?>    <!-- Content -->
 <div class="content">
     <div class="banner about-banner">
         <div class="container">
             <h1>Portfolio</h1>
         </div>
     </div>
-</div>
-    <div class="container">
-            <ul class="filter-items">
-            <li><a href="#" class="active" data-filter="*">All</a></li>
-                <?php foreach ($categoriaArray as $categoria):  ?>
-            <li><a href="#" data-filter=.<?php echo $categoria['cod'];?>><?php echo $categoria['titulo'];?></a></li>
-                <?php endforeach;?>
-        </ul>
-        <div class="projects-container four-columns">
-            <?php foreach ($portfolioArray as $portfolio): ?>
-            <div class="project-post <?=$portfolio['categoria'];?>">
-                <div class="project-photo">
-                    <img alt="" src="<?=URL . '/' . $imagenesArray[0]['ruta'];?>">
-                    <div class="hover-project">
-                        <a class="view-image" href="upload/portfolio1.jpg" title="Image #1"
-                           data-fancybox-group="portfolio"></a>
-                        <a class="visit-link" href="single-project.html"></a>
-                    </div>
-                </div>
-                <h3><?=$portfolio['titulo']; ?></h3>
-                <p><?=$portfolio['desarrollo']; ?></p>
-            </div>
-        <?php endforeach; ?>
-    </div>
-    </div>
 
+    <div class="container">
+        <div class="row-fluid single-project">
+            <div class="span9 single-item-image">
+                <div style=" height: 800px; background: url(<?= URL .'/'. $imagenesArray['ruta']?>) no-repeat center center/cover;"> </div>
+            </div>
+
+            <div class="span3 project-item-content">
+                <h3> <?= ucfirst($portfolioData['titulo']) ;?></h3>
+                <h5>Categoría:</h5>
+                <ul class="services-list">
+                    <li><a class="all-views" ><?= ucfirst($categoriaData['titulo']);?></a></li>
+                </ul>
+                <h5>Desarrollo:</h5>
+                <?= ucfirst($portfolioData['desarrollo']);?>
+                <p class="share-project">Share Project</p>
+                <ul class="social-project">
+                    <li><a class="fb-port" href="#"></a></li>
+                    <li><a class="tweet-port" href="#"></a></li>
+                    <li><a class="soc-port" href="#"></a></li>
+                    <li><a class="linkedin-port" href="#"></a></li>
+                    <li><a class="google-port" href="#"></a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
 <!-- End content -->
+
+
+</div>
+<!-- End Container -->
+
 <?php $template->themeEnd(); ?>

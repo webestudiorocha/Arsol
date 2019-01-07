@@ -87,7 +87,6 @@ class Imagenes
         }
 
         $sql   = "SELECT * FROM `imagenes` $filterSql  ORDER BY id DESC";
-
         $notas = $this->con->sqlReturn($sql);
 
         if ($notas) {

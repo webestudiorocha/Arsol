@@ -1,24 +1,24 @@
+<?php
+$correo  = new Clases\Email();
+$funcion = new Clases\PublicFunction();
+?>
 <section class="quick-contact">
     <div class="container">
         <div class="row-fluid definition">
-            <div class="span12">
-                <h1>Contacto</h1>
-                <p>Suspendisse eu erat quam. Vivamus porttitor eros quis nisi lacinia sed interdum lorem vulputate.</p>
-            </div>
         </div>
 
         <div class="row-fluid footer-data">
             <div class="span4 contact-info">
-                <h3>Contact INFO</h3>
+                <h3>Contacto</h3>
+                <BR>
                 <div class="address">
-                    <p>The Company name Inc. 12345 Main Street ISTANBUL city, Turkey</p>
+                    <p><?= TITULO;?></p>
                 </div>
                 <div class="tel-number">
-                    <span>(090) 555 444 4 222</span>
-                    <span>(090) 555 222 1 222</span>
+                    <span><?= TELEFONO;?></span>
                 </div>
                 <div class="mail-address">
-                    <a href="#">mail@companydomain.com</a>
+                    <a href="#"><?= EMAIL;?></a>
                 </div>
 
                 <h3>Sociales</h3>
@@ -29,24 +29,30 @@
                     <li><a class="tweet" href="#"></a></li>
                 </ul>
             </div>
-
-            <div class="span4 newsletter">
-                <h3>NEWSLETTER</h3>
-                <form id="subscribe">
-                    <input type="text" name="male-us" class="mail-us" placeholder="Email ">
-                    <input type="submit" name="submit" value="Enviar">
-                </form>
-                <div class="map">
-                </div>
-            </div>
-
             <div class="span4">
                 <h3>Formulario</h3>
                 <form id="contact-form">
-                    <input type="text" name="name" class="name" placeholder="Nombre">
+                    <?php if (isset($_POST["enviar"])): ?>
+                        <?php
+                        $nombre   = $funcion->antihack_mysqli(isset($_POST["nombre"]) ? $_POST["nombre"] : '');
+                        $email    = $funcion->antihack_mysqli(isset($_POST["email"]) ? $_POST["email"] : '');
+                        $consulta = $funcion->antihack_mysqli(isset($_POST["consulta"]) ? $_POST["consulta"] : '');
+
+                        $mensajeFinal = "<b>Nombre</b>: " . $nombre . " <br/>";
+                        $mensajeFinal .= "<b>Email</b>: " . $email . "<br/>";
+                        $mensajeFinal .= "<b>Consulta</b>: " . $consulta . "<br/>";
+
+                        $correo->set("asunto", "Consulta web");
+                        $correo->set("receptor", "camilawebestudiorocha@gmail.com");
+                        $correo->set("emisor", "camilawebestudiorocha@gmail.com");
+                        $correo->set("mensaje", $mensajeFinal);
+                        $correo->emailEnviar();
+                        ?>
+                    <?php endif?>
+                    <input type="text" name="nombre" class="name" placeholder="Nombre">
                     <input type="text" name="email" class="email" placeholder="Email">
-                    <textarea placeholder="Mensaje"></textarea>
-                    <input type="submit" name="submit-form" id="submit" value="Enviar Mensaje">
+                    <textarea name="consulta" placeholder="Mensaje"></textarea>
+                    <input type="submit" name="enviar" id="submit" value="Enviar Mensaje">
                 </form>
             </div>
 

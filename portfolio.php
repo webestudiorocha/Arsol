@@ -27,8 +27,8 @@ $categoriaData= $categoria->view();
         </div>
     </div>
     <div class="container">
-        <div class="row-fluid single-project">
-            <div class="span9 single-item-image">
+        <div class="row single-project">
+            <div class="col-md-9 single-item-image">
                 <div style=" height: 800px; background: url(<?= URL .'/'. $img['ruta']?>) no-repeat center center/cover;"> </div>
                 <?= ucfirst($portfolioData['desarrollo']);?>
             </div>

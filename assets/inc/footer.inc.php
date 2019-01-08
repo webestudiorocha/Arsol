@@ -4,11 +4,8 @@ $funciones = new Clases\PublicFunction();
 ?>
 <section class="quick-contact">
     <div class="container">
-        <div class="row-fluid definition">
-        </div>
-
-        <div class="row-fluid footer-data">
-            <div class="span4 contact-info">
+        <div class="row footer-data">
+            <div class="col-md-6 contact-info">
                 <h3>Contacto</h3>
                 <BR>
                 <div class="address">
@@ -29,7 +26,7 @@ $funciones = new Clases\PublicFunction();
                     <li><a class="tweet" href="#"></a></li>
                 </ul>
             </div>
-            <div class="span4">
+            <div class="col-md-6">
                 <h3>Consultas</h3>
                 <?php if (isset($_POST["enviar"])):
                     $nombre = $funciones->antihack_mysqli(isset($_POST["nombre"]) ? $_POST["nombre"] : '');
@@ -60,16 +57,15 @@ $funciones = new Clases\PublicFunction();
                 endif; ?>
                 <form id="contact-form" method="post">
                     <input type="text" name="nombre" class="name" placeholder="Nombre" required id="name"
-                           title="nombre" value="" type="text"/>
+                           title="nombre" value=""/>
                     <input type="text" name="telefono" class="telefono" placeholder="Telefono" required id="telefono"
-                           title="telefono" value="" type="text"/>
+                           title="telefono" value=""/>
                     <input type="text" name="email" class="email" placeholder="Email"
                            required id="email" title="Email" value="" />
                     <textarea name="consulta" placeholder="Consulta" id="comment" title="Comment"></textarea>
                     <input type="submit" name="enviar" id="submit" value="Enviar Mensaje">
                 </form>
             </div>
-
         </div>
     </div>
 </section>

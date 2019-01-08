@@ -211,3 +211,18 @@ $foldershistory[] = "giletta deportes/sitio/archivos/image";
         $useruploadpath = $usersiteroot."$useruploadfolder/";
         $foldershistory[] = "../archivos";
         
+
+        $useruploadfolder = "../assets/archivos/recortadas";
+        $useruploadpath = $usersiteroot."$useruploadfolder/";
+        $foldershistory[] = "../assets/archivos/recortadas";
+        
+
+        $useruploadfolder = "/assets/archivos/recortadas";
+        $useruploadpath = $usersiteroot."$useruploadfolder/";
+        $foldershistory[] = "/assets/archivos/recortadas";
+        
+
+        $useruploadfolder = "arsol/assets/archivos/recortadas";
+        $useruploadpath = $usersiteroot."$useruploadfolder/";
+        $foldershistory[] = "arsol/assets/archivos/recortadas";
+        

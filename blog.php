@@ -11,30 +11,26 @@ $template->themeInit();
 $cod = isset($_GET["cod"]) ? $_GET["cod"] : '';
 $novedades = new Clases\Novedades();
 $novedades->set("cod", $cod);
-$novedadesData = $novedades->view();
+$novedades_data = $novedades->view();
 $imagenes = new Clases\Imagenes();
 $imagenes->set("cod", $cod);
-$imagenesArray = $imagenes->view();
+$img = $imagenes->view();
 ?>
     <!-- Content -->
     <div class="content">
         <div class="banner about-banner">
             <div class="container">
-                <h1><?= ucfirst($novedadesData["titulo"]); ?></h1>
+                <h1><?= ucfirst($novedades_data["titulo"]); ?></h1>
             </div>
         </div>
         <div class="container">
-            <div class="row-fluid blog-page">
-                <section class="col-md-6 single-post photo">
+            <div class="row blog-page">
+                <section class="col-md-12 single-post photo">
                     <div class="post-content">
                         <div class="flexslider">
-                            <ul class="slides">
-                                <li>
-                                    <div style=" height: 400px; background: url(<?= URL . '/' . $imagenesArray['ruta'] ?>) no-repeat center center/cover;"></div>
-                                </li>
-                            </ul>
+                                    <div style=" height: 500px; background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;"></div>
                         </div>
-                        <p><?= ucfirst($novedadesData["desarrollo"]); ?></p>
+                        <p><?= ucfirst($novedades_data["desarrollo"]); ?></p>
                     </div>
                 </section>
             </div>

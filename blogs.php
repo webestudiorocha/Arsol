@@ -9,10 +9,31 @@ $template->set("keywords", "");
 $template->set("imagen", LOGO);
 $template->themeInit();
 $novedades = new Clases\Novedades();
-$novedadesArray = $novedades->list("", "", "");
 $imagenes = new Clases\Imagenes();
-$imagenesArray = $imagenes->list("");
 $funciones = new Clases\PublicFunction();
+
+$pagina = isset($_GET["pagina"]) ? $_GET["pagina"] : '0';
+
+$cantidad = 6;
+
+if ($pagina > 0) {
+    $pagina = $pagina - 1;
+}
+
+if (@count($_GET) > 1) {
+    $anidador = "&";
+} else {
+    $anidador = "?";
+}
+
+if (isset($_GET['pagina'])):
+    $url = $funciones->eliminar_get(CANONICAL, 'pagina');
+else:
+    $url = CANONICAL;
+endif;
+
+$novedades_data = $novedades->list("", "", $cantidad * $pagina . ',' . $cantidad);
+$numeroPaginas = $novedades->paginador("", $cantidad);
 ?>
 <!-- Content -->
 <div class="content">
@@ -21,28 +42,53 @@ $funciones = new Clases\PublicFunction();
             <h1>Blog</h1>
         </div>
     </div>
-</div>
-    <div class="container ">
-        <div class="row-fluid blog-page col-md-6 projects-container">
-            <section class="col-md-6 blog-box">
-                <?php foreach ($novedadesArray as $novedades): ?>
-                    <?php
-                    $imagenes->set("cod", $novedades['cod']);
+    <div class="container">
+        <section class="blog">
+            <div class="row">
+                <?php
+                foreach ($novedades_data as $nov) {
+                    $imagenes->set("cod", $nov['cod']);
                     $img = $imagenes->view();
                     ?>
-                    <article class="blog-project photo">
-                        <div class="post-content">
-                            <div style=" height: 200px;  background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;"></div>
-                            <h1><?= ucfirst($novedades['titulo']); ?></h1>
-                            <p><?= ucfirst(substr(strip_tags($novedades['desarrollo']), 0, 150)); ?>... </p>
-                            <li><a class="read-more"
-                                   href="<?= URL . '/blog/' . $funciones->normalizar_link($novedades['titulo']) . '/' . $funciones->normalizar_link($novedades['cod']) ?>">Leer
-                                    más</a></li>
-                        </div>
-                    </article>
-                <?php endforeach; ?>
-            </section>
-        </div>
-    </div>
+                    <div class="col-md-4 project-post">
+                        <a href="<?= URL .'/blog/'. $funciones->normalizar_link($nov['titulo']).'/'. $funciones->normalizar_link($nov['cod'])?>">
+                            <div class="project-photo"
+                                 style=" height: 300px; background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;">
+                                <div class="hover-project">
+                                </div>
+                            </div>
+                        </a>
+                        <a href="<?= URL .'/blog/'. $funciones->normalizar_link($nov['titulo']).'/'. $funciones->normalizar_link($nov['cod'])?>"><h3><?= ucfirst(substr(strip_tags($nov['titulo']), 0, 80)) . "..." ?></h3></a>
+                    </div>
+                    <?php
+                }
+                ?>
 
+            </div>
+                <?php if ($numeroPaginas > 1): ?>
+                    <div class="col-xs-12">
+                        <div class="pagination mb-60">
+                            <ul class="pagination text-center">
+                                <?php if (($pagina + 1) > 1): ?>
+                                    <li><a href="<?= $url ?><?= $anidador ?>pagina=<?= $pagina ?>"><i
+                                                    class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+                                <?php endif; ?>
+
+                                <?php for ($i = 1; $i <= $numeroPaginas; $i++): ?>
+                                    <li class="<?php if ($i == $pagina + 1) {
+                                        echo "active";
+                                    } ?>"><a href="<?= $url ?><?= $anidador ?>pagina=<?= $i ?>"><?= $i ?></a></li>
+                                <?php endfor; ?>
+
+                                <?php if (($pagina + 2) <= $numeroPaginas): ?>
+                                    <li><a href="<?= $url ?><?= $anidador ?>pagina=<?= ($pagina + 2) ?>"><i
+                                                    class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                                <?php endif; ?>
+                            </ul>
+                        </div>
+                    </div>
+                <?php endif; ?>
+        </section>
+    </div>
+</div>
 <?php $template->themeEnd(); ?>

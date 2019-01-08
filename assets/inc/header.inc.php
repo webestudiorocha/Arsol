@@ -6,11 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="<?= URL; ?>/assets/css/bootstrap.css" type="text/css" media="screen">
-<link rel="stylesheet" href="<?= URL; ?>/assets/css/bootstrap-responsive.css" type="text/css" media="screen">
+<link rel="stylesheet" href="<?= URL; ?>/assets/css/bootstrap.min.css" type="text/css" media="screen">
 <link rel="stylesheet" href="<?= URL; ?>/assets/css/jquery.bxslider.css" type="text/css" media="screen">
-<link rel="stylesheet" href="<?= URL; ?>/assets/css/jquery.fancybox.css" type="text/css" media="screen">
+<!--<link rel="stylesheet" href="<?= URL; ?>/assets/css/jquery.fancybox.css" type="text/css" media="screen">-->
 <link rel="stylesheet" href="<?= URL; ?>/assets/css/style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="<?= URL; ?>/assets/css/estilos.css" type="text/css" media="screen">
 <link rel="stylesheet" href="<?= URL; ?>/assets/css/responsive.css" type="text/css" media="screen">
 
 <!--[if lt IE 9]>

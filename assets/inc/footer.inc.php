@@ -34,10 +34,12 @@ $funciones = new Clases\PublicFunction();
                 <?php if (isset($_POST["enviar"])):
                     $nombre = $funciones->antihack_mysqli(isset($_POST["nombre"]) ? $_POST["nombre"] : '');
                     $email = $funciones->antihack_mysqli(isset($_POST["email"]) ? $_POST["email"] : '');
+                    $telefono = $funciones->antihack_mysqli(isset($_POST["telefono"]) ? $_POST["telefono"] : '');
                     $consulta = $funciones->antihack_mysqli(isset($_POST["consulta"]) ? $_POST["consulta"] : '');
 
                     $mensajeFinal = "<b>Nombre</b>: " . $nombre . " <br/>";
                     $mensajeFinal .= "<b>Email</b>: " . $email . "<br/>";
+                    $mensajeFinal .= "<b>Teléfono</b>: " . $telefono . " <br/>";
                     $mensajeFinal .= "<b>Consulta</b>: " . $consulta . "<br/>";
 
                     //USUARIO
@@ -59,6 +61,8 @@ $funciones = new Clases\PublicFunction();
                 <form id="contact-form" method="post">
                     <input type="text" name="nombre" class="name" placeholder="Nombre" required id="name"
                            title="nombre" value="" type="text"/>
+                    <input type="text" name="telefono" class="telefono" placeholder="Telefono" required id="telefono"
+                           title="telefono" value="" type="text"/>
                     <input type="text" name="email" class="email" placeholder="Email"
                            required id="email" title="Email" value="" />
                     <textarea name="consulta" placeholder="Consulta" id="comment" title="Comment"></textarea>

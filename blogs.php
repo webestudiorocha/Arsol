@@ -22,8 +22,8 @@ $funciones = new Clases\PublicFunction();
         </div>
     </div>
 </div>
-    <div class="container">
-        <div class="projects-container">
+    <div class="container ">
+        <div class="row-fluid blog-page col-md-6 projects-container">
             <section class="col-md-6 blog-box">
                 <?php foreach ($novedadesArray as $novedades): ?>
                     <?php

@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ccf7d05e-4698-4e94-a57c-5a0b350f45b2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Clases/Categorias.php" beforeDir="false" afterPath="$PROJECT_DIR$/Clases/Categorias.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/inc/portfolio/modificar.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/inc/portfolio/modificar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/upload/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/assets/upload/Thumbs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/upload/about2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/upload/about2.jpg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -231,12 +231,12 @@
       <workItem from="1546603527480" duration="14052000" />
       <workItem from="1546862433873" duration="13368000" />
       <workItem from="1546896162479" duration="5897000" />
-      <workItem from="1546949063917" duration="8954000" />
+      <workItem from="1546949063917" duration="9127000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64414000" />
+    <option name="totallyTimeSpent" value="64587000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />

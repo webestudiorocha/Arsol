@@ -2,7 +2,7 @@
 require_once "Config/Autoload.php";
 Config\Autoload::runSitio();
 $template = new Clases\TemplateSite();
-$template->set("title", "Lotes | " . TITULO);
+$template->set("title", "Lotes | ", TITULO);
 $template->set("imagen", LOGO);
 $template->set("keywords", "");
 $template->set("description", "");
@@ -25,7 +25,7 @@ $imagenesArray = $imagenes->view();
         </div>
         <div class="container">
             <div class="row-fluid blog-page">
-                <section class="col-md-12 single-post photo">
+                <section class="col-md-6 single-post photo">
                     <div class="post-content">
                         <div class="flexslider">
                             <ul class="slides">

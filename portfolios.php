@@ -29,7 +29,7 @@ $funciones= new Clases\PublicFunction();
 </div>
     <div class="container">
             <ul class="filter-items">
-            <li><a href="#" class="active" data-filter="*">All</a></li>
+            <li><a href="#" class="active" data-filter="*">Todos</a></li>
                 <?php foreach ($categoriaArray as $categoria):  ?>
             <li><a href="#" data-filter=.<?php echo $categoria['cod'];?>><?php echo $categoria['titulo'];?></a></li>
                 <?php endforeach;?>

@@ -25,7 +25,6 @@ $contenidos_data = $contenidos->view();
                 <div class="span6">
                     <?= ucfirst($contenidos_data['contenido']); ?>
                 </div>
-                <!--
                 <div class="span6">
                     <div class="flexslider">
                         <ul class="slides">
@@ -34,7 +33,7 @@ $contenidos_data = $contenidos->view();
                             </li>
                         </ul>
                     </div>
-                </div>-->
+                </div>
             </div>
         </section>
     </div>

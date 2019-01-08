@@ -43,6 +43,7 @@ class Portfolio
     {
         $sql   = "UPDATE `portfolio` SET cod = '{$this->cod}', titulo = '{$this->titulo}', desarrollo = '{$this->desarrollo}', categoria = '{$this->categoria}', keywords = '{$this->keywords}', description = '{$this->description}', fecha = '{$this->fecha}' WHERE `id`='{$this->id}'";
         $query = $this->con->sql($sql);
+
         return $query;
     }
 

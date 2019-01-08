@@ -23,8 +23,8 @@ if ($borrarImg != '') {
 if (isset($_POST["agregar"])) {
     $count = 0;
     $cod   = $portfolioInd["cod"];
-    //$portfolio->set("id", $id);
-    $portfolio->set("cod", $cod);
+    $portfolio->set("id", $portfolioInd["id"]);
+    //$portfolio->set("cod", $cod);
     $portfolio->set("titulo", $funciones->antihack_mysqli(isset($_POST["titulo"]) ? $_POST["titulo"] : ''));
     $portfolio->set("categoria", $funciones->antihack_mysqli(isset($_POST["categoria"]) ? $_POST["categoria"] : ''));
     $portfolio->set("desarrollo", $funciones->antihack_mysqli(isset($_POST["desarrollo"]) ? $_POST["desarrollo"] : ''));
@@ -65,7 +65,7 @@ if (isset($_POST["agregar"])) {
     }
 
     $portfolio->edit();
-    $funciones->headerMove(URL . "/index.php?op=portfolio");
+    //$funciones->headerMove(URL . "/index.php?op=portfolio");
 }
 ?>
 

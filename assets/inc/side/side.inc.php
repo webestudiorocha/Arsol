@@ -7,6 +7,7 @@ $servicio_data = $servicio->view();
 $imagen = new Clases\Imagenes();
 $imagen->set("cod",$servicio_data['cod']);
 $img = $imagen->view();
+$enviar  = new Clases\Email();
 ?>
 
 <div class="span3 project-item-content">
@@ -16,8 +17,10 @@ $img = $imagen->view();
         $email = $funciones->antihack_mysqli(isset($_POST["email"]) ? $_POST["email"] : '');
         $telefono = $funciones->antihack_mysqli(isset($_POST["telefono"]) ? $_POST["telefono"] : '');
         $consulta = $funciones->antihack_mysqli(isset($_POST["consulta"]) ? $_POST["consulta"] : '');
+        $asunto = $funciones->antihack_mysqli(isset($_POST["asunto"]) ? $_POST["asunto"] : '');
 
         $mensajeFinal = "<b>Nombre</b>: " . $nombre . " <br/>";
+        $mensajeFinal .= "<b>URL</b>: " . $asunto . "<br/>";
         $mensajeFinal .= "<b>Email</b>: " . $email . "<br/>";
         $mensajeFinal .= "<b>Teléfono</b>: " . $telefono . " <br/>";
         $mensajeFinal .= "<b>Consulta</b>: " . $consulta . "<br/>";
@@ -39,6 +42,8 @@ $img = $imagen->view();
         endif;
     endif; ?>
     <form id="contact-form" method="post">
+        <input type="hidden" name="asunto" class="name" placeholder="Nombre" required id="name"
+               title="asunto" value="<?= CANONICAL ?>" type="text"/>
         <input type="text" name="nombre" class="name" placeholder="Nombre" required id="name"
                title="nombre" value="" type="text"/>
         <input type="text" name="telefono" class="telefono" placeholder="Telefono" required id="telefono"

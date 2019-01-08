@@ -9,10 +9,10 @@ $borrarImg = $funciones->antihack_mysqli(isset($_GET["borrarImg"]) ? $_GET["borr
 $portfolio->set("cod", $cod);
 $portfolioInd = $portfolio->view();
 $imagenes->set("cod", $portfolioInd["cod"]);
-$imagenes->set("link", "modificarPortfolio");
+$imagenes->set("link", "portfolio&accion=modificar");
 
 $categorias = new Clases\Categorias();
-$data = $categorias->list(array("area = 'portfolio'"), "", "");
+$data = $categorias->list(array("area = 'portfolio'"));
 
 if ($borrarImg != '') {
     $imagenes->set("id", $borrarImg);
@@ -56,7 +56,7 @@ if (isset($_POST["agregar"])) {
                 unlink($destinoFinal);
             }
 
-            $imagenes->set("codigo", $cod);
+            $imagenes->set("cod", $cod);
             $imagenes->set("ruta", str_replace("../", "", $destinoRecortado));
             $imagenes->add();
         }
@@ -88,7 +88,7 @@ if (isset($_POST["agregar"])) {
                         echo "<option value='".$categoria["cod"]."' selected>".$categoria["titulo"]."</option>";
                     } else {
                         echo "<option value='".$categoria["cod"]."'>".$categoria["titulo"]."</option>";
-                    } 
+                    }
                 }
                 ?>
             </select>

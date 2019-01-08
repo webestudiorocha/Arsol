@@ -57,7 +57,7 @@ class Categorias
         return $row;
     }
 
-    function list($filter,$order,$limit) {
+    function list($filter) {
         $array = array();
         if (is_array($filter)) {
             $filterSql = "WHERE ";
@@ -66,25 +66,13 @@ class Categorias
             $filterSql = '';
         }
 
-        if ($order != '') {
-            $orderSql = $order;
-        } else {
-            $orderSql = "id DESC";
-        }
-
-        if ($limit != '') {
-            $limitSql = "LIMIT " . $limit;
-        } else {
-            $limitSql = '';
-        }
-
-        $sql = "SELECT * FROM `categorias` $filterSql  ORDER BY $orderSql $limitSql";
+        $sql = "SELECT * FROM `categorias` $filterSql  ORDER BY id DESC";
         $notas = $this->con->sqlReturn($sql);
         if ($notas) {
             while ($row = mysqli_fetch_assoc($notas)) {
                 $array[] = $row;
             }
-            return $array ;
+            return $array;
         }
     }
 }

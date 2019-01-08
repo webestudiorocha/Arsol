@@ -2,7 +2,7 @@
 require_once "Config/Autoload.php";
 Config\Autoload::runSitio();
 $template = new Clases\TemplateSite();
-$template->set("title", "Lotes | ", TITULO);
+$template->set("title",  TITULO);
 $template->set("imagen", LOGO);
 $template->set("keywords", "");
 $template->set("description", "");

@@ -7,9 +7,9 @@ class PublicFunction
 
     public function antihack_mysqli($str)
     {
-        $con      = new Conexion();
+        $con = new Conexion();
         $conexion = $con->con();
-        $str      = mysqli_real_escape_string($conexion, $str);
+        $str = mysqli_real_escape_string($conexion, $str);
         return $str;
     }
 

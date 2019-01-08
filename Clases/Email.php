@@ -38,7 +38,7 @@ class Email
             $mail->Port = 587;                                    // TCP port to connect to
 
             //Recipients
-            $mail->setFrom($this->emisor, '<b>PINTURERIA ARIEL</b>');
+            $mail->setFrom($this->emisor, 'Arsol');
             $mail->addAddress($this->receptor, '');     // Add a recipient
 
             //Content

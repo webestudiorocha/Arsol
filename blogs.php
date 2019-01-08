@@ -21,9 +21,10 @@ $funciones = new Clases\PublicFunction();
             <h1>Blog</h1>
         </div>
     </div>
+</div>
     <div class="container">
-        <div class="row-fluid blog-page col-md-6">
-            <section class="col-md-12 blog-box">
+        <div class="projects-container">
+            <section class="col-md-6 blog-box">
                 <?php foreach ($novedadesArray as $novedades): ?>
                     <?php
                     $imagenes->set("cod", $novedades['cod']);
@@ -31,7 +32,7 @@ $funciones = new Clases\PublicFunction();
                     ?>
                     <article class="blog-project photo">
                         <div class="post-content">
-                            <div style=" height: 350px; background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;"></div>
+                            <div style=" height: 200px;  background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;"></div>
                             <h1><?= ucfirst($novedades['titulo']); ?></h1>
                             <p><?= ucfirst(substr(strip_tags($novedades['desarrollo']), 0, 150)); ?>... </p>
                             <li><a class="read-more"
@@ -43,5 +44,5 @@ $funciones = new Clases\PublicFunction();
             </section>
         </div>
     </div>
-</div>
+
 <?php $template->themeEnd(); ?>

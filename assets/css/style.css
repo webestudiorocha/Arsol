@@ -31,6 +31,14 @@
 .isotope-item {
 	z-index: 2;
 }
+.subtitulo{
+	color: #333333;
+	font-size: 14px;
+	font-family: 'Noto Sans', sans-serif;
+	margin-bottom: 0;
+	margin-top: 13px;
+	line-height: 15px;
+}
 .isotope-hidden.isotope-item {
 	pointer-events: none;
 	z-index: 1;

@@ -1,6 +1,6 @@
 <?php
-$correo  = new Clases\Email();
-$funcion = new Clases\PublicFunction();
+$enviar  = new Clases\Email();
+$funciones = new Clases\PublicFunction();
 ?>
 <section class="quick-contact">
     <div class="container">
@@ -31,27 +31,37 @@ $funcion = new Clases\PublicFunction();
             </div>
             <div class="span4">
                 <h3>Formulario</h3>
-                <form id="contact-form">
-                    <?php if (isset($_POST["enviar"])): ?>
-                        <?php
-                        $nombre   = $funcion->antihack_mysqli(isset($_POST["nombre"]) ? $_POST["nombre"] : '');
-                        $email    = $funcion->antihack_mysqli(isset($_POST["email"]) ? $_POST["email"] : '');
-                        $consulta = $funcion->antihack_mysqli(isset($_POST["consulta"]) ? $_POST["consulta"] : '');
+                <?php if (isset($_POST["enviar"])):
+                    $nombre = $funciones->antihack_mysqli(isset($_POST["nombre"]) ? $_POST["nombre"] : '');
+                    $email = $funciones->antihack_mysqli(isset($_POST["email"]) ? $_POST["email"] : '');
+                    $consulta = $funciones->antihack_mysqli(isset($_POST["consulta"]) ? $_POST["consulta"] : '');
 
-                        $mensajeFinal = "<b>Nombre</b>: " . $nombre . " <br/>";
-                        $mensajeFinal .= "<b>Email</b>: " . $email . "<br/>";
-                        $mensajeFinal .= "<b>Consulta</b>: " . $consulta . "<br/>";
+                    $mensajeFinal = "<b>Nombre</b>: " . $nombre . " <br/>";
+                    $mensajeFinal .= "<b>Email</b>: " . $email . "<br/>";
+                    $mensajeFinal .= "<b>Consulta</b>: " . $consulta . "<br/>";
 
-                        $correo->set("asunto", "Consulta web");
-                        $correo->set("receptor", "camilawebestudiorocha@gmail.com");
-                        $correo->set("emisor", "camilawebestudiorocha@gmail.com");
-                        $correo->set("mensaje", $mensajeFinal);
-                        $correo->emailEnviar();
-                        ?>
-                    <?php endif?>
-                    <input type="text" name="nombre" class="name" placeholder="Nombre">
-                    <input type="text" name="email" class="email" placeholder="Email">
-                    <textarea name="consulta" placeholder="Mensaje"></textarea>
+                    //USUARIO
+                    $enviar->set("asunto", "Realizaste tu consulta");
+                    $enviar->set("receptor", $email);
+                    $enviar->set("emisor", EMAIL);
+                    $enviar->set("mensaje", $mensajeFinal);
+                    if ($enviar->emailEnviar() == 1):
+                        echo '<div class="alert alert-success" role="alert">¡Consulta enviada correctamente!</div>';
+                    endif;
+
+                    //ADMIN
+                    $enviar->set("asunto", "Consulta Web");
+                    $enviar->set("receptor", EMAIL);
+                    if ($enviar->emailEnviar() == 0):
+                        echo '<div class="alert alert-danger" role="alert">¡No se ha podido enviar la consulta!</div>';
+                    endif;
+                endif; ?>
+                <form id="contact-form" method="post">
+                    <input type="text" name="nombre" class="name" placeholder="Nombre" required id="name"
+                           title="nombre" value="" type="text"/>
+                    <input type="text" name="email" class="email" placeholder="Email"
+                           required id="email" title="Email" value="" />
+                    <textarea name="consulta" placeholder="Consulta" id="comment" title="Comment"></textarea>
                     <input type="submit" name="enviar" id="submit" value="Enviar Mensaje">
                 </form>
             </div>

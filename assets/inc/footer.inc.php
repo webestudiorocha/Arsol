@@ -30,7 +30,7 @@ $funciones = new Clases\PublicFunction();
                 </ul>
             </div>
             <div class="span4">
-                <h3>Formulario</h3>
+                <h3>Consultas</h3>
                 <?php if (isset($_POST["enviar"])):
                     $nombre = $funciones->antihack_mysqli(isset($_POST["nombre"]) ? $_POST["nombre"] : '');
                     $email = $funciones->antihack_mysqli(isset($_POST["email"]) ? $_POST["email"] : '');

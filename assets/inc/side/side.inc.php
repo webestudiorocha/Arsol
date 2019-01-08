@@ -11,35 +11,41 @@ $img = $imagen->view();
 
 <div class="span3 project-item-content">
     <h3>Consultas</h3>
-    <form method="POST">
-        <div class="form-group">
-            <label for="exampleFormControlInput1">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-        </div>
-        <div class="form-group">
-            <label for="exampleFormControlSelect1">Example select</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="exampleFormControlSelect2">Example multiple select</label>
-            <select multiple class="form-control" id="exampleFormControlSelect2">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="exampleFormControlTextarea1">Example textarea</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-    </form>
+    <?php if (isset($_POST["enviar"])):
+        $nombre = $funciones->antihack_mysqli(isset($_POST["nombre"]) ? $_POST["nombre"] : '');
+        $email = $funciones->antihack_mysqli(isset($_POST["email"]) ? $_POST["email"] : '');
+        $telefono = $funciones->antihack_mysqli(isset($_POST["telefono"]) ? $_POST["telefono"] : '');
+        $consulta = $funciones->antihack_mysqli(isset($_POST["consulta"]) ? $_POST["consulta"] : '');
 
+        $mensajeFinal = "<b>Nombre</b>: " . $nombre . " <br/>";
+        $mensajeFinal .= "<b>Email</b>: " . $email . "<br/>";
+        $mensajeFinal .= "<b>Teléfono</b>: " . $telefono . " <br/>";
+        $mensajeFinal .= "<b>Consulta</b>: " . $consulta . "<br/>";
+
+        //USUARIO
+        $enviar->set("asunto", "Realizaste tu consulta");
+        $enviar->set("receptor", $email);
+        $enviar->set("emisor", EMAIL);
+        $enviar->set("mensaje", $mensajeFinal);
+        if ($enviar->emailEnviar() == 1):
+            echo '<div class="alert alert-success" role="alert">¡Consulta enviada correctamente!</div>';
+        endif;
+
+        //ADMIN
+        $enviar->set("asunto", "Consulta Web");
+        $enviar->set("receptor", EMAIL);
+        if ($enviar->emailEnviar() == 0):
+            echo '<div class="alert alert-danger" role="alert">¡No se ha podido enviar la consulta!</div>';
+        endif;
+    endif; ?>
+    <form id="contact-form" method="post">
+        <input type="text" name="nombre" class="name" placeholder="Nombre" required id="name"
+               title="nombre" value="" type="text"/>
+        <input type="text" name="telefono" class="telefono" placeholder="Telefono" required id="telefono"
+               title="telefono" value="" type="text"/>
+        <input type="text" name="email" class="email" placeholder="Email"
+               required id="email" title="Email" value="" />
+        <textarea name="consulta" placeholder="Consulta" id="comment" title="Comment"></textarea>
+        <input type="submit" name="enviar" id="submit" value="Enviar Mensaje">
+    </form>
 </div>

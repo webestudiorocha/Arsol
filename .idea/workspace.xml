@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ccf7d05e-4698-4e94-a57c-5a0b350f45b2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/inc/footer.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/inc/footer.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/inc/portfolio/modificar.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/inc/portfolio/modificar.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,7 +18,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/portfolios.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="357">
               <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
             </state>
           </provider>
@@ -39,13 +39,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/inc/side/side.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="63" selection-start-line="15" selection-start-column="63" selection-end-line="15" selection-end-column="63" />
+            <state>
+              <caret column="5" selection-start-column="5" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin/inc/portfolio/modificar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://Z:/Turina/Clases/Portfolio.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-816" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/inc/footer.inc.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="155">
@@ -136,7 +152,6 @@
         <option value="$PROJECT_DIR$/servicio.php" />
         <option value="$PROJECT_DIR$/portfolios.php" />
         <option value="$PROJECT_DIR$/portfolio.php" />
-        <option value="$PROJECT_DIR$/admin/inc/portfolio/modificar.php" />
         <option value="$PROJECT_DIR$/empresa.php" />
         <option value="$PROJECT_DIR$/blog.php" />
         <option value="$PROJECT_DIR$/Clases/PublicFunction.php" />
@@ -145,6 +160,7 @@
         <option value="$PROJECT_DIR$/assets/inc/side/side.inc.php" />
         <option value="$PROJECT_DIR$/blogs.php" />
         <option value="$PROJECT_DIR$/assets/inc/footer.inc.php" />
+        <option value="$PROJECT_DIR$/admin/inc/portfolio/modificar.php" />
       </list>
     </option>
   </component>
@@ -169,6 +185,29 @@
             <path>
               <item name="Arsol" type="b2602c69:ProjectViewProjectNode" />
               <item name="Arsol" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Arsol" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Arsol" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Arsol" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Arsol" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="inc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Arsol" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Arsol" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="inc" type="462c0819:PsiDirectoryNode" />
+              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Arsol" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Arsol" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -214,12 +253,12 @@
       <workItem from="1546603527480" duration="14052000" />
       <workItem from="1546862433873" duration="13368000" />
       <workItem from="1546896162479" duration="5897000" />
-      <workItem from="1546949063917" duration="7723000" />
+      <workItem from="1546949063917" duration="8152000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63183000" />
+    <option name="totallyTimeSpent" value="63612000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -250,37 +289,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/inc/header.inc.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/inc/nav.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="61" selection-start-line="1" selection-start-column="61" selection-end-line="1" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/inc/servicios/modificar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="45" column="62" selection-start-line="45" selection-start-column="62" selection-end-line="45" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/inc/servicios/agregar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-880">
-          <caret line="31" column="62" selection-start-line="31" selection-start-column="62" selection-end-line="31" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/inc/portfolio/agregar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="31" column="62" selection-start-line="31" selection-start-column="62" selection-end-line="31" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://Z:/Turina/articulo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -468,13 +476,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/inc/portfolio/modificar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="58" column="43" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Clases/Categorias.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="382">
@@ -517,13 +518,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="396" column="1" selection-start-line="396" selection-start-column="1" selection-end-line="396" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/portfolios.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -584,17 +578,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/inc/side/side.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="63" selection-start-line="15" selection-start-column="63" selection-end-line="15" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/inc/footer.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
           <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://Z:/Pintureria Ariel/admin/inc/portfolio/modificar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://Z:/Pintureria Ariel/Clases/Portfolio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portfolios.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://Z:/Turina/Clases/Portfolio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-816" />
+      </provider>
+    </entry>
+    <entry file="file://Z:/Turina/Clases/Categorias.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-969" />
+      </provider>
+    </entry>
+    <entry file="file://Z:/Turina/admin/inc/portfolio/modificar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/inc/side/side.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/inc/portfolio/modificar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>

@@ -1023,6 +1023,10 @@ ul.social-icon-list li a.linkedin {
 	background: url('../images/inc-soc.jpg') center center no-repeat;
 }
 
+ul.social-icon-list li a.wasaps {
+    background: url('../images/wasaps-soc.jpg') center center no-repeat;
+}
+
 ul.social-icon-list li a.fb {
 	background: url('../images/facebook-soc.jpg') center center no-repeat;
 }

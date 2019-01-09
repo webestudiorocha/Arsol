@@ -19,8 +19,11 @@ $funciones = new Clases\PublicFunction();
                 <a class="instagram" href="https://www.instagram.com/arsolproducciones/" target="_blank"></a><h5>arsolproducciones</h5>
             </div>
             <div>
-                <a class="email" href="" target="_blank"></a>
+                <a class="email"></a><h5>ariel@arsolproducciones.com.ar</h5>
             </div>
+                   <div>
+                       <a class="wasaps"></a><h5>(3564)513448</h5>
+                   </div>
             </li>
             </ul>
         </div>

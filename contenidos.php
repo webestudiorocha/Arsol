@@ -15,7 +15,7 @@ $contenidoData = $contenido->view();
 
 <!-- Content -->
 <div class="content">
-    <div class="banner about-banner">
+    <div class="banner bannerEmpresa about-banner">
         <div class="container">
             <h1><?= ucfirst($id); ?></h1>
         </div>

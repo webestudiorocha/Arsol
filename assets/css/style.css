@@ -587,6 +587,23 @@ ul.project-tags li a {
 	margin-bottom: 50px;
 }
 
+.bannerEmpresa {
+    background: url('../upload/bannerEmpresa.jpeg') !important;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.bannerPortfolio {
+    background: url('../upload/bannerPortfolio.jpg') !important;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+
 .banner.about-banner {
 	padding-top: 60px;
 	padding-bottom: 70px;

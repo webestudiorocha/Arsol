@@ -21,7 +21,7 @@ $funciones = new Clases\PublicFunction();
 
 <!-- Content -->
 <div class="content">
-    <div class="banner about-banner">
+    <div class="banner bannerPortfolio about-banner">
         <div class="container">
             <h1>Portfolio</h1>
         </div>

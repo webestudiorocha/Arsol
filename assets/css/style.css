@@ -1002,6 +1002,7 @@ ul.social-icon-list li {
 	display: inline-block;
 	float: left\0/;
 	margin-right: 2px;
+	padding-left: 50px !important;
 }
 
 ul.social-icon-list li a {
@@ -1019,19 +1020,19 @@ ul.social-icon-list li a:hover {
 }
 
 ul.social-icon-list li a.linkedin {
-	background: url('../images/linkedin-soc.png') center center no-repeat;
+	background: url('../images/inc-soc.jpg') center center no-repeat;
 }
 
 ul.social-icon-list li a.fb {
-	background: url('../images/fb-soc.png') center center no-repeat;
+	background: url('../images/facebook-soc.jpg') center center no-repeat;
 }
 
-ul.social-icon-list li a.skype {
-	background: url('../images/skype-soc.png') center center no-repeat;
+ul.social-icon-list li a.instagram {
+	background: url('../images/instagram-soc.jpg') center center no-repeat;
 }
 
-ul.social-icon-list li a.tweet {
-	background: url('../images/twitter-soc.png') center center no-repeat;
+ul.social-icon-list li a.email {
+	background: url('../images/message-soc.jpg') center center no-repeat;
 }
 
 #subscribe {
@@ -1368,7 +1369,9 @@ footer {
 	-webkit-border-radius: 4px;
 	background: #8248ac url('../images/coment-write.png') 44px center no-repeat;
 }
-
+#sns_footer_top .pd-left {
+	padding-left: 50px !important;
+}
 .post-content {
 	/*margin-left: 100px;*/
 	overflow: hidden;

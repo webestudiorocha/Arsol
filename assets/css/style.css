@@ -151,6 +151,9 @@ ol, ul {
 .nav-collapse .nav li a#contact-nav {
 	background: url('../images/settings.png') 0px center no-repeat;
 }
+.nav-collapse .nav li a#social-nav {
+	background: url('../images/views.png') 0px center no-repeat;
+}
 
 #search-bar {
 	float: right;
@@ -580,7 +583,8 @@ ul.project-tags li a {
 }
 
 .banner {
-	background: url('../upload/banner.jpg');
+	/*background: url('../upload/banner.jpg');*/
+	background-color: #BB0081;
 	padding-top: 80px;
 	padding-bottom: 60px;
 	text-align: center;

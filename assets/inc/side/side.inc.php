@@ -1,10 +1,23 @@
 <?php
 $funciones = new Clases\PublicFunction();
 $enviar  = new Clases\Email();
+$servicios = new Clases\Servicios();
+$portfolios = new Clases\Portfolio();
+$ruta = CANONICAL;
+$codSide=isset($_GET["cod"]) ? $_GET["cod"] : '';
+$mensaje='';
+if(strpos($ruta, 'servicio') !== false){
+    $servicios->set("cod",$codSide);
+    $serv=$servicios->view();
+    $mensaje= "este servicio de ".ucfirst($serv['titulo'])."?";
+}elseif (strpos($ruta, 'portfolio') !== false){
+    $portfolios->set("cod",$codSide);
+    $port=$portfolios->view();
+    $mensaje= "a ".ucfirst($port['titulo'])."?";
+}
 ?>
-
 <div class="col-md-3 project-item-content">
-    <h3>Consultas</h3>
+    <h3>¿Te gustaría contratar <?=$mensaje?></h3>
     <?php if (isset($_POST["enviar_side"])):
         $nombre = $funciones->antihack_mysqli(isset($_POST["nombre"]) ? $_POST["nombre"] : '');
         $email = $funciones->antihack_mysqli(isset($_POST["email"]) ? $_POST["email"] : '');
@@ -58,15 +71,16 @@ $enviar  = new Clases\Email();
             <label for="comment">Mensaje:</label>
             <textarea class="form-control" rows="4" name="consulta"></textarea>
         </div>
-        <button type="submit" name="enviar_side" class="btn btn-primary nav-derecha">Enviar</button>
-        <!--
-        <input type="text" name="nombre" class="name" placeholder="Nombre" required id="name"
-               title="nombre" value="" />
-        <input type="text" name="telefono" class="telefono" placeholder="Telefono" required id="telefono"
-               title="telefono" value="" />
-        <input type="text" name="email" class="email" placeholder="Email"
-               required id="email" title="Email" value="" />
-        <textarea name="consulta" placeholder="Consulta" id="comment" title="Comment"></textarea>
-        <input type="submit" name="enviar" id="submit" value="Enviar Mensaje">-->
+            <button type="submit" name="enviar_side" class="btn btn-primary nav-derecha">Enviar</button>
     </form>
+        <div class="a2a_kit a2a_kit_size_32 a2a_default_style nav-derecha mt-20">
+            <a class="a2a_button_facebook"></a>
+            <a class="a2a_button_twitter"></a>
+            <a class="a2a_button_google_plus"></a>
+            <a class="a2a_button_pinterest"></a>
+            <a class="a2a_button_whatsapp"></a>
+            <a class="a2a_button_facebook_messenger"></a>
+        </div>
+
+
 </div>

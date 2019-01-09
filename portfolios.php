@@ -21,12 +21,12 @@ $funciones = new Clases\PublicFunction();
 
 <!-- Content -->
 <div class="content">
-    <div class="banner bannerPortfolio about-banner">
+    <div class="banner about-banner">
         <div class="container">
             <h1>Portfolio</h1>
         </div>
     </div>
-    <div class="container">
+    <div class="container mt-15">
         <ul class="filter-items">
             <li><a href="#" class="active" data-filter="*">Todos</a></li>
             <?php foreach ($categoria_data as $cat): ?>
@@ -41,15 +41,13 @@ $funciones = new Clases\PublicFunction();
                 $img = $imagenes->view();
                 ?>
                 <div class="project-post <?= $port['categoria']; ?>">
-                    <div class="project-photo">
-                        <div style=" height: 200px; background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;"></div>
-                        <div class="hover-project">
-                            <a class="view-image" href="<?= URL ?>/<?= $img['ruta'] ?>" title="<?=ucfirst($port['titulo'])?>"
-                               data-fancybox-group="portfolio"></a>
-                            <a class="visit-link"
-                               href="<?= URL . '/portfolio/' . $funciones->normalizar_link($port['titulo']) . '/' . $funciones->normalizar_link($port['cod']) ?>"></a>
+                    <a href="<?= URL . '/portfolio/' . $funciones->normalizar_link($port['titulo']) . '/' . $funciones->normalizar_link($port['cod']) ?>">
+                        <div class="project-photo">
+                            <div style=" height: 200px; background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;"></div>
+                            <div class="hover-project">
+                            </div>
                         </div>
-                    </div>
+                    </a>
                     <a href="<?= URL . '/portfolio/' . $funciones->normalizar_link($port['titulo']) . '/' . $funciones->normalizar_link($port['cod']) ?>"><h3><?= $port['titulo']; ?></h3></a>
 
                     <p><?= ucfirst(substr(strip_tags($port['desarrollo']), 0, 150)); ?>...</p>

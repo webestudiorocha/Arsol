@@ -1,5 +1,5 @@
 <?php
-$campos = ["novedades", "productos", "no_sliders", "no_portfolio", "no_servicios", "no_galerias"];
+$campos = ["novedades", "productos", "sliders", "no_portfolio", "servicios", "no_galerias"];
 $categorias = new Clases\Categorias(); 
 $imagenes  = new Clases\Imagenes();  
 $zebra     = new Clases\Zebra_Image();

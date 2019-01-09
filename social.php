@@ -1,3 +1,18 @@
+<?php
+require_once "Config/Autoload.php";
+Config\Autoload::runSitio();
+$template = new Clases\TemplateSite();
+$template->set("title","");
+$template->set("imagen", "");
+$template->set("keywords", "");
+$template->set("description","");
+$template->themeInit();
+?>
+    <div class="banner about-banner">
+        <div class="container">
+            <h1>Redes sociales</h1>
+        </div>
+    </div>
 <!-- Place <div> tag where you want the feed to appear -->
 <div id="curator-feed"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div>
 <!-- The Javascript can be moved to the end of the html page before the </body> tag -->
@@ -9,3 +24,4 @@
         e = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
     })();
 </script>
+<?php $template->themeEnd(); ?>

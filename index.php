@@ -6,6 +6,7 @@ $funciones = new Clases\PublicFunction();
 $imagenes = new Clases\Imagenes();
 $portfolio = new Clases\Portfolio();
 $novedades = new Clases\Novedades();
+$sliders = new Clases\Sliders();
 $template->set("title", TITULO . " | Inicio");
 $template->set("description", "");
 $template->set("keywords", "");
@@ -13,14 +14,36 @@ $template->set("imagen", LOGO);
 $template->themeInit();
 $id = isset($_GET["id"]) ? $_GET["id"] : '';
 $portfolio->set("cod", $id);
+$sliders_data = $sliders->list('','','');
 $portfolio_data = $portfolio->list("", "", "3");
 $novedades_data = $novedades->list('', '', '3');
 ?>
-    <div id="slider" class="slider1" align="right"
-         style=" height: 400px; background: url(<?= URL . '/assets/archivos/gg.jpg' ?>) no-repeat center center/cover;">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <?php
+            $activo = 0;
+            foreach ($sliders_data as $sli) {
+                $imagenes->set("cod",$sli['cod']);
+                $img_data = $imagenes->view();
+                ?>
+                <div class="carousel-item <?php if ($activo==0){echo 'active';$activo++;} ?>" style=" height: 600px; background: url(<?= URL . '/'.$img_data['ruta'] ?>) no-repeat center center/cover;">
+                    <!--<img class="d-block h-400" src="<?= URL . '/'.$img_data['ruta'] ?>">-->
+                </div>
+                <?php
+                }
+            ?>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
     <!-- Content -->
-    <div class="content">
+    <div class="content mt-15">
         <div class="container">
             <section class="portfolio">
                 <div class="row definition">
@@ -28,7 +51,7 @@ $novedades_data = $novedades->list('', '', '3');
                         <h1>Portfolio</h1>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row mt-15">
                     <?php
                     foreach ($portfolio_data as $port) {
                         $imagenes->set("cod", $port['cod']);
@@ -60,7 +83,7 @@ $novedades_data = $novedades->list('', '', '3');
                         <h1>Blog</h1>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row mt-15">
                     <?php
                     foreach ($novedades_data as $nov) {
                         $imagenes->set("cod", $nov['cod']);

@@ -2,7 +2,7 @@
 require_once "Config/Autoload.php";
 Config\Autoload::runSitio();
 $template = new Clases\TemplateSite();
-$template->set("title",  TITULO);
+$template->set("title", TITULO);
 $template->set("imagen", LOGO);
 $template->set("keywords", "");
 $template->set("description", "");
@@ -15,6 +15,7 @@ $novedades_data = $novedades->view();
 $imagenes = new Clases\Imagenes();
 $imagenes->set("cod", $cod);
 $img = $imagenes->view();
+$fecha = explode("-", $novedades_data['fecha']);
 ?>
     <!-- Content -->
     <div class="content">
@@ -27,10 +28,13 @@ $img = $imagenes->view();
             <div class="row blog-page">
                 <section class="col-md-12 single-post photo">
                     <div class="post-content">
-                        <div class="flexslider">
-                                    <div style=" height: 500px; background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;"></div>
+                        <div class="flexslider mb-10">
+                            <div style=" height: 500px; background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;"></div>
                         </div>
                         <p><?= ucfirst($novedades_data["desarrollo"]); ?></p>
+                        <div class="nav-derecha">
+                            <i class="fa fa-calendar-o "></i> <?= $fecha[2] . '/' . $fecha[1] . '/' . $fecha[0] ?>
+                        </div>
                     </div>
                 </section>
             </div>

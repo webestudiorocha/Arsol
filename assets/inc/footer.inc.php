@@ -8,6 +8,7 @@ $funciones = new Clases\PublicFunction();
             <div class="col-md-6 contact-info">
                 <h3 >Redes Sociales</h3>
                 <ul class="social-icon-list social">
+
                     <li><a class="linkedin" href="https://www.linkedin.com/arsolproducciones" target="_blank"></a> arsolproducciones </li>
                     </br>
                     <br>
@@ -20,7 +21,7 @@ $funciones = new Clases\PublicFunction();
                     <li><a class="email"></a> ariel@arsolproducciones.com.ar </li>
                     </br>
                     <br>
-                    <li><a class="wasaps"></a> (3564)513448 </li>
+                    <li><a class="wasaps"></a> Ariel Donato Angulo (3564)513448  </li>
                     </br>
                 </ul>
             </div>

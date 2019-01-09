@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccf7d05e-4698-4e94-a57c-5a0b350f45b2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/Thumbs.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/inc/footer.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/inc/footer.inc.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,20 +13,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/inc/footer.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="43" />
+            <state relative-caret-position="340">
+              <caret line="23" column="79" selection-start-line="23" selection-start-column="79" selection-end-line="23" selection-end-column="79" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="1155" column="29" selection-start-line="1155" selection-start-column="29" selection-end-line="1155" selection-end-column="29" />
+            <state relative-caret-position="228">
+              <caret line="1037" lean-forward="true" selection-start-line="1037" selection-end-line="1037" />
             </state>
           </provider>
         </entry>
@@ -57,7 +56,6 @@
       <find>article</find>
       <find>12</find>
       <find>.container</find>
-      <find>insta</find>
       <find>pd-r</find>
       <find>left</find>
       <find>social-icon-</find>
@@ -66,6 +64,7 @@
       <find>h5</find>
       <find>h1</find>
       <find>social</find>
+      <find>insta</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -126,8 +125,8 @@
         <option value="$PROJECT_DIR$/blogs.php" />
         <option value="$PROJECT_DIR$/assets/css/responsive.css" />
         <option value="$PROJECT_DIR$/assets/inc/nav.inc.php" />
-        <option value="$PROJECT_DIR$/assets/inc/footer.inc.php" />
         <option value="$PROJECT_DIR$/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/assets/inc/footer.inc.php" />
       </list>
     </option>
   </component>
@@ -226,12 +225,12 @@
       <workItem from="1546949063917" duration="12655000" />
       <workItem from="1546974006421" duration="2144000" />
       <workItem from="1547034978506" duration="4587000" />
-      <workItem from="1547040350880" duration="2478000" />
+      <workItem from="1547040350880" duration="3627000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88503000" />
+    <option name="totallyTimeSpent" value="89652000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -643,17 +642,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/inc/footer.inc.php">
+    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="43" />
+        <state relative-caret-position="228">
+          <caret line="1037" lean-forward="true" selection-start-line="1037" selection-end-line="1037" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
+    <entry file="file://$PROJECT_DIR$/assets/inc/footer.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="1155" column="29" selection-start-line="1155" selection-start-column="29" selection-end-line="1155" selection-end-column="29" />
+        <state relative-caret-position="340">
+          <caret line="23" column="79" selection-start-line="23" selection-start-column="79" selection-end-line="23" selection-end-column="79" />
         </state>
       </provider>
     </entry>

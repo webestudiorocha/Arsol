@@ -27,7 +27,9 @@ $img = $imagen->view();
         <div class="row single-project">
             <div class="col-md-9 single-item-image">
                 <div style=" height: 400px; background: url(<?= URL .'/'. $img['ruta']?>) no-repeat center center/cover;"> </div>
+                <br>
                 <?= ucfirst($servicio_data["desarrollo"]);?>
+                </br>
             </div>
             <?php include'assets/inc/side/side.inc.php';?>
         </div>

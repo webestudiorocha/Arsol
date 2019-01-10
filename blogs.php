@@ -42,7 +42,7 @@ $numeroPaginas = $novedades->paginador("", $cantidad);
             <h1>Blog</h1>
         </div>
     </div>
-    <div class="container">
+    <div class="container" style="text-align: center">
         <section class="blog">
             <div class="row">
                 <?php
@@ -67,8 +67,8 @@ $numeroPaginas = $novedades->paginador("", $cantidad);
             </div>
                 <?php if ($numeroPaginas > 1): ?>
                     <div class="col-xs-12">
-                        <div class="pagination mb-60">
-                            <ul class="pagination text-center">
+                        <div class="important-pagination pagination text-center">
+                            <ul class=" text-center">
                                 <?php if (($pagina + 1) > 1): ?>
                                     <li><a href="<?= $url ?><?= $anidador ?>pagina=<?= $pagina ?>"><i
                                                     class="fa fa-angle-left" ></i></a></li>

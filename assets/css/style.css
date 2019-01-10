@@ -2098,7 +2098,7 @@ audio {
 	font-family: 'Noto Sans', sans-serif;
 	text-transform: uppercase;
 	padding: 22px 25px 22px 65px;
-	background: #8348ad url('../images/link-proj.png') 18px center no-repeat;
+	background: #8348ad center no-repeat;
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -2231,6 +2231,7 @@ audio {
 .important-projects,
 .important-pagination {
 	margin-bottom: 40px;
+	display: block !important;
 }
 
 .important-projects h2 {
@@ -2250,7 +2251,7 @@ audio {
 }
 
 .important-pagination {
-	text-align: right;
+	text-align: center;
 }
 
 .important-pagination a {

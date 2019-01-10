@@ -5,7 +5,7 @@ $funciones = new Clases\PublicFunction();
 <section class="quick-contact">
     <div class="container">
         <div class="row footer-data">
-            <div class="col-md-4 contact-info">
+            <div class="col-md-4 contact-info ">
                 <h3>Redes Sociales</h3>
                 <ul>
                     <li class="sociales"><a href="https://www.facebook.com/arsolproducciones/" target="_blank"
@@ -41,6 +41,7 @@ $funciones = new Clases\PublicFunction();
                     $email = $funciones->antihack_mysqli(isset($_POST["email"]) ? $_POST["email"] : '');
                     $telefono = $funciones->antihack_mysqli(isset($_POST["telefono"]) ? $_POST["telefono"] : '');
                     $consulta = $funciones->antihack_mysqli(isset($_POST["consulta"]) ? $_POST["consulta"] : '');
+                    $asunto = $funciones->antihack_mysqli(isset($_POST["asunto"]) ? $_POST["asunto"] : '');
 
                     $mensajeFinal = "<b>Nombre</b>: " . $nombre . " <br/>";
                     $mensajeFinal .= "<b>Email</b>: " . $email . "<br/>";
@@ -57,15 +58,25 @@ $funciones = new Clases\PublicFunction();
                     endif;
 
                     //ADMIN
+
+                    $mensajeFinalAdmin = "<b>Nombre</b>: " . $nombre . " <br/>";
+                    $mensajeFinalAdmin .= "<b>URL</b>: " . $asunto . "<br/>";
+                    $mensajeFinalAdmin .= "<b>Email</b>: " . $email . "<br/>";
+                    $mensajeFinalAdmin .= "<b>Teléfono</b>: " . $telefono . " <br/>";
+                    $mensajeFinalAdmin .= "<b>Consulta</b>: " . $consulta . "<br/>";
+                    //ADMIN
                     $enviar->set("asunto", "Consulta Web");
                     $enviar->set("receptor", EMAIL);
+                    $enviar->set("mensaje", $mensajeFinalAdmin);
                     if ($enviar->emailEnviar() == 0):
                         echo '<div class="alert alert-danger" role="alert">¡No se ha podido enviar la consulta!</div>';
                     endif;
                 endif; ?>
                 <form id="contact-form" method="post">
                     <input type="text" name="nombre" class="form-control" placeholder="Nombre" required id="name"
-                           title="nombre" value=""/>
+                           title="nombre" />
+                    <input type="hidden" name="asunto" class="form-control" placeholder="Nombre" required id="name"
+                           title="asunto" value="<?= CANONICAL ?>"/>
                     <input type="text" name="telefono" class="form-control" placeholder="Telefono" required
                            id="telefono"
                            title="telefono" value=""/>

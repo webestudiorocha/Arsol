@@ -1,23 +1,23 @@
 <?php
 $funciones = new Clases\PublicFunction();
-$enviar  = new Clases\Email();
+$enviar = new Clases\Email();
 $servicios = new Clases\Servicios();
 $portfolios = new Clases\Portfolio();
 $ruta = CANONICAL;
-$codSide=isset($_GET["cod"]) ? $_GET["cod"] : '';
-$mensaje='';
-if(strpos($ruta, 'servicio') !== false){
-    $servicios->set("cod",$codSide);
-    $serv=$servicios->view();
-    $mensaje= "este servicio de ".ucfirst($serv['titulo'])."?";
-}elseif (strpos($ruta, 'portfolio') !== false){
-    $portfolios->set("cod",$codSide);
-    $port=$portfolios->view();
-    $mensaje= "a ".ucfirst($port['titulo'])."?";
+$codSide = isset($_GET["cod"]) ? $_GET["cod"] : '';
+$mensaje = '';
+if (strpos($ruta, 'servicio') !== false) {
+    $servicios->set("cod", $codSide);
+    $serv = $servicios->view();
+    $mensaje = "este servicio de " . ucfirst($serv['titulo']) . "?";
+} elseif (strpos($ruta, 'portfolio') !== false) {
+    $portfolios->set("cod", $codSide);
+    $port = $portfolios->view();
+    $mensaje = "a " . ucfirst($port['titulo']) . "?";
 }
 ?>
 <div class="col-md-3 project-item-content">
-    <h3>¿Te gustaría contratar <?=$mensaje?></h3>
+    <h3>¿Te gustaría contratar <?= $mensaje ?></h3>
     <?php if (isset($_POST["enviar_side"])):
         $nombre = $funciones->antihack_mysqli(isset($_POST["nombre"]) ? $_POST["nombre"] : '');
         $email = $funciones->antihack_mysqli(isset($_POST["email"]) ? $_POST["email"] : '');
@@ -58,10 +58,10 @@ if(strpos($ruta, 'servicio') !== false){
             <input type="text" class="form-control" name="nombre">
         </div>
         <input type="hidden" name="asunto" class="form-control" placeholder="Nombre" required id="name"
-               title="asunto" value="<?= CANONICAL ?>" />
+               title="asunto" value="<?= CANONICAL ?>"/>
         <div class="form-group">
             <label for="comment">Teléfono:</label>
-            <input type="text" class="form-control" name="telefono" >
+            <input type="text" class="form-control" name="telefono">
         </div>
         <div class="form-group">
             <label for="comment">Email:</label>
@@ -71,16 +71,28 @@ if(strpos($ruta, 'servicio') !== false){
             <label for="comment">Mensaje:</label>
             <textarea class="form-control" rows="4" name="consulta"></textarea>
         </div>
-            <button type="submit" name="enviar_side" class="btn btn-primary nav-derecha">Enviar</button>
+        <button type="submit" name="enviar_side" class="btn btn-primary nav-derecha">Enviar</button>
     </form>
-        <div class="a2a_kit a2a_kit_size_32 a2a_default_style nav-derecha mt-20">
-            <a class="a2a_button_facebook"></a>
-            <a class="a2a_button_twitter"></a>
-            <a class="a2a_button_google_plus"></a>
-            <a class="a2a_button_pinterest"></a>
-            <a class="a2a_button_whatsapp"></a>
-            <a class="a2a_button_facebook_messenger"></a>
+    <br>
+    <div class="a2a_kit a2a_kit_size_32 a2a_default_style nav-derecha mt-20">
+        <a class="a2a_button_facebook"></a>
+        <a class="a2a_button_twitter"></a>
+        <a class="a2a_button_google_plus"></a>
+        <a class="a2a_button_pinterest"></a>
+        <a class="a2a_button_whatsapp"></a>
+        <a class="a2a_button_facebook_messenger"></a>
+        </br>
+        <br>
+        <div>
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Farsolproducciones%2F&tabs&width=340&height=197&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                    width="100%" height="197" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                    allowTransparency="true" allow="encrypted-media"></iframe>
         </div>
+        </br>
+    </div>
+    </br>
+    <br>
 
+    </br>
 
 </div>

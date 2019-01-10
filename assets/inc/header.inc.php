@@ -1,5 +1,3 @@
-<title>Arsol</title>
-
 <meta charset="utf-8">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127300251-17"></script>
@@ -36,5 +34,3 @@
 <link rel="stylesheet" type="text/css" href="<?=URL;?>/assets/css/ie8.css"/>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-
-

@@ -1,12 +1,6 @@
 <?php
 require_once "Config/Autoload.php";
 Config\Autoload::runSitio();
-$template = new Clases\TemplateSite();
-$template->set("title", "Lotes | " . TITULO);
-$template->set("imagen", LOGO);
-$template->set("keywords", "");
-$template->set("description", "");
-$template->themeInit();
 //Clases
 $cod = isset($_GET["cod"]) ? $_GET["cod"] : '';
 $portfolio = new Clases\Portfolio();
@@ -18,6 +12,12 @@ $imagenes_data = $imagenes->list($filter);
 $categoria = new Clases\Categorias();
 $categoria->set("cod", $portfolioData['categoria']);
 $categoriaData = $categoria->view();
+$template = new Clases\TemplateSite();
+$template->set("title", TITULO." | " .ucfirst(strip_tags($portfolioData['titulo'])));
+$template->set("imagen", LOGO);
+$template->set("keywords", strip_tags($portfolioData['keywords']));
+$template->set("description", ucfirst(substr(strip_tags($portfolioData['desarrollo']), 0, 160)));
+$template->themeInit();
 
 ?>    <!-- Content -->
 <div class="content">
@@ -35,7 +35,10 @@ $categoriaData = $categoria->view();
                         $activo = 0;
                         foreach ($imagenes_data as $img) {
                             ?>
-                            <div class="carousel-item <?php if ($activo==0){echo 'active';$activo++;} ?>" style=" height: 600px; background: url(<?= URL . '/'.$img['ruta'] ?>) no-repeat center center/cover;">
+                            <div class="carousel-item <?php if ($activo == 0) {
+                                echo 'active';
+                                $activo++;
+                            } ?>" style=" height: 600px; background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;">
                             </div>
                             <?php
                         }

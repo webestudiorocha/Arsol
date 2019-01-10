@@ -2,10 +2,10 @@
 require_once "Config/Autoload.php";
 Config\Autoload::runSitio();
 $template = new Clases\TemplateSite();
-$template->set("title", "Lotes | " . TITULO);
+$template->set("title", TITULO.' | Portfolio');
 $template->set("imagen", LOGO);
-$template->set("keywords", "");
-$template->set("description", "");
+$template->set("keywords", "Portfolio de ".TITULO);
+$template->set("description", "Portfolio de ".TITULO);
 $template->themeInit();
 //Clases
 $id = isset($_GET["id"]) ? $_GET["id"] : '';

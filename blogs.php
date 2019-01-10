@@ -3,15 +3,14 @@ require_once "Config/Autoload.php";
 Config\Autoload::runSitio();
 $template = new Clases\TemplateSite();
 $funciones = new Clases\PublicFunction();
-$template->set("title", TITULO);
-$template->set("description", "");
-$template->set("keywords", "");
+$template->set("title", TITULO.' | Blogs');
+$template->set("description", "Blogs de ".TITULO);
+$template->set("keywords", "Blogs de ".TITULO);
 $template->set("imagen", LOGO);
 $template->themeInit();
 $novedades = new Clases\Novedades();
 $imagenes = new Clases\Imagenes();
 $funciones = new Clases\PublicFunction();
-
 $pagina = isset($_GET["pagina"]) ? $_GET["pagina"] : '0';
 
 $cantidad = 6;

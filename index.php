@@ -8,13 +8,13 @@ $portfolio = new Clases\Portfolio();
 $novedades = new Clases\Novedades();
 $sliders = new Clases\Sliders();
 $template->set("title", TITULO . " | Inicio");
-$template->set("description", "");
-$template->set("keywords", "");
+$template->set("description", "Inicio " . TITULO);
+$template->set("keywords", "Inicio," . TITULO);
 $template->set("imagen", LOGO);
 $template->themeInit();
 $id = isset($_GET["id"]) ? $_GET["id"] : '';
 $portfolio->set("cod", $id);
-$sliders_data = $sliders->list('','','');
+$sliders_data = $sliders->list('', '', '');
 $portfolio_data = $portfolio->list("", "", "3");
 $novedades_data = $novedades->list('', '', '3');
 ?>
@@ -23,14 +23,17 @@ $novedades_data = $novedades->list('', '', '3');
             <?php
             $activo = 0;
             foreach ($sliders_data as $sli) {
-                $imagenes->set("cod",$sli['cod']);
+                $imagenes->set("cod", $sli['cod']);
                 $img_data = $imagenes->view();
                 ?>
-                <div class="carousel-item <?php if ($activo==0){echo 'active';$activo++;} ?>" style=" height: 600px; background: url(<?= URL . '/'.$img_data['ruta'] ?>) no-repeat center center/cover;">
-                    <!--<img class="d-block h-400" src="<?= URL . '/'.$img_data['ruta'] ?>">-->
+                <div class="carousel-item <?php if ($activo == 0) {
+                    echo 'active';
+                    $activo++;
+                } ?>" style=" height: 600px; background: url(<?= URL . '/' . $img_data['ruta'] ?>) no-repeat center center/cover;">
+                    <!--<img class="d-block h-400" src="<?= URL . '/' . $img_data['ruta'] ?>">-->
                 </div>
                 <?php
-                }
+            }
             ?>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -57,14 +60,14 @@ $novedades_data = $novedades->list('', '', '3');
                         $imagenes->set("cod", $port['cod']);
                         $img = $imagenes->view();
                         ?>
-                        <div class="col-md-4 project-post  ">
-                            <a  href="<?= URL . '/portfolio/' . $funciones->normalizar_link($port['titulo']) . '/' . $funciones->normalizar_link($port['cod']) ?>">
-                            <div class="project-photo"
-                                 style=" height: 200px; background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;">
-                                <div class="hover-project">
+                        <div class="col-md-4 project-post ">
+                            <a href="<?= URL . '/portfolio/' . $funciones->normalizar_link($port['titulo']) . '/' . $funciones->normalizar_link($port['cod']) ?>">
+                                <div class="project-photo"
+                                     style=" height: 200px; background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;">
+                                    <div class="hover-project">
 
+                                    </div>
                                 </div>
-                            </div>
                             </a>
                             <a href="<?= URL . '/portfolio/' . $funciones->normalizar_link($port['titulo']) . '/' . $funciones->normalizar_link($port['cod']) ?>">
                                 <h3><?= ucfirst($port['titulo']); ?></h3></a>

@@ -2,12 +2,7 @@
 require_once "Config/Autoload.php";
 Config\Autoload::runSitio();
 $template = new Clases\TemplateSite();
-$template->set("title", "Estudio Jurídico Rocha - Marcas y Patentes - Productos");
-$template->set("description", "Nuestro estudio está ampliamente capacitado para registrar tu marca.");
-$template->set("keywords", "marca y patente,estudio juridico de marcas y patentes, estudio juridico en buenos aires, marcas y patentes en buenos aires");
-$template->set("imagen", URL . "/img/logo.png");
 $funciones = new Clases\PublicFunction();
-$template->themeInit();
 $cod = isset($_GET["cod"]) ? $_GET["cod"] : '';
 $servicio = new Clases\Servicios();
 $servicio->set("cod", $cod);
@@ -15,6 +10,11 @@ $servicio_data = $servicio->view();
 $imagenes = new Clases\Imagenes();
 $filter = array("cod='" . $servicio_data['cod'] . "'");
 $imagenes_data = $imagenes->list($filter);
+$template->set("title", TITULO . ' | '.ucfirst(strip_tags($servicio_data['titulo'])));
+$template->set("description", ucfirst(substr(strip_tags($servicio_data['desarrollo']), 0, 160)));
+$template->set("keywords", strip_tags($servicio_data['keywords']));
+$template->set("imagen", LOGO);
+$template->themeInit();
 ?>
 <!-- Content -->
 <div class="content">

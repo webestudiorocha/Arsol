@@ -175,7 +175,7 @@ ol, ul {
 
 ul.dropdown {
 	position: absolute;
-	width: 150px;
+	width: 300px;
 	background: #fff;
 	top:110%;
 	left: 0;
@@ -185,6 +185,24 @@ ul.dropdown {
 	-moz-transition: all 0.2s linear;
 	-webkit-transition: all 0.2s linear;
 	-o-transition: all 0.2s linear;
+}
+
+@media screen and (max-width: 500px) {
+
+	ul.dropdown {
+		position: absolute;
+		width: 300px;
+		background: #fff;
+		top:0 !important;
+		left: 0;
+		border-top: 2px solid #8248ac;
+		visibility: hidden;
+		transition: all 0.2s linear;
+		-moz-transition: all 0.2s linear;
+		-webkit-transition: all 0.2s linear;
+		-o-transition: all 0.2s linear;
+	}
+
 }
 
 ul.dropdown:before {
@@ -2098,7 +2116,7 @@ audio {
 	font-family: 'Noto Sans', sans-serif;
 	text-transform: uppercase;
 	padding: 22px 25px 22px 65px;
-	background: #8348ad center no-repeat;
+	background: #BB0081 center no-repeat;
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;

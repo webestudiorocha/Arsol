@@ -11,9 +11,7 @@ $funciones_nav = new Clases\PublicFunction();
             <img alt="" src="<?= URL; ?>/assets/images/logo.png" width="150">
         </a>
         <button type="button" class="btn btn-navbar d-sm-none btn-mobile" data-toggle="collapse" data-target="#navC">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+            MENU
         </button>
         <div id="navC" class="nav-collapse collapse d-sm-none nav-mobile">
             <ul class="nav" style="display: block;">
@@ -31,7 +29,7 @@ $funciones_nav = new Clases\PublicFunction();
                 </li>
                 <li class="mt-5">
                     <a id="contact-nav">Servicios</a>
-                    <ul class="">
+                    <ul class="dropdown">
                         <?php foreach ($servicio_data as $serv): ?>
                             <li class="mt-5">
                                 <a href="<?= URL . '/servicio/' . $funciones_nav->normalizar_link($serv['titulo']) . '/' . $funciones_nav->normalizar_link($serv['cod']) ?>"><?= ucfirst($serv['titulo']); ?></a>

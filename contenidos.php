@@ -2,15 +2,15 @@
 require_once "Config/Autoload.php";
 Config\Autoload::runSitio();
 $template = new Clases\TemplateSite();
-$id       = isset($_GET["id"]) ? $_GET["id"] : '';
-$template->set("title",ucwords($id)." | ".TITULO);
-$template->set("imagen", LOGO);
-$template->set("keywords", "");
-$template->set("description","");
-$template->themeInit();
-$contenido     = new Clases\Contenidos();
+$id = isset($_GET["id"]) ? $_GET["id"] : '';
+$contenido = new Clases\Contenidos();
 $contenido->set("cod", $id);
 $contenidoData = $contenido->view();
+$template->set("title", TITULO . " | Empresa");
+$template->set("imagen", LOGO);
+$template->set("keywords", "");
+$template->set("description", ucfirst(substr(strip_tags($contenidoData['contenido']), 0, 160)));
+$template->themeInit();
 ?>
 
 <!-- Content -->
@@ -23,7 +23,7 @@ $contenidoData = $contenido->view();
     <div class="container">
         <section class="about-us">
             <div class="row-fluid our-description">
-                    <?= $contenidoData['contenido']; ?>
+                <?= $contenidoData['contenido']; ?>
             </div>
         </section>
     </div>

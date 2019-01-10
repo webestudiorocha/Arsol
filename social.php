@@ -2,10 +2,10 @@
 require_once "Config/Autoload.php";
 Config\Autoload::runSitio();
 $template = new Clases\TemplateSite();
-$template->set("title","");
-$template->set("imagen", "");
-$template->set("keywords", "");
-$template->set("description","");
+$template->set("title",TITULO." | Redes sociales");
+$template->set("imagen", LOGO);
+$template->set("keywords", "Redes sociales,".TITULO);
+$template->set("description","Nuestras redes sociales");
 $template->themeInit();
 ?>
     <div class="banner about-banner">

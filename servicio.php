@@ -13,7 +13,8 @@ $imagenes_data = $imagenes->list($filter);
 $template->set("title", TITULO . ' | '.ucfirst(strip_tags($servicio_data['titulo'])));
 $template->set("description", ucfirst(substr(strip_tags($servicio_data['desarrollo']), 0, 160)));
 $template->set("keywords", strip_tags($servicio_data['keywords']));
-$template->set("imagen", LOGO);
+$template->set("imagen", URL."/".$imagenes_data[0]['ruta']);
+$template->set("favicon", LOGO);
 $template->themeInit();
 ?>
 <!-- Content -->

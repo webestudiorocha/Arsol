@@ -27,7 +27,7 @@ $novedades_data = $novedades->list('', '', '3');
                 $img_data = $imagenes->view();
                 ?>
                 <div class="carousel-item <?php if ($activo==0){echo 'active';$activo++;} ?>" style=" height: 600px; background: url(<?= URL . '/'.$img_data['ruta'] ?>) no-repeat center center/cover;">
-
+                    <!--<img class="d-block h-400" src="<?= URL . '/'.$img_data['ruta'] ?>">-->
                 </div>
                 <?php
                 }
@@ -45,7 +45,7 @@ $novedades_data = $novedades->list('', '', '3');
     <!-- Content -->
     <div class="content mt-15">
         <div class="container">
-            <section class="portfolio">
+            <section class="portfolio ">
                 <div class="row definition">
                     <div class="col-md-12 col-sm-12">
                         <h1>Portfolio</h1>
@@ -57,17 +57,15 @@ $novedades_data = $novedades->list('', '', '3');
                         $imagenes->set("cod", $port['cod']);
                         $img = $imagenes->view();
                         ?>
-                        <div class="col-md-4 project-post">
+                        <div class="col-md-4 project-post  ">
+                            <a  href="<?= URL . '/portfolio/' . $funciones->normalizar_link($port['titulo']) . '/' . $funciones->normalizar_link($port['cod']) ?>">
                             <div class="project-photo"
                                  style=" height: 200px; background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;">
                                 <div class="hover-project">
-                                    <a class="view-image" href="<?= URL . '/' . $img['ruta'] ?>"
-                                       title="<?= ucfirst($port['titulo']) ?>"
-                                       data-fancybox-group="portfolio"></a>
-                                    <a class="visit-link"
-                                       href="<?= URL . '/portfolio/' . $funciones->normalizar_link($port['titulo']) . '/' . $funciones->normalizar_link($port['cod']) ?>"></a>
+
                                 </div>
                             </div>
+                            </a>
                             <a href="<?= URL . '/portfolio/' . $funciones->normalizar_link($port['titulo']) . '/' . $funciones->normalizar_link($port['cod']) ?>">
                                 <h3><?= ucfirst($port['titulo']); ?></h3></a>
                         </div>

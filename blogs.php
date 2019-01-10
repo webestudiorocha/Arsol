@@ -71,7 +71,7 @@ $numeroPaginas = $novedades->paginador("", $cantidad);
                             <ul class="pagination text-center">
                                 <?php if (($pagina + 1) > 1): ?>
                                     <li><a href="<?= $url ?><?= $anidador ?>pagina=<?= $pagina ?>"><i
-                                                    class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+                                                    class="fa fa-angle-left" ></i></a></li>
                                 <?php endif; ?>
 
                                 <?php for ($i = 1; $i <= $numeroPaginas; $i++): ?>
@@ -82,7 +82,7 @@ $numeroPaginas = $novedades->paginador("", $cantidad);
 
                                 <?php if (($pagina + 2) <= $numeroPaginas): ?>
                                     <li><a href="<?= $url ?><?= $anidador ?>pagina=<?= ($pagina + 2) ?>"><i
-                                                    class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                                                    class="fa fa-angle-right" ></i></a></li>
                                 <?php endif; ?>
                             </ul>
                         </div>

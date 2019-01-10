@@ -27,7 +27,7 @@ $novedades_data = $novedades->list('', '', '3');
                 $img_data = $imagenes->view();
                 ?>
                 <div class="carousel-item <?php if ($activo==0){echo 'active';$activo++;} ?>" style=" height: 600px; background: url(<?= URL . '/'.$img_data['ruta'] ?>) no-repeat center center/cover;">
-                    <!--<img class="d-block h-400" src="<?= URL . '/'.$img_data['ruta'] ?>">-->
+
                 </div>
                 <?php
                 }

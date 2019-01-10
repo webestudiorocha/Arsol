@@ -1,3 +1,4 @@
+<?php
 
 
 class Zebra_Pagination
@@ -997,3 +998,6 @@ class Zebra_Pagination
     }
 
 }
+
+?>
+?>

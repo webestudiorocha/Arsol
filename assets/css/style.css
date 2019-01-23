@@ -110,6 +110,7 @@ ol, ul {
 }
 
 .nav-collapse .nav li a {
+	font-size: 13px;
 	color: #7281a1;
 	font-family: 'Noto Sans', sans-serif;
 	font-weight: 700;

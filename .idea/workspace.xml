@@ -2,43 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccf7d05e-4698-4e94-a57c-5a0b350f45b2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/inc/categorias/agregar.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/inc/categorias/agregar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/inc/categorias/modificar.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/inc/categorias/modificar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/inc/sliders/agregar.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/inc/sliders/agregar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/archivos/recortadas/a_0a5b059386.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/archivos/recortadas/a_0ddfeb7fd4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/archivos/recortadas/a_0f5f0a979f.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/archivos/recortadas/a_17fbddc465.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/archivos/recortadas/a_76ea9f5b39.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/archivos/recortadas/a_7756880dcc.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/archivos/recortadas/a_b8715b0c83.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/archivos/recortadas/a_d7ff5bf84b.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/archivos/recortadas/a_e737454ba3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/archivos/recortadas/a_e9bf425824.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/archivos/recortadas/a_ebee80d1d3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/archivos/recortadas/a_fba038191c.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/all.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/all.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/estilos.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/estilos.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/font/font-awesome/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/font/font-awesome/css/font-awesome.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/Thumbs.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/about.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/about.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/blog.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/blog.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/home.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/home.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/portfolio.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/portfolio.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/settings.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/settings.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/views.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/views.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/inc/footer.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/inc/footer.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/inc/nav.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/inc/nav.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio.php" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolios.php" beforeDir="false" afterPath="$PROJECT_DIR$/portfolios.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,48 +29,12 @@
     <favorites_list name="Arsol" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="124" column="29" lean-forward="true" selection-start-line="124" selection-start-column="29" selection-end-line="124" selection-end-column="29" />
-              <folding>
-                <element signature="e#1197#1305#0#HTML" expanded="true" />
-                <element signature="e#2175#2207#0#HTML" expanded="true" />
-                <element signature="e#2292#2358#0#HTML" expanded="true" />
-                <element signature="e#2898#3001#0#HTML" expanded="true" />
-                <element signature="e#4001#4021#0#HTML" expanded="true" />
-                <element signature="e#4123#4177#0#HTML" expanded="true" />
-                <element signature="e#5068#5171#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="portfolios.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/portfolios.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-34">
-              <caret line="28" column="6" lean-forward="true" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/portfolio.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="57" column="18" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assets/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="461" column="132" selection-start-line="461" selection-start-column="132" selection-end-line="461" selection-end-column="132" />
+            <state relative-caret-position="535">
+              <caret line="71" selection-start-line="71" selection-end-line="71" />
             </state>
           </provider>
         </entry>
@@ -186,6 +117,7 @@
         <option value="$PROJECT_DIR$/assets/inc/footer.inc.php" />
         <option value="$PROJECT_DIR$/admin/inc/servicios/modificar.php" />
         <option value="$PROJECT_DIR$/assets/css/estilos.css" />
+        <option value="$PROJECT_DIR$/assets/css/style.css" />
         <option value="$PROJECT_DIR$/assets/inc/header.inc.php" />
         <option value="$PROJECT_DIR$/blogs.php" />
         <option value="$PROJECT_DIR$/social.php" />
@@ -200,12 +132,20 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/admin/inc/categorias/agregar.php" />
         <option value="$PROJECT_DIR$/admin/inc/categorias/modificar.php" />
-        <option value="$PROJECT_DIR$/portfolios.php" />
         <option value="$PROJECT_DIR$/portfolio.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/portfolios.php" />
       </list>
     </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
@@ -221,7 +161,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -232,13 +171,32 @@
             <path>
               <item name="Arsol" type="b2602c69:ProjectViewProjectNode" />
               <item name="Arsol" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Arsol" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Arsol" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="inc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Arsol" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Arsol" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="inc" type="462c0819:PsiDirectoryNode" />
+              <item name="categorias" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Arsol" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Arsol" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="inc" type="462c0819:PsiDirectoryNode" />
+              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Arsol" type="b2602c69:ProjectViewProjectNode" />
               <item name="Arsol" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Arsol" type="b2602c69:ProjectViewProjectNode" />
@@ -255,6 +213,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -281,9 +240,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="nav.inc.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/assets/inc/nav.inc.php">
-      <method v="2" />
-    </configuration>
+    <configuration name="nav.inc.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/assets/inc/nav.inc.php" />
     <recent_temporary>
       <list>
         <item itemvalue="PHP Script.nav.inc.php" />
@@ -323,31 +280,41 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141617000" />
+    <option name="totallyTimeSpent" value="141854000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1376" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49932706" visible="true" weight="0.16868381" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" sideWeight="0.50067294" side_tool="true" weight="0.1525788" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49932706" visible="true" weight="0.16838235" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50143266" side_tool="true" weight="0.32405892" />
+      <window_info anchor="right" id="Database" order="3" weight="0.3295129" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.66890985" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49856734" weight="0.3243607" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50143266" side_tool="true" weight="0.32405892" />
+      <window_info id="Favorites" order="2" sideWeight="0.50067294" side_tool="true" weight="0.1525788" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49932706" visible="true" weight="0.16868381" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.66890985" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Database" order="3" weight="0.3295129" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50143266" side_tool="true" weight="0.32405892" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49856734" weight="0.3243607" />
+      <window_info id="Favorites" order="2" sideWeight="0.50067294" side_tool="true" weight="0.1525788" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,20 +355,9 @@
         </entry>
       </map>
     </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list />
-          </value>
-        </entry>
-        <entry key="User">
-          <value>
-            <list />
-          </value>
-        </entry>
-      </map>
-    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Clases/Sliders.php">
@@ -702,7 +658,7 @@
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
-          <caret line="124" column="29" lean-forward="true" selection-start-line="124" selection-start-column="29" selection-end-line="124" selection-end-column="29" />
+          <caret line="124" column="29" selection-start-line="124" selection-start-column="29" selection-end-line="124" selection-end-column="29" />
           <folding>
             <element signature="e#1197#1305#0#HTML" expanded="true" />
             <element signature="e#2175#2207#0#HTML" expanded="true" />
@@ -724,15 +680,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/portfolios.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="28" column="6" lean-forward="true" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+        <state relative-caret-position="535">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="461" column="132" selection-start-line="461" selection-start-column="132" selection-end-line="461" selection-end-column="132" />
+        <state relative-caret-position="191">
+          <caret line="112" selection-start-line="112" selection-end-line="112" />
         </state>
       </provider>
     </entry>

@@ -1,5 +1,5 @@
 <?php
-require_once "Config/Autoload.php";
+$id = isset($_GET["id"]) ? $_GET["id"] : '';require_once "Config/Autoload.php";
 Config\Autoload::runSitio();
 $template = new Clases\TemplateSite();
 $funciones = new Clases\PublicFunction();
@@ -12,12 +12,15 @@ $template->set("description", "Inicio " . TITULO);
 $template->set("keywords", "Inicio," . TITULO);
 $template->set("imagen", LOGO);
 $template->themeInit();
-$id = isset($_GET["id"]) ? $_GET["id"] : '';
 $portfolio->set("cod", $id);
 $sliders_data = $sliders->list('', '', '');
 $portfolio_data = $portfolio->list("", "", "3");
 $novedades_data = $novedades->list('', '', '3');
+$categoria = new Clases\Categorias();
+$filter = array("area='portfolio'");
+$categoria_data = $categoria->list($filter)
 ?>
+
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <?php
@@ -29,7 +32,7 @@ $novedades_data = $novedades->list('', '', '3');
                 <div class="carousel-item <?php if ($activo == 0) {
                     echo 'active';
                     $activo++;
-                } ?>" style=" height: 600px; background: url(<?= URL . '/' . $img_data['ruta'] ?>) no-repeat center center/cover;">
+                } ?>" style=" height: 696px; background: url(<?= URL . '/' . $img_data['ruta'] ?>) no-repeat center center/cover;">
                     <!--<img class="d-block h-400" src="<?= URL . '/' . $img_data['ruta'] ?>">-->
                 </div>
                 <?php
@@ -46,6 +49,13 @@ $novedades_data = $novedades->list('', '', '3');
         </a>
     </div>
     <!-- Content -->
+<br>
+<div  class="text-center">
+    <img style="width: 100%; z-index: 1;" src="assets/images/iconos/separador.png">
+    <div class="text-center">
+        <img style=" left: 10px; margin-top: -55px; z-index: 900; " src="assets/images/iconos/separador-rubro.png" >
+    </div>
+</div>
     <div class="content mt-15">
         <div class="container">
             <section class="portfolio ">
@@ -56,20 +66,17 @@ $novedades_data = $novedades->list('', '', '3');
                 </div>
                 <div class="row mt-15">
                     <?php
-                    foreach ($portfolio_data as $port) {
+                    foreach ($categoria_data as $port) {
                         $imagenes->set("cod", $port['cod']);
                         $img = $imagenes->view();
                         ?>
                         <div class="col-md-4 project-post ">
-                            <a href="<?= URL . '/portfolio/' . $funciones->normalizar_link($port['titulo']) . '/' . $funciones->normalizar_link($port['cod']) ?>">
+                            <a href="<?= URL . '/portfolios?categoria='. $funciones->normalizar_link($port['cod']) ?>">
                                 <div class="project-photo"
                                      style=" height: 200px; background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;">
-                                    <div class="hover-project">
-
-                                    </div>
                                 </div>
                             </a>
-                            <a href="<?= URL . '/portfolio/' . $funciones->normalizar_link($port['titulo']) . '/' . $funciones->normalizar_link($port['cod']) ?>">
+                            <a href="<?= URL . '/portfolios?categoria='. $funciones->normalizar_link($port['cod']) ?>">
                                 <h3><?= ucfirst($port['titulo']); ?></h3></a>
                         </div>
                         <?php
@@ -78,12 +85,22 @@ $novedades_data = $novedades->list('', '', '3');
                 </div>
                 <a class="look-all" href="<?= URL; ?>/portfolios">Ver Más</a>
             </section>
+
+        </div>
+        <div  class="text-center">
+            <img style="width: 100%;" src="assets/images/iconos/separador.png">
+            <div class="text-center">
+                <img style=" left: 10px; margin-top: -55px; z-index: 900; " src="assets/images/iconos/separador-blog.png" >
+            </div>
+        </div>
+<div class="container">
             <section class="blog">
                 <div class="row definition">
                     <div class="col-md-12">
                         <h1>Blog</h1>
                     </div>
                 </div>
+
                 <div class="row mt-15">
                     <?php
                     foreach ($novedades_data as $nov) {

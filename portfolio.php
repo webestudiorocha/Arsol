@@ -56,7 +56,6 @@ $template->themeInit();
                 </div>
                 <?= ucfirst($portfolioData['desarrollo']); ?>
             </div>
-            <?php include 'assets/inc/side/side.inc.php'; ?>
         </div>
     </div>
 </div>

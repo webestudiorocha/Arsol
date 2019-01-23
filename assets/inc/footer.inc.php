@@ -6,26 +6,26 @@ $funciones = new Clases\PublicFunction();
     <div class="container">
         <div class="row footer-data">
             <div class="col-md-4 contact-info ">
-                <h3>Redes Sociales</h3>
                 <ul>
+                    <li class="sociales"><a target="_blank" class="whatsaps "><i class="fa "></i></a>(3564)513448
+                    </li>
+                    <li class="sociales"><a target="_blank" class="emails "><i class="fa"></i></a>
+                        ariel@arsolproducciones.com.ar
+                    </li>
                     <li class="sociales"><a href="https://www.facebook.com/arsolproducciones/" target="_blank"
-                                            class="btn-social btn-facebook"><i class="fa fa-facebook"></i></a> Arsol
+                                            class=" facebook "><i class="fa "></i></a>@arsol
                         Producciones
                     </li>
                     <li class="sociales"><a href="https://www.instagram.com/arsolproducciones/" target="_blank"
-                                            class="btn-social btn-instagram"><i class="fa fa-instagram"></i></a>
+                                            class="instagrams"><i class="fa "></i></a>
                         @arsolproducciones
                     </li>
                     <li class="sociales"><a href="https://www.linkedin.com/arsolproducciones" target="_blank"
-                                            class="btn-social btn-linkedin"><i class="fa fa-linkedin"></i></a>
-                        arsolproducciones
+                                            class="linkiu "><i class="fa "></i></a>
+                        /arsolproducciones
                     </li>
-                    <li class="sociales"><a target="_blank" class="btn-social btn-steam"><i class="fa fa-envelope"></i></a>
-                        ariel@arsolproducciones.com.ar
-                    </li>
-                    <li class="sociales"><a target="_blank" class="btn-social btn-email"><i class="fa fa-whatsapp"></i></a>
-                        Ariel Donato Angulo (3564)513448
-                    </li>
+
+
                 </ul>
             </div>
             <div class="col-md-4">

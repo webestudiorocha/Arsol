@@ -127,6 +127,66 @@ ol, ul {
 	text-decoration: underline;
 	color: #7281a1;
 }
+.facebook {
+	 background: url('../images/iconos/facebook.png');
+	 display: inline-block;
+	 line-height: 54px;
+	 margin: 8px 4px;
+	 text-align: center;
+	 text-decoration: none;
+	 transition: background-color .3s;
+	 webkit-transition: background-color .3s;
+	 width: 54px;
+
+ }
+.instagrams {
+	background: url('../images/iconos/instagram.png');
+	display: inline-block;
+	line-height: 54px;
+	margin: 8px 4px;
+	text-align: center;
+	text-decoration: none;
+	transition: background-color .3s;
+	webkit-transition: background-color .3s;
+	width: 54px;
+
+}
+.linkiu {
+	background: url('../images/iconos/linkedin.png');
+	display: inline-block;
+	line-height: 54px;
+	margin: 8px 4px;
+	text-align: center;
+	text-decoration: none;
+	transition: background-color .3s;
+	webkit-transition: background-color .3s;
+	width: 54px;
+
+}
+.whatsaps {
+	background: url('../images/iconos/whatsapp.png');
+	display: inline-block;
+	line-height: 54px;
+	margin: 8px 4px;
+	text-align: center;
+	text-decoration: none;
+	transition: background-color .3s;
+	webkit-transition: background-color .3s;
+	width: 54px;
+
+}
+.emails {
+	background: url('../images/iconos/email.png');
+	display: inline-block;
+	line-height: 54px;
+	margin: 8px 4px;
+	text-align: center;
+	text-decoration: none;
+	transition: background-color .3s;
+	webkit-transition: background-color .3s;
+	width: 54px;
+
+}
 
 .nav-collapse .nav li a#home-nav {
 	background: url('../images/home.png') 3px center no-repeat;
@@ -388,15 +448,19 @@ section.what-we-do {
 
 .look-all,
 .purchase-button {
+	border-radius: 8px;
 	display: inline-block;
+	padding: 10px 80px;
 	color: #fff;
 	font-size: 18px;
 	font-family: 'Noto Sans', sans-serif;
-	padding: 4px 30px;
-	background: #8348ac;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8b278f+0,d5158e+100 */
+	background: #8b278f; /* Old browsers */
+	background: -moz-linear-gradient(left, #8b278f 0%, #d5158e 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #8b278f 0%,#d5158e 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #8b278f 0%,#d5158e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8b278f', endColorstr='#d5158e',GradientType=1 ); /* IE6-9 */
 	text-transform: uppercase;
-	border-radius: 2px;
-	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	-o-border-radius: 2px;
 	transition: all 0.2s linear;
@@ -407,6 +471,7 @@ section.what-we-do {
 
 .look-all:hover,
 .purchase-button:hover {
+	border-radius: 8px;
 	text-decoration: none;
 	color: #fff;
 	opacity: 0.8;
@@ -1060,23 +1125,23 @@ ul.social-icon-list li a:hover {
 }
 
 ul.social-icon-list li a.linkedin {
-	background: url('../images/inc-soc.jpg') center center no-repeat;
+	background: url('../images/linkedin') center center no-repeat;
 }
 
 ul.social-icon-list li a.wasaps {
-    background: url('../images/wasaps-soc.jpg') center center no-repeat;
+    background: url('../images/whatsapp') center center no-repeat;
 }
 
 ul.social-icon-list li a.fb {
-	background: url('../images/facebook-soc.jpg') center center no-repeat;
+	background: url('../images/facebook') center center no-repeat;
 }
 
 ul.social-icon-list li a.instagram {
-	background: url('../images/instagram-soc.jpg') center center no-repeat;
+	background: url('../images/instagram') center center no-repeat;
 }
 
 ul.social-icon-list li a.email {
-	background: url('../images/message-soc.jpg') center center no-repeat;
+	background: url('../images/email') center center no-repeat;
 }
 
 #subscribe {

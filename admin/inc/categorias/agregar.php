@@ -64,7 +64,10 @@ if (isset($_POST["agregar"])) {
                 <option class="<?php if (!in_array('galerias', $campos)) {echo 'd-none';}?>" value="galerias">Galerias</option>
                 <option class="<?php if (!in_array('productos', $campos)) {echo 'd-none';}?>" value="productos">Productos</option>
             </select>
-        </label> 
+        </label>
+        <label class="col-md-7">Imágenes:<br/>
+            <input type="file" id="file" name="files[]" multiple="multiple" accept="image/*" />
+        </label>
         <div class="clearfix"></div>
         <br/>
         <div class="col-md-12">

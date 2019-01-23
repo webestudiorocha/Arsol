@@ -50,10 +50,10 @@ $template->themeInit();
                                 <span class="sr-only">Next</span>
                             </a>
                         </div>
-                        <!--
+
                         <div class="flexslider mb-10">
                             <div style=" height: 500px; background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;"></div>
-                        </div>-->
+                        </div>
                         <p><?= ucfirst($novedades_data["desarrollo"]); ?></p>
                         <div class="nav-derecha">
                             <i class="fa fa-calendar-o "></i> <?= $fecha[2] . '/' . $fecha[1] . '/' . $fecha[0] ?>

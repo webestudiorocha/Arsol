@@ -9,6 +9,7 @@ $template->set("description", "Portfolio de ".TITULO);
 $template->themeInit();
 //Clases
 $id = isset($_GET["id"]) ? $_GET["id"] : '';
+$categoriaGET = isset($_GET["categoria"]) ? $_GET["categoria"] : '';
 $portfolio = new Clases\Portfolio();
 $portfolio->set("cod", $id);
 $portfolio_data = $portfolio->list("", "", "");
@@ -18,7 +19,6 @@ $filter = array("area='portfolio'");
 $categoria_data = $categoria->list($filter);
 $funciones = new Clases\PublicFunction();
 ?>
-
 <!-- Content -->
 <div class="content">
     <div class="banner about-banner">
@@ -28,9 +28,11 @@ $funciones = new Clases\PublicFunction();
     </div>
     <div class="container mt-15">
         <ul class="filter-items">
-            <li><a href="#" class="active" data-filter="*">Todos</a></li>
+            <li><a href="#" id="click" class="active" data-filter="*">Todos</a></li>
             <?php foreach ($categoria_data as $cat): ?>
-                <li><a href="#" data-filter=.<?php echo $cat['cod']; ?>><?php echo $cat['titulo']; ?></a>
+                <li><a href="#" id="<?php echo $cat['cod']; ?>" data-filter=".<?php echo $cat['cod']; ?>">
+                        <?php echo $cat['titulo']; ?>
+                    </a>
                 </li>
             <?php endforeach; ?>
         </ul>
@@ -58,3 +60,13 @@ $funciones = new Clases\PublicFunction();
 </div>
 <!-- End content -->
 <?php $template->themeEnd(); ?>
+
+
+    <script>
+        $(document).ready(function(){
+            if('<?php echo $categoriaGET ?>' != ''){
+                $('#<?php echo $categoriaGET; ?>').trigger('click');
+            }
+        });
+    </script>
+

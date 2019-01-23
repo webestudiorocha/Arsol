@@ -58,7 +58,11 @@ if (isset($_POST["agregar"])) {
                 <option value="galerias">Galerias</option>
                 <option value="productos">Productos</option>
             </select>
-        </label> 
+        </label>
+        <label class="col-md-12">
+            Imágenes:<br/>
+            <input type="file" id="file" name="files[]" multiple="multiple" accept="image/*" />
+        </label>
         <div class="clearfix"></div>
         <br/>
         <div class="col-md-12">

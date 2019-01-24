@@ -5,6 +5,7 @@ $servicio->set("cod", $id);
 $servicio_data = $servicio->list("", "", "");
 $funciones_nav = new Clases\PublicFunction();
 ?>
+<span>¿QUERÉS SER PARTE DE NUESTRO STAFF DE ARTISTAS?</span>
 <nav class="navbar navbar-expand-lg static-top">
     <div class="container">
         <a class="navbar-brand" href="<?= URL; ?>/index">

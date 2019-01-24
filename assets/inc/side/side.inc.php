@@ -71,7 +71,7 @@ if (strpos($ruta, 'servicio') !== false) {
             <label for="comment">Mensaje:</label>
             <textarea class="form-control" rows="4" name="consulta"></textarea>
         </div>
-        <button type="submit" name="enviar_side" class="btn btn-primary nav-derecha">Enviar</button>
+        <button type="submit" name="enviar_side" class="boton">Enviar</button>
     </form>
     <br>
     <div class="a2a_kit a2a_kit_size_32 a2a_default_style nav-derecha mt-20">

@@ -128,7 +128,7 @@ ol, ul {
 	color: #7281a1;
 }
 .facebook {
-	 background: url('../images/iconos/facebook.png');
+	 background: url('../images/iconos/facebook.png') center no-repeat ;
 	 display: inline-block;
 	 line-height: 54px;
 	 margin: 8px 4px;
@@ -140,7 +140,7 @@ ol, ul {
 
  }
 .instagrams {
-	background: url('../images/iconos/instagram.png');
+	background: url('../images/iconos/instagram.png')center no-repeat;
 	display: inline-block;
 	line-height: 54px;
 	margin: 8px 4px;
@@ -152,7 +152,7 @@ ol, ul {
 
 }
 .linkiu {
-	background: url('../images/iconos/linkedin.png');
+	background: url('../images/iconos/linkedin.png')center no-repeat;
 	display: inline-block;
 	line-height: 54px;
 	margin: 8px 4px;
@@ -164,7 +164,7 @@ ol, ul {
 
 }
 .whatsaps {
-	background: url('../images/iconos/whatsapp.png');
+	background: url('../images/iconos/whatsapp.png')center no-repeat;
 	display: inline-block;
 	line-height: 54px;
 	margin: 8px 4px;
@@ -176,7 +176,7 @@ ol, ul {
 
 }
 .emails {
-	background: url('../images/iconos/email.png');
+	background: url('../images/iconos/email.png')center no-repeat;
 	display: inline-block;
 	line-height: 54px;
 	margin: 8px 4px;
@@ -454,6 +454,27 @@ section.what-we-do {
 	color: #fff;
 	font-size: 18px;
 	font-family: 'Noto Sans', sans-serif;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8b278f+0,d5158e+100 */
+	background: #8b278f; /* Old browsers */
+	background: -moz-linear-gradient(left, #8b278f 0%, #d5158e 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #8b278f 0%,#d5158e 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #8b278f 0%,#d5158e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8b278f', endColorstr='#d5158e',GradientType=1 ); /* IE6-9 */
+	text-transform: uppercase;
+	-moz-border-radius: 2px;
+	-o-border-radius: 2px;
+	transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+}
+.boton{
+	border-radius: 8px;
+	font-size: 18px;
+	font-family: 'Noto Sans', sans-serif;
+	padding: 10px 10px !important;
+	margin-top: 20px !important;
+	margin-left: 170px !important;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8b278f+0,d5158e+100 */
 	background: #8b278f; /* Old browsers */
 	background: -moz-linear-gradient(left, #8b278f 0%, #d5158e 100%); /* FF3.6-15 */
@@ -1997,9 +2018,10 @@ audio {
 .h121{
 	width: 11%!important;
 	background-color: white !important;
-	margin-top: -90px !important;
-	display: inline-table !important;
-	margin-bottom: 40px !important;
+	background-position: center !important;
+	margin-top: -20px !important;
+	margin: auto;
+	display: table
 }
 .h23{
 	width: 40%!important;

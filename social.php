@@ -8,9 +8,16 @@ $template->set("keywords", "Redes sociales,".TITULO);
 $template->set("description","Nuestras redes sociales");
 $template->themeInit();
 ?>
+
     <div class="banner about-banner">
         <div class="container">
             <h1>Redes sociales</h1>
+        </div>
+    </div>
+    <div  class="text-center">
+        <img style="width: 100%;" src="assets/images/iconos/separador.png">
+        <div class="text-center">
+            <img style=" left: 10px; margin-top: -55px; z-index: 900; background: white;" src="assets/images/iconos/contacto.png" >
         </div>
     </div>
 <!-- Place <div> tag where you want the feed to appear -->

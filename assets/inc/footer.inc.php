@@ -2,7 +2,9 @@
 $enviar = new Clases\Email();
 $funciones = new Clases\PublicFunction();
 ?>
+
 <section class="quick-contact">
+
     <div class="container">
         <div class="row footer-data">
             <div class="col-md-4 contact-info ">

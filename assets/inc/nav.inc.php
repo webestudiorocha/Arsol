@@ -70,7 +70,7 @@ $funciones_nav = new Clases\PublicFunction();
 
 
                 <li>
-                    <a id="social-nav" href="<?= URL; ?>/social">Contacto</a>
+                    <a id="social-nav" href="<?= URL; ?>/social">Redes Sociales</a>
                 </li>
             </ul>
         </div>

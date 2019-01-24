@@ -130,6 +130,12 @@ $categoria_data = $categoria->list($filter)
                 <a class="look-all" href="<?= URL; ?>/blogs">Ver más</a>
             </section>
         </div>
+        <div  class="text-center">
+            <img style="width: 100%; z-index: 1;" src="assets/images/iconos/separador.png">
+            <div class="text-center">
+                <img style=" left: 10px; margin-top: -55px; z-index: 900;background: white; " src="assets/images/iconos/servicios.png" >
+            </div>
+        </div>
 <div class="container">
             <section class="blog">
                 <div class="row definition">

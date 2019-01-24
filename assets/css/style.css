@@ -1975,20 +1975,39 @@ audio {
 .h11{
 	width: 43%!important;
 	background-color: white !important;
-	margin-top: -90px !important;
-	display: inline-table !important;
-	margin-bottom: 40px !important;
+	background-position: center !important;
+	margin-top: -20px !important;
+	margin: auto;
+	display: table;
+
 }
 .texto{
 	background:  linear-gradient(#9D006B, #D8138E);
 	-webkit-background-clip: text;
 	color: transparent;
 }
+.texto2{
+	background:  linear-gradient(#9D006B, #D8138E);
+	-webkit-background-clip: text;
+	color: transparent;
+	text-indent: -10px !important;
+	margin: auto!important;
+	display: table !important;
+}
 .h121{
 	width: 11%!important;
 	background-color: white !important;
 	margin-top: -90px !important;
 	display: inline-table !important;
+	margin-bottom: 40px !important;
+}
+.h23{
+	width: 40%!important;
+	background: white !important;
+	margin-top: -20px !important;
+	text-align: center;
+	margin: auto;
+	display: flex;
 	margin-bottom: 40px !important;
 }
 .h12

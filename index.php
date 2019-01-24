@@ -7,6 +7,10 @@ $imagenes = new Clases\Imagenes();
 $portfolio = new Clases\Portfolio();
 $novedades = new Clases\Novedades();
 $sliders = new Clases\Sliders();
+$servicio = new Clases\Servicios();
+$cod = isset($_GET["cod"]) ? $_GET["cod"] : '';
+$servicio->set("cod", $cod);
+$servicio_data = $servicio->list("", "", "");
 $template->set("title", TITULO . " | Inicio");
 $template->set("description", "Inicio " . TITULO);
 $template->set("keywords", "Inicio," . TITULO);
@@ -60,7 +64,7 @@ $categoria_data = $categoria->list($filter)
         <div class="container">
             <section class="portfolio ">
                 <div class="row definition">
-                    <div class="col-md-12 col-sm-12 text-center">
+                    <div class="col-md-12  ">
                     <h5 class="h12">  <h1 class="h11">Contrataciones/<span class="texto">Rubros</span></h1></h5>
                     </div>
                 </div>
@@ -124,6 +128,38 @@ $categoria_data = $categoria->list($filter)
                     ?>
                 </div>
                 <a class="look-all" href="<?= URL; ?>/blogs">Ver más</a>
+            </section>
+        </div>
+<div class="container">
+            <section class="blog">
+                <div class="row definition">
+                    <div class="col-md-12">
+                        <h5 class="h12">  <h1 class="h11"><span class="texto">Servicios</span> Para Eventos</h1></h5>
+                    </div>
+                </div>
+
+                <div class="row mt-15">
+                    <?php
+                    foreach ($servicio_data as $servicio) {
+                        $imagenes->set("cod", $nov['cod']);
+                        $img = $imagenes->view();
+                        ?>
+                        <div class="col-md-4 project-post">
+                            <a href="<?= URL . '/blog/' . $funciones->normalizar_link($servicio['titulo']) . '/' . $funciones->normalizar_link($servicio['cod']) ?>">
+                                <div class="project-photo"
+                                     style=" height: 300px; background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;">
+                                    <div class="hover-project">
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="<?= URL . '/servicio/' . $funciones->normalizar_link($servicio['titulo']) . '/' . $funciones->normalizar_link($servicio['cod']) ?>">
+                                <h3><?= ucfirst(substr(strip_tags($servicio['titulo']), 0, 80)) . "..." ?></h3></a>
+                        </div>
+                        <?php
+                    }
+                    ?>
+                </div>
+                <a class="look-all" href="<?= URL; ?>/servicio.php">Ver más</a>
             </section>
         </div>
     </div>

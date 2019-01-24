@@ -41,6 +41,16 @@ $numeroPaginas = $novedades->paginador("", $cantidad);
             <h1>Blog</h1>
         </div>
     </div>
+</div>
+
+    <div  class="text-center">
+        <img style="width: 100% !important; z-index: 1;" src="assets/images/iconos/separador.png">
+        <div class="text-center">
+            <img style=" left: 10px; margin-top: -55px; z-index: 900; " src="assets/images/iconos/separador-blog.png" >
+        </div>
+    </div>
+
+<div class="content">
     <div class="container" style="text-align: center">
         <section class="blog">
             <div class="row">

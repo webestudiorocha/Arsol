@@ -1970,9 +1970,33 @@ audio {
 	text-align: center;
 	margin-bottom: 47px;
 	padding-bottom: 12px;
-	border-bottom: 1px solid #828fac;
-}
 
+}
+.h11{
+	width: 43%!important;
+	background-color: white !important;
+	margin-top: -90px !important;
+	display: inline-table !important;
+	margin-bottom: 40px !important;
+}
+.texto{
+	background:  linear-gradient(#9D006B, #D8138E);
+	-webkit-background-clip: text;
+	color: transparent;
+}
+.h121{
+	width: 11%!important;
+	background-color: white !important;
+	margin-top: -90px !important;
+	display: inline-table !important;
+	margin-bottom: 40px !important;
+}
+.h12
+{
+	border-bottom: 2px solid black !important;
+	width: 100% !important;
+    margin-top: 40px !important;
+}
 .filter-items li {
 	display: inline-block;
 }

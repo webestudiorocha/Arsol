@@ -8,7 +8,7 @@ RewriteRule ^(.*)$ $1.php
 RewriteRule ^lote/(.*)/(.*)$ ./lote.php?id=$2
 RewriteRule ^inicio ./index.php
 RewriteRule ^blog/(.*)/(.*)$ ./blog.php?cod=$2
-RewriteRule ^portfolio/(.*)/(.*)$ ./portfolio.php?cod=$2 [QSA]
+RewriteRule ^portfolio/(.*)/(.*)$ ./portfolio.php?cod=$2 
 RewriteRule ^servicio/(.*)/(.*)$ ./servicio.php?cod=$2
 RewriteRule ^c/(.*)/(.*)$ ./contenidos.php?id=$2
 	

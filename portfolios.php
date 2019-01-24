@@ -26,7 +26,7 @@ $funciones = new Clases\PublicFunction();
             <h1>Portfolio</h1>
         </div>
     </div>
-    <div class="container mt-15">
+    <div class="container mt-15 definition">
         <ul class="filter-items">
             <li><a href="#" id="click" class="active" data-filter="*">Todos</a></li>
             <?php foreach ($categoria_data as $cat): ?>
@@ -35,7 +35,9 @@ $funciones = new Clases\PublicFunction();
                     </a>
                 </li>
             <?php endforeach; ?>
+
         </ul>
+        <h5 class="  h12">  <h1 class="h11">Contrataciones/<span class="texto"><?php echo $cat['titulo']; ?></span></h1></h5>
         <div class="projects-container four-columns">
             <?php foreach ($portfolio_data as $port): ?>
                 <?php

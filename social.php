@@ -14,10 +14,10 @@ $template->themeInit();
             <h1>Redes sociales</h1>
         </div>
     </div>
-    <div  class="text-center">
-        <img style="width: 100%;" src="assets/images/iconos/separador.png">
-        <div class="text-center">
-            <img style=" left: 10px; margin-top: -55px; z-index: 900; background: white;" src="assets/images/iconos/contacto.png" >
+    <div  class="text-center header-breadcumb">
+        <div class="text-center imagenes" >
+            <img style="width: 100%;" src="<?= URL ?>/assets/images/iconos/separador.png">
+            <img class="img-general"  src="<?= URL ?>/assets/images/iconos/contacto.png" >
         </div>
     </div>
 <!-- Place <div> tag where you want the feed to appear -->

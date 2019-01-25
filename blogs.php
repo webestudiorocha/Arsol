@@ -43,15 +43,14 @@ $numeroPaginas = $novedades->paginador("", $cantidad);
     </div>
 </div>
 
-    <div  class="text-center">
-        <img style="width: 100% !important; z-index: 1;" src="assets/images/iconos/separador.png">
-        <div class="text-center">
-            <img style=" left: 10px; margin-top: -55px; z-index: 900; " src="assets/images/iconos/separador-blog.png" >
-        </div>
+<div  class="text-center header-breadcumb">
+    <div class="text-center imagenes" >
+        <img style="width: 100%;" src="<?= URL ?>/assets/images/iconos/separador.png">
+        <img class="img-general"  src="<?= URL ?>/assets/images/iconos/blog.png" >
     </div>
-
+</div>
 <div class="content">
-    <div class="container" style="text-align: center">
+    <div class="container" >
         <section class="blog">
             <div class="row">
                 <?php
@@ -63,11 +62,12 @@ $numeroPaginas = $novedades->paginador("", $cantidad);
                         <a href="<?= URL .'/blog/'. $funciones->normalizar_link($nov['titulo']).'/'. $funciones->normalizar_link($nov['cod'])?>">
                             <div class="project-photo"
                                  style=" height: 300px; background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;">
-                                <div class="hover-project">
-                                </div>
+                                <img class="img4" src="assets/images/iconos/separador.png" >
+                                <h3 class="img3">Leer Más</h3>
+
                             </div>
                         </a>
-                        <a href="<?= URL .'/blog/'. $funciones->normalizar_link($nov['titulo']).'/'. $funciones->normalizar_link($nov['cod'])?>"><h3><?= ucfirst(substr(strip_tags($nov['titulo']), 0, 80)) . "..." ?></h3></a>
+                        <a href="<?= URL .'/blog/'. $funciones->normalizar_link($nov['titulo']).'/'. $funciones->normalizar_link($nov['cod'])?>"></a>
                     </div>
                     <?php
                 }

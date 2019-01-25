@@ -512,15 +512,15 @@ section.what-we-do {
 .content section.team {
     text-align: center;
 }
-.titulos{
+
+.titulos {
     margin-top: 20px;
-    padding: 0px 0px 0px;
     background: linear-gradient(#9D006B, #D8138E);
     -webkit-background-clip: text;
     color: transparent;
     font-size: inherit;
     font-weight: bold;
-  margin-left: 800px;
+    margin-left: 800px;
 
 }
 
@@ -658,6 +658,7 @@ section.what-we-do {
     text-transform: uppercase;
     background: #0000009c;
 }
+
 .img3 {
     text-align: center;
     margin-top: 0 !important;
@@ -666,6 +667,7 @@ section.what-we-do {
     text-transform: capitalize !important;
     background: #0000009c;
 }
+
 .img4 {
     margin-bottom: -6px !important;
     height: 5px;
@@ -3611,4 +3613,38 @@ ul.tab-list li {
 
 .toogle-content div a {
     float: right;
+}
+
+.header-breadcumb {
+    padding-top: 0px;
+    background: #333;
+    height: 40px;
+    margin-top: -51px;
+    margin-bottom: 71px;
+}
+
+.header-breadcumb-index {
+    padding-top: 0px;
+    background: #333;
+    height: 40px;
+    margin-top: -24px;
+    margin-bottom: 40px;
+}
+
+.img-rubro {
+    left: 10px;
+    margin-top: -55px;
+    z-index: 900;
+}
+
+.imagenes {
+    position: relative;
+    top: 23px
+}
+
+.img-general {
+    left: 10px;
+    margin-top: -55px;
+    z-index: 900;
+    background: white;
 }

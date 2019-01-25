@@ -12,7 +12,7 @@ $imagenes_data = $imagenes->list($filter);
 $fecha = explode("-", $novedades_data['fecha']);
 $template = new Clases\TemplateSite();
 $template->set("title", TITULO .' | '.ucfirst(strip_tags($novedades_data['titulo'])));
-$template->set("imagen", LOGO);
+$template->set("imagen", URL."/".$imagenes_data[0]['ruta']);
 $template->set("favicon", LOGO);
 $template->set("keywords", strip_tags($novedades_data['keywords']));
 $template->set("description", ucfirst(substr(strip_tags($novedades_data['desarrollo']), 0, 160)));
@@ -51,9 +51,9 @@ $template->themeInit();
                             </a>
                         </div>
 
-                        <div class="flexslider mb-10">
-                            <div style=" height: 500px; background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;"></div>
-                        </div>
+    <!--<div class="flexslider mb-10">
+                        <div style=" height: 500px; background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;"></div>
+                        </div>-->
                         <p><?= ucfirst($novedades_data["desarrollo"]); ?></p>
                         <div class="nav-derecha">
                             <i class="fa fa-calendar-o "></i> <?= $fecha[2] . '/' . $fecha[1] . '/' . $fecha[0] ?>

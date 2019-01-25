@@ -26,18 +26,24 @@ $funciones = new Clases\PublicFunction();
             <h1>Portfolio</h1>
         </div>
     </div>
+    <div  class="text-center header-breadcumb">
+        <div class="text-center imagenes" >
+            <img style="width: 100%;" src="<?= URL ?>/assets/images/iconos/separador.png">
+            <img class="img-rubro"  src="<?= URL ?>/assets/images/iconos/separador-rubro.png" >
+        </div>
+    </div>
     <div class="container mt-15 definition">
         <ul class="filter-items">
-            <li><a href="#" id="click" class="active" data-filter="*">Todos</a></li>
+            <li><a href="#" id="click" class="active" data-filter="*" onclick="$('#texto').html('')">Todos</a></li>
             <?php foreach ($categoria_data as $cat): ?>
-                <li><a href="#" id="<?php echo $cat['cod']; ?>" data-filter=".<?php echo $cat['cod']; ?>">
+                <li><a href="#" id="<?php echo $cat['cod']; ?>" data-filter=".<?php echo $cat['cod']; ?>" onclick="$('#texto').html('<?=$cat['titulo'];?>')">
                         <?php echo $cat['titulo']; ?>
                     </a>
                 </li>
             <?php endforeach; ?>
 
         </ul>
-        <h5 class="  h12">  <h1 class="h11">Contrataciones/<span class="texto"><?php echo $cat['titulo']; ?></span></h1></h5>
+        <h5 class="  h12">  <h1 class="h11">Contrataciones/<span class="texto" id="texto"><?php echo $cat['titulo']; ?></span></h1></h5>
         <div class="projects-container four-columns">
             <?php foreach ($portfolio_data as $port): ?>
                 <?php
@@ -63,12 +69,12 @@ $funciones = new Clases\PublicFunction();
 <!-- End content -->
 <?php $template->themeEnd(); ?>
 
-
+<?php if($categoriaGET != '') { ?>
     <script>
         $(document).ready(function(){
-            if('<?php echo $categoriaGET ?>' != ''){
-                $('#<?php echo $categoriaGET; ?>').trigger('click');
-            }
+console.log('<?php echo $categoriaGET; ?>');
+            $('#<?php echo $categoriaGET; ?>').trigger('click');
         });
     </script>
+<?php } ?>
 

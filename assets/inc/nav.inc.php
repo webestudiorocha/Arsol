@@ -5,11 +5,8 @@ $servicio->set("cod", $id);
 $servicio_data = $servicio->list("", "", "");
 $funciones_nav = new Clases\PublicFunction();
 ?>
-<div >
-    <h1 class="titulos">¿QUERÉS SER PARTE DE NUESTRO STAFF DE ARTISTAS?</h1>
-</div>
+<a href="<?= URL; ?>/portfolios.php" class="titulos">¿QUERÉS SER PARTE DE NUESTRO STAFF DE ARTISTAS?</a>
 <nav class="navbar navbar-expand-lg static-top">
-
     <div class="container">
         <a class="navbar-brand" href="<?= URL; ?>/index">
             <img alt="" src="<?= URL; ?>/assets/images/logo.png" width="150">

@@ -54,12 +54,12 @@ $categoria_data = $categoria->list($filter)
     </div>
     <!-- Content -->
 <br>
-<div  class="text-center">
-    <img style="width: 100%; z-index: 1;" src="assets/images/iconos/separador.png">
-    <div class="text-center">
-        <img style=" left: 10px; margin-top: -55px; z-index: 900; " src="assets/images/iconos/separador-rubro.png" >
+    <div  class="text-center header-breadcumb-index">
+        <div class="text-center imagenes" >
+            <img style="width: 100%;" src="<?= URL ?>/assets/images/iconos/separador.png">
+            <img class="img-rubro"  src="<?= URL ?>/assets/images/iconos/separador-rubro.png" >
+        </div>
     </div>
-</div>
     <div class="content mt-15">
         <div class="container">
             <section class="portfolio ">
@@ -96,10 +96,10 @@ $categoria_data = $categoria->list($filter)
             </section>
 
         </div>
-        <div  class="text-center">
-            <img style="width: 100%;" src="assets/images/iconos/separador.png">
-            <div class="text-center">
-                <img style=" left: 10px; margin-top: -55px; z-index: 900; " src="assets/images/iconos/separador-blog.png" >
+        <div  class="text-center header-breadcumb-index">
+            <div class="text-center imagenes" >
+                <img style="width: 100%;" src="<?= URL ?>/assets/images/iconos/separador.png">
+                <img class="img-general"  src="<?= URL ?>/assets/images/iconos/blog.png" >
             </div>
         </div>
 <div class="container">
@@ -125,6 +125,7 @@ $categoria_data = $categoria->list($filter)
 
                                 </div>
                             </a>
+                            <a href="<?= URL .'/blog/'. $funciones->normalizar_link($nov['titulo']).'/'. $funciones->normalizar_link($nov['cod'])?>"></a>
 
                         </div>
                         <?php
@@ -134,10 +135,10 @@ $categoria_data = $categoria->list($filter)
                 <a class="look-all" href="<?= URL; ?>/blogs">Ver más</a>
             </section>
         </div>
-        <div  class="text-center">
-            <img style="width: 100%; z-index: 1;" src="assets/images/iconos/separador.png">
-            <div class="text-center">
-                <img style=" left: 10px; margin-top: -55px; z-index: 900;background: white; " src="assets/images/iconos/servicios.png" >
+        <div  class="text-center header-breadcumb-index">
+            <div class="text-center" style="position: relative;top:23px">
+                <img style="width: 100%;" src="<?= URL ?>/assets/images/iconos/separador.png">
+                <img style=" left: 10px; margin-top: -55px; z-index: 900; background: white;"  src="<?= URL ?>/assets/images/iconos/servicios.png" >
             </div>
         </div>
 <div class="container">

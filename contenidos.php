@@ -19,8 +19,19 @@ $template->themeInit();
         <div class="container">
             <h1><?= ucfirst($id); ?></h1>
         </div>
+
     </div>
+</div>
+<div  class="text-center">
+    <img style="width: 100%;" src="assets/images/iconos/separador.png">
+    <div class="text-center">
+        <img style=" left: 10px; margin-top: -55px; z-index: 900; background: white;" src="assets/images/iconos/empresa.png" >
+    </div>
+</div>
+<div class="content">
+
     <div class="container">
+
         <section class="about-us">
             <div class="row-fluid our-description">
                 <?= $contenidoData['contenido']; ?>
@@ -28,6 +39,7 @@ $template->themeInit();
         </section>
     </div>
 </div>
+
 <!-- End content -->
 <?php $template->themeEnd(); ?>
 	

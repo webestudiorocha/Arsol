@@ -5,8 +5,11 @@ $servicio->set("cod", $id);
 $servicio_data = $servicio->list("", "", "");
 $funciones_nav = new Clases\PublicFunction();
 ?>
-<span>¿QUERÉS SER PARTE DE NUESTRO STAFF DE ARTISTAS?</span>
+<div >
+    <h1 class="titulos">¿QUERÉS SER PARTE DE NUESTRO STAFF DE ARTISTAS?</h1>
+</div>
 <nav class="navbar navbar-expand-lg static-top">
+
     <div class="container">
         <a class="navbar-brand" href="<?= URL; ?>/index">
             <img alt="" src="<?= URL; ?>/assets/images/logo.png" width="150">
@@ -16,7 +19,9 @@ $funciones_nav = new Clases\PublicFunction();
         </button>
 
         <div id="navC" class="nav-collapse collapse d-sm-none nav-mobile">
+
             <ul class="nav" style="display: block;">
+
                 <li class="mt-5">
                     <a id="home-nav" href="<?= URL; ?>/index">Inicio</a>
                 </li>

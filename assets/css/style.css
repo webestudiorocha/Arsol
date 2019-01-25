@@ -512,6 +512,17 @@ section.what-we-do {
 .content section.team {
     text-align: center;
 }
+.titulos{
+    margin-top: 20px;
+    padding: 0px 0px 0px;
+    background: linear-gradient(#9D006B, #D8138E);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: inherit;
+    font-weight: bold;
+  margin-left: 800px;
+
+}
 
 .project-post,
 .blog-post,

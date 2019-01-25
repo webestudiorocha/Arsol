@@ -77,12 +77,16 @@ $categoria_data = $categoria->list($filter)
                         ?>
                         <div class="col-md-4 project-post ">
                             <a href="<?= URL . '/portfolios?categoria='. $funciones->normalizar_link($port['cod']) ?>">
+
                                 <div class="project-photo"
-                                     style=" height: 200px; background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;">
+                                     style=" height: 200px;background: url(<?= URL . '/' . $img['ruta'] ?>)  no-repeat center center/cover;">
+                                    <img class="img2" src="assets/images/iconos/separador.png" >
+                                    <h3 class="img"><?= ucfirst($port['titulo']); ?></h3>
                                 </div>
+
+
                             </a>
-                            <a href="<?= URL . '/portfolios?categoria='. $funciones->normalizar_link($port['cod']) ?>">
-                                <h3><?= ucfirst($port['titulo']); ?></h3></a>
+
                         </div>
                         <?php
                     }
@@ -116,12 +120,12 @@ $categoria_data = $categoria->list($filter)
                             <a href="<?= URL . '/blog/' . $funciones->normalizar_link($nov['titulo']) . '/' . $funciones->normalizar_link($nov['cod']) ?>">
                                 <div class="project-photo"
                                      style=" height: 300px; background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;">
-                                    <div class="hover-project">
-                                    </div>
+                                    <img class="img4" src="assets/images/iconos/separador.png" >
+                                    <h3 class="img3">Leer Más</h3>
+
                                 </div>
                             </a>
-                            <a href="<?= URL . '/blog/' . $funciones->normalizar_link($nov['titulo']) . '/' . $funciones->normalizar_link($nov['cod']) ?>">
-                                <h3><?= ucfirst(substr(strip_tags($nov['titulo']), 0, 80)) . "..." ?></h3></a>
+
                         </div>
                         <?php
                     }
@@ -147,19 +151,19 @@ $categoria_data = $categoria->list($filter)
                 <div class="row mt-15">
                     <?php
                     foreach ($servicio_data as $servicio) {
-                        $imagenes->set("cod", $nov['cod']);
+                        $imagenes->set("cod", $servicio['cod']);
                         $img = $imagenes->view();
                         ?>
                         <div class="col-md-4 project-post">
-                            <a href="<?= URL . '/blog/' . $funciones->normalizar_link($servicio['titulo']) . '/' . $funciones->normalizar_link($servicio['cod']) ?>">
+                            <a href="<?= URL . '/servicio/' . $funciones->normalizar_link($servicio['titulo']) . '/' . $funciones->normalizar_link($servicio['cod']) ?>">
                                 <div class="project-photo"
                                      style=" height: 300px; background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;">
-                                    <div class="hover-project">
-                                    </div>
+                                    <img class="img4" src="assets/images/iconos/separador.png" >
+                                    <h3 class="img"><?= ucfirst($servicio['titulo']); ?></h3>
+
                                 </div>
                             </a>
-                            <a href="<?= URL . '/servicio/' . $funciones->normalizar_link($servicio['titulo']) . '/' . $funciones->normalizar_link($servicio['cod']) ?>">
-                                <h3><?= ucfirst(substr(strip_tags($servicio['titulo']), 0, 80)) . "..." ?></h3></a>
+
                         </div>
                         <?php
                     }

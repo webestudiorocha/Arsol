@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-01-2019 a las 16:33:44
+-- Tiempo de generación: 25-01-2019 a las 14:55:42
 -- Versión del servidor: 10.1.34-MariaDB
 -- Versión de PHP: 7.2.7
 
@@ -83,6 +83,15 @@ CREATE TABLE `categorias` (
   `area` varchar(255) COLLATE utf8mb4_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
+--
+-- Volcado de datos para la tabla `categorias`
+--
+
+INSERT INTO `categorias` (`id`, `cod`, `titulo`, `area`) VALUES
+(15, 'cb7cbaa69d', 'Folclore', 'portfolio'),
+(16, '3e1a901b47', 'Rock', 'portfolio'),
+(17, 'bd41bca1ef', 'Humor', 'portfolio');
+
 -- --------------------------------------------------------
 
 --
@@ -100,9 +109,7 @@ CREATE TABLE `contenidos` (
 --
 
 INSERT INTO `contenidos` (`id`, `contenido`, `cod`) VALUES
-(6, '<p>&iexcl;Muchas gracias!<br />\r\n<strong>Agromade</strong><br />\r\n356 469-6748 &nbsp;<br />\r\nLun - Viernes: 9:00 - 18:00 &nbsp;<br />\r\nventas@agro-made.com.ar</p>\r\n', 'PIE CORREOS'),
-(7, '<h2 style=\"text-align:center\"><span style=\"color:#27ae60; font-family:Tahoma,Geneva,sans-serif\"><span style=\"font-size:36px\"><strong>PAGANOS EN<br />\r\n12 CUOTAS</strong></span><br />\r\n<span style=\"font-size:22px\"><strong>CON MERCADOPAGO</strong></span></span></h2>\r\n', 'alerta sesion'),
-(9, '<p><strong>Arsol</strong> is the best theme for elit, sed do eiusmod tempor dolor sit amet, conse ctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et lorna aliquatd minim veniam, quis nostrud exercitation oris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolo.</p>\r\n\r\n<p>Lorem is a dummy text do eiusmod tempor dolor sit amet, onsectetur adip iscing elit, sed do eiusmod tempor incididunt ut labore et lorna aliqua Ut enim onsectetur</p>\r\n\r\n<p>Lorem is a dummy text do eiusmod tempor dolor sit amet, onsectetur adip iscing elit, sed do eiusmod tempor incididunt ut labore et lorna aliqua Ut enim onsectetur</p>\r\n', 'Nosotros');
+(1, '<div class=\"btgrid\">\r\n<div class=\"row row-1\">\r\n<div class=\"col col-md-6\">\r\n<div class=\"content\">\r\n<p><span style=\"font-family:Verdana,Geneva,sans-serif\"><strong>&iquest;Quer&eacute;s ser una estrella? Mostrar tu talento al mundo?</strong></span></p>\r\n\r\n<p><span style=\"font-family:Verdana,Geneva,sans-serif\">Sabemos lo di&iacute;fil y frustrante que puede ser no lograr pasar a la siguiente etapa de tu crecimiento como artista por eso creamos ArSol...</span></p>\r\n\r\n<p>Una productora de artistas argentinos que trabaja codo a codo con vos para que ese crecimiento que persegu&iacute;s llegue en menor tiempo.</p>\r\n\r\n<p>Tenemos los mejores contactos para explotar todo el talento que hay en vos.</p>\r\n</div>\r\n</div>\r\n\r\n<div class=\"col col-md-6\">\r\n<div class=\"content\">\r\n<p>Comediantes y m&uacute;sicos de todos los estilos: rock, pop, cumbia y cuarteto conf&iacute;an en nosotros para conseguir esos contratos que los hacen crecer.</p>\r\n\r\n<p>Adem&aacute;s, creamos nuestros propios eventos para seguir posicionando a nuestras estrellas y lograr un crecimiento constante. Y cuando terceros nos contratan solo se encargan de disfrutar, de la gesti&oacute;n nos encargamos nosotros.</p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n\r\n<p style=\"text-align:right\"><strong><span style=\"color:#ff00cc\"><span style=\"font-family:Verdana,Geneva,sans-serif\">&iquest;Est&aacute;s buscando explotar tu talento?</span></span></strong></p>\r\n\r\n<p style=\"text-align:right\"><strong><span style=\"color:#ff00cc\"><span style=\"font-family:Verdana,Geneva,sans-serif\">Nosotros tambi&eacute;n.</span></span></strong></p>\r\n', 'EMPRESA');
 
 -- --------------------------------------------------------
 
@@ -121,13 +128,6 @@ CREATE TABLE `galerias` (
   `fecha` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
---
--- Volcado de datos para la tabla `galerias`
---
-
-INSERT INTO `galerias` (`id`, `cod`, `titulo`, `desarrollo`, `categoria`, `keywords`, `description`, `fecha`) VALUES
-(1, 'ff97738a81', 'Nova', '', 'e8d2454eca', '', '', '0000-00-00');
-
 -- --------------------------------------------------------
 
 --
@@ -145,52 +145,26 @@ CREATE TABLE `imagenes` (
 --
 
 INSERT INTO `imagenes` (`id`, `ruta`, `cod`) VALUES
-(2, 'assets/archivos/recortadas/a_7a69dcc642.jpg', '95c8fa9dce'),
-(4, 'assets/archivos/recortadas/a_46d645f245.jpg', '5d7d1aed02'),
-(6, 'assets/archivos/banner/8b7b13269e.jpg', '85727cc11c'),
-(7, 'assets/archivos/banner/0ae1c18314.jpg', 'e1ac45a48c'),
-(8, 'assets/archivos/banner/a6c8e012ff.jpg', '91cbaac126'),
-(9, 'assets/archivos/banner/e0a316e87a.jpg', 'ebc9a42abc'),
-(10, 'assets/archivos/banner/f8c4a7333c.jpg', '4cba079bda'),
-(11, 'assets/archivos/banner/9d37bf572a.jpg', 'a4cf823a64'),
-(12, 'assets/archivos/banner/5ba14c523f.jpg', '249ab023c3'),
-(13, 'assets/archivos/banner/6fabe3357e.jpg', '4bf25da4ff'),
-(18, 'assets/archivos/recortadas/a_ae742e61f3.jpg', '9eeff70305'),
-(19, 'assets/archivos/recortadas/a_2430c201e0.jpg', '15fe554b8c'),
-(21, 'assets/archivos/recortadas/a_0161c13634.jpg', '59127c3054'),
-(24, 'assets/archivos/recortadas/a_b9ea43275c.jpg', '381864777b'),
-(29, 'assets/archivos/recortadas/a_55d1f104a5.jpg', 'ea87385ab0'),
-(30, 'assets/archivos/recortadas/a_4630b87cea.jpg', '7aa33b3db0'),
-(31, 'assets/archivos/recortadas/a_9c7810a6d2.jpg', 'a1e8eaa23c'),
-(32, 'assets/archivos/recortadas/a_a170192678.png', 'df0a773ebd'),
-(33, 'assets/archivos/recortadas/a_0c9e6ac89a.jpg', 'df0a773ebd'),
-(34, 'assets/archivos/recortadas/a_fe23041daa.png', 'df0a773ebd'),
-(35, 'assets/archivos/recortadas/a_2db804d2fb.png', 'df0a773ebd'),
-(36, 'assets/archivos/recortadas/a_0888054cca.png', 'df0a773ebd'),
-(37, 'assets/archivos/recortadas/a_9ed19bcba7.png', 'df0a773ebd'),
-(38, 'assets/archivos/recortadas/a_ed4d2b5275.png', '31b2caddcd'),
-(39, 'assets/archivos/recortadas/a_786d17178b.png', 'a9344bfff2'),
-(40, 'assets/archivos/recortadas/a_5bdb90651c.png', 'a9344bfff2'),
-(41, 'assets/archivos/recortadas/a_fdd393a70a.png', '048040f93a'),
-(42, 'assets/archivos/recortadas/a_02c43c41aa.jpg', '048040f93a'),
-(43, 'assets/archivos/recortadas/a_f86ec4ae6e.png', '048040f93a'),
-(44, 'assets/archivos/recortadas/a_74e7aeec74.png', '048040f93a'),
-(45, 'assets/archivos/recortadas/a_547e77db02.png', '048040f93a'),
-(46, 'assets/archivos/recortadas/a_890fbf983c.png', '048040f93a'),
-(47, 'assets/archivos/recortadas/a_00b2a6e238.png', '048040f93a'),
-(48, 'assets/archivos/recortadas/a_780f98b91b.png', 'ff97738a81'),
-(51, 'assets/archivos/recortadas/a_518aa223cf.jpg', 'ca3a7828a2'),
-(55, 'assets/archivos/recortadas/a_4213d27b34.jpg', 'd333aeee6c'),
-(56, 'assets/archivos/recortadas/a_1036695b7c.jpg', 'a79ff191cf'),
-(57, 'assets/archivos/recortadas/a_674156d911.jpg', '6f213bde70'),
-(58, 'assets/archivos/recortadas/a_60f4bd61d9.jpg', '2a6e8f2d5d'),
-(59, 'assets/archivos/recortadas/a_16441132f1.jpg', 'ff416dfff7'),
-(63, 'assets/archivos/recortadas/a_f6177cf0e9.jpg', '6796c90030'),
-(64, 'assets/archivos/recortadas/a_50d8209bf9.jpg', '64893f762d'),
-(65, 'assets/archivos/recortadas/a_76d75eaf0a.jpg', 'f30c3aceaa'),
-(66, 'assets/archivos/recortadas/a_9e33458309.JPG', '05a42f1cd1'),
-(67, 'assets/archivos/recortadas/a_5ac98bcc33.jpg', '8c6a11f739'),
-(68, 'assets/archivos/recortadas/a_213a861a57.jpg', '2a6e8f2d5d');
+(75, 'assets/archivos/recortadas/a_854fc54aef.jpg', '159edbd13c'),
+(76, 'assets/archivos/recortadas/a_3049922daf.jpg', '53d062b164'),
+(156, 'assets/archivos/recortadas/a_dd7013f2b7.jpeg', 'e9394395cd'),
+(162, 'assets/archivos/recortadas/a_bfa0a501b6.jpg', '0861310f1f'),
+(163, 'assets/archivos/recortadas/a_3807c7f6b6.jpg', '22f5784b16'),
+(164, 'assets/archivos/recortadas/a_a6d4ac25e1.jpg', 'c2cea01abd'),
+(165, 'assets/archivos/recortadas/a_2aea10ec59.jpeg', '3baf5de9cc'),
+(166, 'assets/archivos/recortadas/a_b1aead0958.jpeg', '77903d6550'),
+(167, 'assets/archivos/recortadas/a_ca889f87f3.jpeg', '9c17920528'),
+(168, 'assets/archivos/recortadas/a_911925da0e.jpg', 'cb7cbaa69d'),
+(169, 'assets/archivos/recortadas/a_0e76e6cf62.jpg', '3e1a901b47'),
+(170, 'assets/archivos/recortadas/a_e128760f59.jpg', 'bd41bca1ef'),
+(171, 'assets/archivos/recortadas/a_87b1a47e39.jpg', '440b7c8e04'),
+(173, 'assets/archivos/recortadas/a_8922b9ea5d.jpg', 'c7c4277673'),
+(176, 'assets/archivos/recortadas/a_dcbcec9cf6.jpg', 'f94c6106dc'),
+(177, 'assets/archivos/recortadas/a_e90ba79d50.jpeg', '25f3aee806'),
+(178, 'assets/archivos/recortadas/a_b082d3ba97.jpeg', '39809a95a8'),
+(179, 'assets/archivos/recortadas/a_2d3f30b2fa.jpeg', '39809a95a8'),
+(180, 'assets/archivos/recortadas/a_205b221fdc.jpeg', '39809a95a8'),
+(181, 'assets/archivos/recortadas/a_2d5cdc15e8.jpeg', '39809a95a8');
 
 -- --------------------------------------------------------
 
@@ -358,10 +332,10 @@ CREATE TABLE `novedades` (
 --
 
 INSERT INTO `novedades` (`id`, `cod`, `titulo`, `desarrollo`, `categoria`, `keywords`, `description`, `fecha`) VALUES
-(7, '6796c90030', 'Los lotes mantienen en pie el negocio desarrollista', '<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</p>\r\n', '694999d7d4', '', '', '2018-12-11'),
-(8, '64893f762d', '¿Que hacer con tus ahorros?', '<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</p>\r\n', '694999d7d4', '', '', '2018-12-11'),
-(9, 'f30c3aceaa', 'Crece la venta de lotes en Córdoba', '<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>\r\n', '694999d7d4', '', '', '2018-12-11'),
-(10, '05a42f1cd1', '¡Nuevas financiaciones para tu obtener tu lote!', '<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>\r\n', '694999d7d4', '', '', '0000-00-00');
+(1, 'e9394395cd', 'vbvbcv', '<p>bvccbcbvc</p>\r\n', '8939fb4b41', '', '', '2019-01-01'),
+(2, '3baf5de9cc', 'ik,k', '<p><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n', '8939fb4b41', '', '', '2019-01-01'),
+(3, '77903d6550', 'kuikuouoiu', '<p><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n', '8939fb4b41', '', '', '2019-01-09'),
+(4, '9c17920528', 'dftryruytu', '<p><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n', '8939fb4b41', '', '', '2019-01-03');
 
 -- --------------------------------------------------------
 
@@ -382,21 +356,6 @@ CREATE TABLE `pedidos` (
   `fecha` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
---
--- Volcado de datos para la tabla `pedidos`
---
-
-INSERT INTO `pedidos` (`id`, `cod`, `producto`, `cantidad`, `precio`, `estado`, `tipo`, `usuario`, `detalle`, `fecha`) VALUES
-(3, '07cedf9928', 'PISO VINILICO COD 012-6 1220X180', 1, 1848, 0, 2, 'b198a2518d', '', '2018-07-12 00:00:00'),
-(4, '07cedf9928', 'Retiro en Sucursal Rosario', 1, 0, 0, 2, 'b198a2518d', '', '2018-07-12 00:00:00'),
-(7, '00a320a3cf', 'PISO VINILICO COD 012-6 1220X180', 1, 1848, 0, 0, 'b198a2518d', '', '2018-07-12 00:00:00'),
-(8, '00a320a3cf', 'PISO VINILICO COD 09-8 936X150', 1, 2100, 0, 0, 'b198a2518d', '', '2018-07-12 00:00:00'),
-(361, 'cde6df7e08', 'PISO VINILICO COD 09-8 936X150', 2, 2100, 0, 2, 'b198a2518d', '', '2018-08-12 00:00:00'),
-(362, 'cde6df7e08', 'PISO VINILICO COD 003-1 1220X180', 2, 1848, 0, 2, 'b198a2518d', '', '2018-08-12 00:00:00'),
-(363, 'cde6df7e08', 'ABRIDOR DE ENVASES CONDOR', 3, 47.06, 0, 2, 'b198a2518d', '', '2018-08-12 00:00:00'),
-(364, 'cde6df7e08', 'VINILO ALTO TRANSITO X M2', 3, 698.36, 0, 2, 'b198a2518d', '', '2018-08-12 00:00:00'),
-(365, 'cde6df7e08', 'Retiro en Sucursal Rosario', 1, 0, 0, 2, 'b198a2518d', '', '2018-08-12 00:00:00');
-
 -- --------------------------------------------------------
 
 --
@@ -413,6 +372,15 @@ CREATE TABLE `portfolio` (
   `description` text COLLATE utf8mb4_spanish_ci,
   `fecha` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `portfolio`
+--
+
+INSERT INTO `portfolio` (`id`, `cod`, `titulo`, `desarrollo`, `categoria`, `keywords`, `description`, `fecha`) VALUES
+(24, 'c7c4277673', 'hjhgjg', '<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of &quot;de Finibus Bonorum et Malorum&quot; (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, &quot;Lorem ipsum dolor sit amet..&quot;, comes from a line in section 1.10.32.</p>\r\n', '3e1a901b47', '', '                                                        ', '2019-01-01'),
+(25, 'f94c6106dc', 'yuyy', '<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don&#39;t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn&#39;t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>\r\n', 'cb7cbaa69d', '', '', '2019-01-24'),
+(26, '39809a95a8', 'Facu Cerda', '<div class=\"btgrid\">\r\n<div class=\"row row-1\">\r\n<div class=\"col col-md-6\">\r\n<div class=\"content\">\r\n<p><iframe frameborder=\"0\" height=\"315\" src=\"https://www.youtube.com/embed/kpexiQ3Jh1I\" width=\"560\"></iframe></p>\r\n</div>\r\n</div>\r\n\r\n<div class=\"col col-md-6\">\r\n<div class=\"content\">\r\n<p><iframe frameborder=\"0\" height=\"315\" src=\"https://www.youtube.com/embed/CeDTp9-N98E\" width=\"560\"></iframe></p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n\r\n<p>&nbsp;</p>\r\n', 'cb7cbaa69d', '', '', '2019-01-01');
 
 -- --------------------------------------------------------
 
@@ -452,12 +420,8 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id`, `cod`, `titulo`, `precio`, `precio_mayorista`, `precio_descuento`, `stock`, `desarrollo`, `categoria`, `subcategoria`, `keywords`, `description`, `fecha`, `meli`, `url`, `cod_producto`, `var1`, `var2`, `var3`, `var4`, `var5`, `var6`, `var7`, `var8`) VALUES
-(2, '8c6a11f739', 'Lote 1', 600000, 0, 0, 10, '<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>\r\n', '5e87013e5d', '', '', '            ', '2018-12-11', '', '', '', '200', '10x20', 'Av. Libertador Esq. Iturraspe', 'La Falda', '', '', '', ''),
-(3, 'd333aeee6c', 'Lote 2', 220000, 0, 0, 0, '<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>\r\n', '5e87013e5d', '', '', '            ', '2018-12-11', '', '', '', '300', '10x30', 'Av. Libertador Esq. Iturraspe', 'Carlos Paz', '', '', '', ''),
-(4, 'a79ff191cf', 'Lote 3', 300000, 0, 0, 0, '<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>\r\n', '5e87013e5d', '', '', '            ', '2018-12-11', '', '', '', '400', '10x40', 'Av. Libertador Esq. Iturraspe', 'Valle Hermoso', '', '', '', ''),
-(5, '6f213bde70', 'Lote 4', 250000, 0, 0, 0, '<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>\r\n', '5e87013e5d', '', '', '            ', '2018-12-11', '', '', '', '200', '10x20', 'Av. Libertador Esq. Iturraspe', 'Carlos Paz', '', '', '', ''),
-(6, '2a6e8f2d5d', 'Lote 5', 400000, 0, 0, 0, '<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>\r\n', '5e87013e5d', '', '', '            ', '2018-12-11', '', '', '', '200', '10x20', 'Av. Libertador Esq. Iturraspe', 'Mina clavero', '', '', '', ''),
-(7, 'ff416dfff7', 'Lote 6', 300000, 0, 0, 0, '<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>\r\n', '5e87013e5d', '', '', '            ', '2018-12-11', '', '', '', '300', '10x30', 'Av. Libertador Esq. Iturraspe', 'Huerta Grande', '', '', '', '');
+(14, '159edbd13c', 'gghfg web', 312213, 0, 31321, 21312, '<p>jgghf</p>\r\n', '180e974f21', '', '', '            ', '2019-01-04', '', '', '321213', '', '', '', '', '', '', '', ''),
+(15, '53d062b164', 'kjhkh print', 321312, 0, 2121, 32131, '<p>jyujfh</p>\r\n', 'ff595a5f91', '', '', '            ', '2019-01-04', '', '', '3221', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -2342,6 +2306,13 @@ CREATE TABLE `servicios` (
   `fecha` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
+--
+-- Volcado de datos para la tabla `servicios`
+--
+
+INSERT INTO `servicios` (`id`, `cod`, `titulo`, `desarrollo`, `categoria`, `keywords`, `description`, `fecha`) VALUES
+(8, '25f3aee806', 'Eventos', '', '', '', '', '2019-01-02');
+
 -- --------------------------------------------------------
 
 --
@@ -2362,8 +2333,9 @@ CREATE TABLE `sliders` (
 --
 
 INSERT INTO `sliders` (`id`, `cod`, `titulo`, `subtitulo`, `categoria`, `fecha`) VALUES
-(8, '5d7d1aed02', 'Prueba', '', '60cc9145a0', '2018-11-29'),
-(12, '9eeff70305', 'sadsad', '', '60cc9145a0', '2018-11-30');
+(4, '0861310f1f', 'slider 1', '', '8d5a7b5393', '2019-01-23'),
+(5, '22f5784b16', 'Slider 2', '', '8d5a7b5393', '2019-01-23'),
+(6, 'c2cea01abd', 'Slider 3', '', '8d5a7b5393', '2019-01-23');
 
 -- --------------------------------------------------------
 
@@ -2553,25 +2525,25 @@ ALTER TABLE `banners`
 -- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `contenidos`
 --
 ALTER TABLE `contenidos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `galerias`
 --
 ALTER TABLE `galerias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `imagenes`
 --
 ALTER TABLE `imagenes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=182;
 
 --
 -- AUTO_INCREMENT de la tabla `linea`
@@ -2583,25 +2555,25 @@ ALTER TABLE `linea`
 -- AUTO_INCREMENT de la tabla `novedades`
 --
 ALTER TABLE `novedades`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `pedidos`
 --
 ALTER TABLE `pedidos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=366;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `portfolio`
 --
 ALTER TABLE `portfolio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `rubros`
@@ -2613,13 +2585,13 @@ ALTER TABLE `rubros`
 -- AUTO_INCREMENT de la tabla `servicios`
 --
 ALTER TABLE `servicios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `sliders`
 --
 ALTER TABLE `sliders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `subcategorias`

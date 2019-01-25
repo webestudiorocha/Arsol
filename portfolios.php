@@ -46,15 +46,15 @@ $funciones = new Clases\PublicFunction();
                 ?>
                 <div class="project-post <?= $port['categoria']; ?>">
                     <a href="<?= URL . '/portfolio/' . $funciones->normalizar_link($port['titulo']) . '/' . $funciones->normalizar_link($port['cod']) ?>">
-                        <div class="project-photo">
-                            <div style=" height: 200px; background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;"></div>
-                            <div class="hover-project">
-                            </div>
+                        <div class="project-photo"
+
+                           style=" height: 200px; background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;">
+                            <img class="img2" src="assets/images/iconos/separador.png" >
+                            <h3 class="img"><?= ucfirst($port['titulo']); ?></h3>
+
                         </div>
                     </a>
-                    <a href="<?= URL . '/portfolio/' . $funciones->normalizar_link($port['titulo']) . '/' . $funciones->normalizar_link($port['cod']) ?>"><h3><?= $port['titulo']; ?></h3></a>
 
-                    <p><?= ucfirst(substr(strip_tags($port['desarrollo']), 0, 150)); ?>...</p>
                 </div>
             <?php endforeach; ?>
         </div>

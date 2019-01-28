@@ -27,9 +27,13 @@ $template->themeInit();
             <h1> <?= ucfirst($portfolioData['titulo']); ?></h1>
         </div>
     </div>
+
+
     <div class="container mt-15">
         <div class="row single-project">
-            <div class="col-md-9 single-item-image">
+            <h5 class=" h12">  <h1 class="h11">Contrataciones/<span class="texto3" id="texto3"><?php echo $categoriaData['titulo']; ?></span>
+                    /<span class="texto" id="texto"><?php echo $portfolioData['titulo']; ?></span></h1></h5>
+            <div class="col-md-6 single-item-image">
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <?php
@@ -39,7 +43,7 @@ $template->themeInit();
                             <div class="carousel-item <?php if ($activo == 0) {
                                 echo 'active';
                                 $activo++;
-                            } ?>" style=" height: 600px; background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;">
+                            } ?>" style=" height: 550px; background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;">
                             </div>
                             <?php
                         }

@@ -552,6 +552,7 @@ section.what-we-do {
     width: 100%;
 }
 
+
 .hover-project {
     position: absolute;
     width: 100%;
@@ -2050,17 +2051,26 @@ audio {
 }
 
 .h11 {
-    width: 43% !important;
+
     background-color: white !important;
     background-position: center !important;
-    margin-top: -20px !important;
+    margin-top: -28px !important;
     margin: auto;
     display: table;
+    font-size: 35px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase !important;
 
 }
 
 .texto {
     background: linear-gradient(#9D006B, #D8138E);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.texto3 {
+    background: #262B2E;
     -webkit-background-clip: text;
     color: transparent;
 }

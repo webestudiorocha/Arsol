@@ -43,7 +43,7 @@ $funciones = new Clases\PublicFunction();
             <?php endforeach; ?>
 
         </ul>
-        <h5 class="  h12">  <h1 class="h11">Contrataciones/<span class="texto" id="texto"><?php echo $cat['titulo']; ?></span></h1></h5>
+        <h5 class=" h12">  <h1 class="h11">Contrataciones/<span class="texto" id="texto"><?php echo $cat['titulo']; ?></span></h1></h5>
         <div class="projects-container four-columns">
             <?php foreach ($portfolio_data as $port): ?>
                 <?php

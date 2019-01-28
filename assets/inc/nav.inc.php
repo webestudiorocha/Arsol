@@ -29,14 +29,7 @@ $funciones_nav = new Clases\PublicFunction();
                     <a id="portfolio-nav" href="<?= URL; ?>/portfolios">Contrataciones</a>
                 </li>
                 <li class="mt-5">
-                    <a id="contact-nav">Servicios</a>
-                    <ul class="dropdown">
-                        <?php foreach ($servicio_data as $serv): ?>
-                            <li class="mt-5">
-                                <a href="<?= URL . '/servicio/' . $funciones_nav->normalizar_link($serv['titulo']) . '/' . $funciones_nav->normalizar_link($serv['cod']) ?>"><?= ucfirst($serv['titulo']); ?></a>
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
+                    <a id="contact-nav" href="<?= URL; ?>/servicios">Servicios</a>
                 </li>
                 <li class="mt-5">
                     <a id="blog-nav" href="<?= URL; ?>/blogs">Blog</a>
@@ -58,14 +51,8 @@ $funciones_nav = new Clases\PublicFunction();
                     <a id="portfolio-nav" href="<?= URL; ?>/portfolios">Contrataciones</a>
                 </li>
                 <li>
-                    <a id="contact-nav">Servicios</a>
-                    <ul class="dropdown mt-25">
-                        <?php foreach ($servicio_data as $serv): ?>
-                            <li>
-                                <a href="<?= URL . '/servicio/' . $funciones_nav->normalizar_link($serv['titulo']) . '/' . $funciones_nav->normalizar_link($serv['cod']) ?>"><?= ucfirst($serv['titulo']); ?></a>
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
+                    <a id="contact-nav"  href="<?= URL; ?>/servicios">Servicios</a>
+
                 </li>
                 <li>
                     <a id="blog-nav" href="<?= URL; ?>/blogs">Blog</a>

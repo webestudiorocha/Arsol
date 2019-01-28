@@ -2049,7 +2049,17 @@ audio {
     padding-bottom: 12px;
 
 }
-
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0
+}
 .h11 {
 
     background-color: white !important;
@@ -2063,11 +2073,37 @@ audio {
     text-transform: uppercase !important;
 
 }
+.h111 {
 
-.texto {
     background: linear-gradient(#9D006B, #D8138E);
+    margin-top: -15px !important;
     -webkit-background-clip: text;
     color: transparent;
+    font-size: 30px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 700;
+
+}
+.h112
+{
+    background: linear-gradient(#9d5886, #d861c8);
+    margin-top: -15px !important;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 700;
+}
+
+.texto {
+    background: linear-gradient(#9D006B, #D8138E) !important;
+    -webkit-background-clip: text !important;
+    color: transparent !important;
+}
+.texto1 {
+    background: linear-gradient(#000000, #bebdbc) !important;
+    -webkit-background-clip: text !important;
+    color: transparent !important;
 }
 .texto3 {
     background: #262B2E;
@@ -2083,6 +2119,7 @@ audio {
     margin: auto !important;
     display: table !important;
 }
+
 
 .h121 {
     width: 11% !important;

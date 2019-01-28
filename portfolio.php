@@ -62,9 +62,36 @@ $template->themeInit();
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
-                <?= ucfirst($portfolioData['desarrollo']); ?>
 
-                <a class="look-all"  href="<?= URL;?>/side.inc.php">Contratar</a>
+            </div>
+            <div class="col-md-6">
+
+            </div>
+            <div class="col-md-12">
+                <?= ucfirst($portfolioData['desarrollo']); ?>
+            </div>
+
+            <button type="button" class="look-all" data-toggle="modal" data-target="#myModal">
+               Contratar
+            </button>
+
+            <!-- The Modal -->
+            <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="h111">Formulario</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <?php include("assets/inc/formulario.inc.php"); ?>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

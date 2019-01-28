@@ -16,8 +16,8 @@ if (strpos($ruta, 'servicio') !== false) {
     $mensaje = "a " . ucfirst($port['titulo']) . "?";
 }
 ?>
-<div class="col-md-3 project-item-content">
-    <h3>¿Te gustaría contratar <?= $mensaje ?></h3>
+<div class="col-md-12 project-item-content">
+    <h3 class="texto1">¿Te gustaría contratar <?= $mensaje ?></h3>
     <?php if (isset($_POST["enviar_side"])):
         $nombre = $funciones->antihack_mysqli(isset($_POST["nombre"]) ? $_POST["nombre"] : '');
         $email = $funciones->antihack_mysqli(isset($_POST["email"]) ? $_POST["email"] : '');
@@ -54,27 +54,28 @@ if (strpos($ruta, 'servicio') !== false) {
     endif; ?>
     <form method="post">
         <div class="form-group">
-            <label for="comment">Nombre:</label>
+            <label for="comment" class="h112">Nombre:</label>
             <input type="text" class="form-control" name="nombre">
         </div>
         <input type="hidden" name="asunto" class="form-control" placeholder="Nombre" required id="name"
                title="asunto" value="<?= CANONICAL ?>"/>
         <div class="form-group">
-            <label for="comment">Teléfono:</label>
+            <label for="comment" class="h112">Teléfono:</label>
             <input type="text" class="form-control" name="telefono">
         </div>
         <div class="form-group">
-            <label for="comment">Email:</label>
+            <label for="comment"class="h112" >Email:</label>
             <input type="email" class="form-control" name="email">
         </div>
         <div class="form-group">
-            <label for="comment">Mensaje:</label>
+            <label for="comment"class="h112" >Mensaje:</label>
             <textarea class="form-control" rows="4" name="consulta"></textarea>
         </div>
         <button type="submit" name="enviar_side" class="boton">Enviar</button>
     </form>
     <br>
-    <div class="a2a_kit a2a_kit_size_32 a2a_default_style nav-derecha mt-20">
+    <div class="col-md-12">
+    <div class="a2a_kit a2a_kit_size_32 a2a_default_style mt-20">
         <a class="a2a_button_facebook"></a>
         <a class="a2a_button_twitter"></a>
         <a class="a2a_button_google_plus"></a>
@@ -90,6 +91,7 @@ if (strpos($ruta, 'servicio') !== false) {
         </div>
         <br>
     </div>
+</div>
     <br>
     <br>
 </div>

@@ -24,6 +24,12 @@ $template->themeInit();
             <h1><?= ucfirst($servicio_data["titulo"]);?></h1>
         </div>
     </div>
+    <div  class="text-center header-breadcumb">
+        <div class="text-center imagenes" >
+            <img style="width: 100%;" src="<?= URL ?>/assets/images/iconos/separador.png">
+            <img class="img-rubro" style="background: white;" src="<?= URL ?>/assets/images/iconos/servicios.png" >
+        </div>
+    </div>
     <div class="container mt-15">
         <div class="row single-project">
             <div class="col-md-9 single-item-image">

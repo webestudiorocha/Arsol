@@ -73,22 +73,4 @@ if (strpos($ruta, 'servicio') !== false) {
         </div>
         <button type="submit" name="enviar_side" class="boton">Enviar</button>
     </form>
-    <br>
-    <div class="col-md-12">
-    <div class="a2a_kit a2a_kit_size_32 a2a_default_style mt-20">
-        <a class="a2a_button_facebook"></a>
-        <a class="a2a_button_twitter"></a>
-        <a class="a2a_button_google_plus"></a>
-        <a class="a2a_button_pinterest"></a>
-        <a class="a2a_button_whatsapp"></a>
-        <a class="a2a_button_facebook_messenger"></a>
-        <br>
-        <div>
-            <br>
-            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Farsolproducciones%2F&tabs&width=340&height=197&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-                    width="100%" height="197" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                    allowTransparency="true" allow="encrypted-media"></iframe>
-        </div>
-    </div>
-</div>
 </div>

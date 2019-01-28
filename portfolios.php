@@ -49,6 +49,7 @@ $funciones = new Clases\PublicFunction();
                 <?php
                 $imagenes->set("cod", $port['cod']);
                 $img = $imagenes->view();
+
                 ?>
                 <div class="project-post <?= $port['categoria']; ?>">
                     <a href="<?= URL . '/portfolio/' . $funciones->normalizar_link($port['titulo']) . '/' . $funciones->normalizar_link($port['cod']) ?>">

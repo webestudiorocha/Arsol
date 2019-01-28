@@ -64,7 +64,7 @@ $categoria_data = $categoria->list($filter)
         <div class="container">
             <section class="portfolio ">
                 <div class="row definition">
-                    <div class="col-md-12  ">
+                    <div class="col-md-12">
                     <h5 class="h12">  <h1 class="h11">Contrataciones/<span class="texto">Rubros</span></h1></h5>
                     </div>
                 </div>

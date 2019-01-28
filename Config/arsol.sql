@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-01-2019 a las 14:55:42
+-- Tiempo de generación: 28-01-2019 a las 16:59:58
 -- Versión del servidor: 10.1.34-MariaDB
 -- Versión de PHP: 7.2.7
 
@@ -158,13 +158,20 @@ INSERT INTO `imagenes` (`id`, `ruta`, `cod`) VALUES
 (169, 'assets/archivos/recortadas/a_0e76e6cf62.jpg', '3e1a901b47'),
 (170, 'assets/archivos/recortadas/a_e128760f59.jpg', 'bd41bca1ef'),
 (171, 'assets/archivos/recortadas/a_87b1a47e39.jpg', '440b7c8e04'),
-(173, 'assets/archivos/recortadas/a_8922b9ea5d.jpg', 'c7c4277673'),
-(176, 'assets/archivos/recortadas/a_dcbcec9cf6.jpg', 'f94c6106dc'),
 (177, 'assets/archivos/recortadas/a_e90ba79d50.jpeg', '25f3aee806'),
 (178, 'assets/archivos/recortadas/a_b082d3ba97.jpeg', '39809a95a8'),
 (179, 'assets/archivos/recortadas/a_2d3f30b2fa.jpeg', '39809a95a8'),
 (180, 'assets/archivos/recortadas/a_205b221fdc.jpeg', '39809a95a8'),
-(181, 'assets/archivos/recortadas/a_2d5cdc15e8.jpeg', '39809a95a8');
+(181, 'assets/archivos/recortadas/a_2d5cdc15e8.jpeg', '39809a95a8'),
+(182, 'assets/archivos/recortadas/a_ef28bafca0.jpeg', '9c17920528'),
+(183, 'assets/archivos/recortadas/a_bd4a9b4806.jpeg', '4542e9d3ed'),
+(184, 'assets/archivos/recortadas/a_710525bc46.jpg', 'f94c6106dc'),
+(185, 'assets/archivos/recortadas/a_f9918e8255.jpg', 'f94c6106dc'),
+(186, 'assets/archivos/recortadas/a_51f70f6814.jpg', 'f94c6106dc'),
+(187, 'assets/archivos/recortadas/a_ad3f6b88ec.jpeg', 'c7c4277673'),
+(188, 'assets/archivos/recortadas/a_8e9c1eb6b7.jpeg', 'c7c4277673'),
+(189, 'assets/archivos/recortadas/a_ede1ccf950.JPG', '8ebe42d3e9'),
+(190, 'assets/archivos/recortadas/a_78564ce5c0.JPG', '8ebe42d3e9');
 
 -- --------------------------------------------------------
 
@@ -335,7 +342,7 @@ INSERT INTO `novedades` (`id`, `cod`, `titulo`, `desarrollo`, `categoria`, `keyw
 (1, 'e9394395cd', 'vbvbcv', '<p>bvccbcbvc</p>\r\n', '8939fb4b41', '', '', '2019-01-01'),
 (2, '3baf5de9cc', 'ik,k', '<p><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n', '8939fb4b41', '', '', '2019-01-01'),
 (3, '77903d6550', 'kuikuouoiu', '<p><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n', '8939fb4b41', '', '', '2019-01-09'),
-(4, '9c17920528', 'dftryruytu', '<p><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n', '8939fb4b41', '', '', '2019-01-03');
+(4, '9c17920528', 'dftryruytu', '<p><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n', '', '', '                            ', '2019-01-03');
 
 -- --------------------------------------------------------
 
@@ -378,9 +385,11 @@ CREATE TABLE `portfolio` (
 --
 
 INSERT INTO `portfolio` (`id`, `cod`, `titulo`, `desarrollo`, `categoria`, `keywords`, `description`, `fecha`) VALUES
-(24, 'c7c4277673', 'hjhgjg', '<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of &quot;de Finibus Bonorum et Malorum&quot; (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, &quot;Lorem ipsum dolor sit amet..&quot;, comes from a line in section 1.10.32.</p>\r\n', '3e1a901b47', '', '                                                        ', '2019-01-01'),
-(25, 'f94c6106dc', 'yuyy', '<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don&#39;t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn&#39;t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>\r\n', 'cb7cbaa69d', '', '', '2019-01-24'),
-(26, '39809a95a8', 'Facu Cerda', '<div class=\"btgrid\">\r\n<div class=\"row row-1\">\r\n<div class=\"col col-md-6\">\r\n<div class=\"content\">\r\n<p><iframe frameborder=\"0\" height=\"315\" src=\"https://www.youtube.com/embed/kpexiQ3Jh1I\" width=\"560\"></iframe></p>\r\n</div>\r\n</div>\r\n\r\n<div class=\"col col-md-6\">\r\n<div class=\"content\">\r\n<p><iframe frameborder=\"0\" height=\"315\" src=\"https://www.youtube.com/embed/CeDTp9-N98E\" width=\"560\"></iframe></p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n\r\n<p>&nbsp;</p>\r\n', 'cb7cbaa69d', '', '', '2019-01-01');
+(24, 'c7c4277673', 'Pilcomayo', '<p>Yo empec&eacute; a hacer m&uacute;sica a los 12 a&ntilde;os de edad aproximadamente cuando mi madre PAULA me regalo mi primer guitarra porque ella quer&iacute;a que yo sea m&uacute;sico.</p>\r\n\r\n<p>A los 15 a&ntilde;os forme mi primer grupo que se llamo LOS ARRIEROS DEL PILCOMAYO y cant&aacute;bamos temas de Don Abraham Nasif (poeta de ingeniero JuarezFsa.)</p>\r\n\r\n<p>Lugo cante unos a&ntilde;os como solista y viviendo en TARTAGAL conforme un grupo de se llamaba LAS VOCES DEL CIELO con mi compadre DANIEL TORO de Dragones y a los 25 a&ntilde;os de edad m&aacute;s o menos pase a integrar el Grupo LOS DE LAVALLE con COCO GOMEZ,( grabamos un disco llamado LA MOCHA AHORCADA) Luego regrese a mi FORMOSA querida y armamos un D&uacute;o LA SUMA( grabamos un cd LA FIESTA DEL MONTE por ultimo y ya desde el a&ntilde;o 2007 forme mi Grupo PILCOMAYO( Grabamos 1er cd MOJANDO TOERRA RESECA)en Homenaje a ese Rio que me vio crecer en mi infancia en el extremo OESTE FORMOSE&Ntilde;O. en el a&ntilde;o 2014 Actuamos en COSQUIN PARA TODO EL PAIS hoy estamos presentando el nuevo Material discogr&aacute;fico SOY FORMOSE&Ntilde;O que cuenta con 12 temas in&eacute;ditos en su mayor&iacute;a de mi autor&iacute;a y de otros poetas Formose&ntilde;os.</p>\r\n', 'cb7cbaa69d', '', '                                                                                    ', '2019-01-01'),
+(25, 'f94c6106dc', 'Pajarito', '<p>&nbsp; Pajarito viene desde el Norte de Salta, Anta su Tierra Natal. A llevado la M&uacute;sica y su esencia desde que era muy chico. A los 9 a&ntilde;os eligi&oacute; a su Amigo y Compa&ntilde;ero Instrumento 4/4 como &eacute;l suele nombrar, para empezar a recorrer este sue&ntilde;o que desde entonces ha tenido. Empez&oacute; a transitar escenarios populares de la Zona de Salta y sus alrededores en sus inicios. Tuvo la gran oportunidad de haber acompa&ntilde;ado con su Viol&iacute;n a los Artistas de la zona de SALTA, JUJUY Y DEL PAIS VECINO DE BOLIVIA y a los ARTISTAS Consagrados en el&nbsp; Pa&iacute;s como el, *CHAQUE&Ntilde;O PALAVECINO* y *JORGE ROJAS*.Ahora inici&oacute; su proyecto musical, como Solista instrumental y vocal.</p>\r\n\r\n<p>Dejando un nueva Propuesta Musical para Bailar y Cantar.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<div class=\"btgrid\">\r\n<div class=\"row row-1\">\r\n<div class=\"col col-md-6\">\r\n<div class=\"content\">\r\n<p><iframe frameborder=\"0\" height=\"315\" src=\"https://www.youtube.com/embed/TH6jzob2BqU\" width=\"560\"></iframe></p>\r\n</div>\r\n</div>\r\n\r\n<div class=\"col col-md-6\">\r\n<div class=\"content\">\r\n<p><iframe frameborder=\"0\" height=\"315\" src=\"https://www.youtube.com/embed/Cv5dO4o3-9g\" width=\"560\"></iframe></p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n\r\n<p>&nbsp;</p>\r\n', 'cb7cbaa69d', '', '                                                        ', '2019-01-24'),
+(26, '39809a95a8', 'Facu Cerda', '<div class=\"btgrid\">\r\n<div class=\"row row-1\">\r\n<div class=\"col-md-6\">\r\n<div class=\"content\">\r\n<p><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/kpexiQ3Jh1I\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe></p>\r\n</div>\r\n</div>\r\n\r\n<div class=\"col-md-6\">\r\n<div class=\"content\">\r\n<p><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/CeDTp9-N98E\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe></p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n\r\n<p>&nbsp;</p>\r\n', 'cb7cbaa69d', '', '                                                                                                                ', '2019-01-01'),
+(28, '2fb0470da9', 'Victor Quinteros', '<p>Victor Quinteros&nbsp;es un humorista argentino, nacido en C&oacute;rdoba, uno de los m&aacute;s reconocidos de los &uacute;ltimos tiempos.</p>\r\n\r\n<p>Victor Quinteros&nbsp;se dedica al humor desde 2004, luego de una incursi&oacute;n de m&aacute;s de 20 a&ntilde;os en folclore. Debido a su experiencia es que ahora monta un show humor&iacute;stico musical, donde hace re&iacute;r y emocionar a la gente, relatando situaciones graciosas de la vida cotidiana, la comparaci&oacute;n con los tiempos de antes o sus padres. Lanz&oacute; algunos discos de humor, como&nbsp;Humor diferente&nbsp;Vol 1 y 2,&nbsp;Bien cooordob&eacute;s, entre otros. Su reconocimiento lleg&oacute; en 2011, como una de las nuevas promesas del humor, teniendo entrevistas para reconocidos medios de Buenos Aires y su programa en la radio Cadena 3.&nbsp;Present&oacute; su show en escenarios como el del festival Pensar con humor, El Aljibe de C&oacute;rdoba, el Festival del humor, la buena mesa y la canci&oacute;n, la Fiesta de la ganader&iacute;a del oeste pampeano, la Fiesta provincial del turismo en Achiras, entre muchas otras. Forma parte de los episodios de El show del caos, un canal de Youtube donde cuenta sus mejores cuentos, particip&oacute; de la obra&nbsp;3 tipos de humor&nbsp;con la que hizo temporada en 2015 y tiene un programa dominical en radio Suquia de C&oacute;rdoba llamado&nbsp;Los Pavotes.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<div class=\"btgrid\">\r\n<div class=\"row row-1\">\r\n<div class=\"col col-md-6\">\r\n<div class=\"content\">\r\n<p><iframe frameborder=\"0\" height=\"315\" src=\"https://www.youtube.com/embed/4Cd5sfTyM4o\" width=\"560\"></iframe></p>\r\n</div>\r\n</div>\r\n\r\n<div class=\"col col-md-6\">\r\n<div class=\"content\">\r\n<p><iframe frameborder=\"0\" height=\"315\" src=\"https://www.youtube.com/embed/v1I100oUtqs\" width=\"560\"></iframe></p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<div class=\"btgrid\">\r\n<div class=\"row row-1\">\r\n<div class=\"col col-md-6\">\r\n<div class=\"content\">\r\n<p><iframe frameborder=\"0\" height=\"315\" src=\"https://www.youtube.com/embed/vAi_yE4u7oY\" width=\"560\"></iframe></p>\r\n</div>\r\n</div>\r\n\r\n<div class=\"col col-md-6\">\r\n<div class=\"content\">\r\n<p><iframe frameborder=\"0\" height=\"315\" src=\"https://www.youtube.com/embed/5l7oS7i49tw\" width=\"560\"></iframe></p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n\r\n<p>&nbsp;</p>\r\n', 'bd41bca1ef', '', '', '2019-01-01'),
+(29, '8ebe42d3e9', 'I  Griega', '<p>Integrantes: Facundo Malacalza: Voz y Guitarra, Jerem&iacute;as Lobos: Teclados y Coros, Pablo Ludue&ntilde;a: Bajo, Nicol&aacute;s Bovio: Guitarra y Coros, Guido Lozano: Bater&iacute;a.</p>\r\n\r\n<p>I Griega es una banda que se form&oacute; hace 7 a&ntilde;os en la ciudad de San Francisco. La banda cuenta con dos discos editados. El primero fue lanzado en el a&ntilde;o 2013 bajo el nombre de &ldquo;Se hizo Piel&rdquo; con la producci&oacute;n art&iacute;stica de Cesar Andino, cantante de Cabezones. Durante la presentaci&oacute;n de este disco el grupo fue telonero de bandas como Catupecu Machu, Cabezones, Onda Vaga, Cielo Razzo e IllyaKuryaki and theValderramas.En 2014 graban el videoclip de &ldquo;Oculta&rdquo;, primer corte de difusi&oacute;n del disco y comparten&nbsp; escenario con Salta la Banca y El Bordo. En 2015, fueron semifinalistas del concurso nacional de bandas &ldquo;RockeaBA&rdquo; organizado por el gobierno de la Provincia de Buenos Aires y tocaron junto a Estelares y La Vela Puerca.</p>\r\n\r\n<p>En el a&ntilde;o 2016 ganan el concurso nacional de bandas organizado por la marca Converse, accediendo a grabar en los estudios &ldquo;El Pie&rdquo; bajo la producci&oacute;n de TweetyGonzalez. Durante 2017 editan su segundo trabajo discogr&aacute;fico llamado &ldquo;Diana&rdquo; y bajo la presentaci&oacute;n del mismo telonean a bandas como No te Va Gustar, La Mississippi, La Beriso, Los Cafres,&nbsp; La Vela Puerca en la ciudad de San Francisco y a Guasones en la ciudad de Villa Mar&iacute;a. Adem&aacute;s durante 2017 logran ser finalistas del concurso nacional de bandas del Hard Rock y del Mundial de Bandas del canal Quiero, donde ganan la edici&oacute;n de 200 vinilos. En el verano del 2018 realizan su primera gira de 10 fechas por la Costa Atl&aacute;ntica y editan el liryc video del tema &ldquo;Conectados&rdquo;. En este momento la banda se encuentra presentando su nuevo video del tema &ldquo;Utop&iacute;a&rdquo; y preparando la nueva gira por La Costa Atl&aacute;ntica que se llevar&aacute; a cabo en la segunda quincena de enero.&nbsp;</p>\r\n\r\n<div class=\"btgrid\">\r\n<div class=\"row row-1\">\r\n<div class=\"col col-md-6\">\r\n<div class=\"content\">\r\n<p><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/PwRl26UpaC0\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe></p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n\r\n<p>&nbsp;</p>\r\n', '3e1a901b47', '', '', '2019-01-01');
 
 -- --------------------------------------------------------
 
@@ -2311,7 +2320,8 @@ CREATE TABLE `servicios` (
 --
 
 INSERT INTO `servicios` (`id`, `cod`, `titulo`, `desarrollo`, `categoria`, `keywords`, `description`, `fecha`) VALUES
-(8, '25f3aee806', 'Eventos', '', '', '', '', '2019-01-02');
+(8, '25f3aee806', 'Eventos', '', '', '', '', '2019-01-02'),
+(9, '4542e9d3ed', 'yututyu', '<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &#39;Content here, content here&#39;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &#39;lorem ipsum&#39; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>\r\n', '', '', '', '2019-01-02');
 
 -- --------------------------------------------------------
 
@@ -2543,7 +2553,7 @@ ALTER TABLE `galerias`
 -- AUTO_INCREMENT de la tabla `imagenes`
 --
 ALTER TABLE `imagenes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=182;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=191;
 
 --
 -- AUTO_INCREMENT de la tabla `linea`
@@ -2567,7 +2577,7 @@ ALTER TABLE `pedidos`
 -- AUTO_INCREMENT de la tabla `portfolio`
 --
 ALTER TABLE `portfolio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
@@ -2585,7 +2595,7 @@ ALTER TABLE `rubros`
 -- AUTO_INCREMENT de la tabla `servicios`
 --
 ALTER TABLE `servicios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `sliders`

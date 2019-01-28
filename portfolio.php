@@ -14,7 +14,7 @@ $categoria->set("cod", $portfolioData['categoria']);
 $categoriaData = $categoria->view();
 $template = new Clases\TemplateSite();
 $template->set("title", TITULO." | " .ucfirst(strip_tags($portfolioData['titulo'])));
-$template->set("imagen", URL."/".$imagenes_data[0]['ruta']);
+$template->set("imagen", LOGO);
 $template->set("favicon", LOGO);
 $template->set("keywords", strip_tags($portfolioData['keywords']));
 $template->set("description", ucfirst(substr(strip_tags($portfolioData['desarrollo']), 0, 160)));
@@ -27,13 +27,17 @@ $template->themeInit();
             <h1> <?= ucfirst($portfolioData['titulo']); ?></h1>
         </div>
     </div>
-
-
+    <div  class="text-center header-breadcumb">
+        <div class="text-center imagenes" >
+            <img style="width: 100%;" src="<?= URL ?>/assets/images/iconos/separador.png">
+            <img class="img-rubro"  src="<?= URL ?>/assets/images/iconos/separador-rubro.png" >
+        </div>
+    </div>
     <div class="container mt-15">
         <div class="row single-project">
             <h5 class=" h12">  <h1 class="h11">Contrataciones/<span class="texto3" id="texto3"><?php echo $categoriaData['titulo']; ?></span>
                     /<span class="texto" id="texto"><?php echo $portfolioData['titulo']; ?></span></h1></h5>
-            <div class="col-md-6 single-item-image">
+            <div class="col-md-6">
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <?php
@@ -59,6 +63,8 @@ $template->themeInit();
                     </a>
                 </div>
                 <?= ucfirst($portfolioData['desarrollo']); ?>
+
+                <a class="look-all"  href="<?= URL;?>/side.inc.php">Contratar</a>
             </div>
         </div>
     </div>

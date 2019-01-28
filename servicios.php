@@ -2,21 +2,19 @@
 require_once "Config/Autoload.php";
 Config\Autoload::runSitio();
 $template = new Clases\TemplateSite();
-$template = new Clases\TemplateSite();
-$template->set("title", TITULO.' | Portfolio');
+$template->set("title", TITULO.' | Servicio');
 $template->set("imagen", LOGO);
-$template->set("keywords", "Portfolio de ".TITULO);
-$template->set("description", "Portfolio de ".TITULO);
+$template->set("keywords", TITULO);
+$template->set("description", TITULO);
 $template->themeInit();
-$funciones = new Clases\PublicFunction();
+//Clases
 $cod = isset($_GET["cod"]) ? $_GET["cod"] : '';
-$servicio = new Clases\Servicios();
-$servicio->set("cod", $cod);
-$servicio_data = $servicio->list("", "" , "");
+$servicios = new Clases\Servicios();
+$servicios->set("cod", $cod);
+$servicio_data = $servicios->list("", "", "");
 $imagenes = new Clases\Imagenes();
 $filter = array("area='servicio'");
-$imagenes_data = $imagenes->list($filter);
-
+$funciones = new Clases\PublicFunction();
 ?>
 <!-- Content -->
 <div class="content">
@@ -25,26 +23,39 @@ $imagenes_data = $imagenes->list($filter);
             <h1>Servicios</h1>
         </div>
     </div>
-    <div class="container mt-15">
-        <div class="row single-project">
-            <div class="col-md-9 single-item-image">
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                    <?php foreach ($servicio_data as $ser): ?>
-                    <div class="carousel-inner">
+    <div  class="text-center header-breadcumb">
+        <div class="text-center imagenes" >
+            <img style="width: 100%;" src="<?= URL ?>/assets/images/iconos/separador.png">
+            <img class="img-rubro" style="background: white;" src="<?= URL ?>/assets/images/iconos/servicios.png" >
+        </div>
+    </div>
+    <br>
+    <div class="container mt-15 definition">
+        <h5 class="h12">  <h1 class="h11"><span class="texto">Servicios</span> Para Eventos</h1></h5>
+        <br>
+        <div class="projects-container four-columns">
+            <?php foreach ($servicio_data as $ser): ?>
+                <?php
+                $imagenes->set("cod", $ser['cod']);
+                $img = $imagenes->view();
+                ?>
+                <div class="project-post">
+                    <a href="<?= URL . '/servicio/' . $funciones->normalizar_link($ser['titulo']) . '/' . $funciones->normalizar_link($ser['cod']) ?>">
+                        <div class="project-photo"
 
-                      <?php  $imagenes->set("cod", $ser['cod']);
-                        $img = $imagenes->view();
-                        ?>
-                        <a href="<?= URL . '/servicio/' . $funciones->normalizar_link($ser['titulo']) . '/' . $funciones->normalizar_link($ser['cod']) ?>">
+                             style=" height: 200px; background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;">
+                            <img class="img2" src="assets/images/iconos/separador.png" >
+                            <h3 class="img"><?= ucfirst($ser['titulo']); ?></h3>
 
-                    </div>
-                    <?php endforeach; ?>
+                        </div>
+                    </a>
+
                 </div>
-                <br>
-            </div>
-
+            <?php endforeach; ?>
         </div>
     </div>
 </div>
 <!-- End content -->
 <?php $template->themeEnd(); ?>
+
+

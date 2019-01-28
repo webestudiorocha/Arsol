@@ -170,7 +170,7 @@ $categoria_data = $categoria->list($filter)
                     }
                     ?>
                 </div>
-                <a class="look-all" href="<?= URL; ?>/servicio.php">Ver más</a>
+                <a class="look-all" href="<?= URL; ?>/servicios.php">Ver más</a>
             </section>
         </div>
     </div>

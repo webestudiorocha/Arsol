@@ -476,6 +476,9 @@ a.btn-social,
 .sociales{
     color: white;
 }
+.sociales2{
+    color: black;
+}
 .nav-letras{
     text-transform: uppercase;
 }
@@ -532,8 +535,13 @@ a.btn-social,
     padding-top: 0px !important;
 }
 
+.pt-5 {
+    padding-top: 5px !important;
+}
+
+
 .pt-10 {
-    padding-top: 20px !important;
+    padding-top: 10px !important;
 }
 
 .pt-15 {
@@ -613,8 +621,7 @@ a.btn-social,
 }
 
 .pb-10 {
-    padding-bottom: 5px !important;
-    border-radius: 20px;
+    padding-bottom: 10px !important; 
 }
 
 .pb-15 {
@@ -830,4 +837,14 @@ a.btn-social,
 
 #sns_menu .sns_mainmenu, #sns_menu .sns_mainmenu:before {
     background: none !important;
+}
+
+.fs9{ font-size:9px !important;} .fs10{ font-size:10px !important;} .fs11{ font-size:11px !important;} .fs12{ font-size:12px !important;} .fs13{ font-size:13px !important;} .fs14{ font-size:14px !important;} .fs15{ font-size:15px !important;} .fs16{ font-size:16px !important;} .fs17{ font-size:17px !important;} .fs18{ font-size:18px !important;} .fs19{ font-size:19px !important;} .fs20{ font-size:20px !important;} .fs21{ font-size:21px !important;} .fs22{ font-size:22px !important;} .fs23{ font-size:23px !important;} .fs24{ font-size:24px !important;} .fs25{ font-size:25px !important;} .fs26{ font-size:26px !important;} .fs27{ font-size:27px !important;} .fs28{ font-size:28px !important;} .fs29{ font-size:29px !important;} .fs30{ font-size:30px !important;} .fs31{ font-size:31px !important;} .fs32{ font-size:32px !important;} .fs33{ font-size:33px !important;} .fs34{ font-size:34px !important;} .fs35{ font-size:35px !important;} .fs36{ font-size:36px !important;} .fs37{ font-size:37px !important;} .fs38{ font-size:38px !important;} .fs39{ font-size:39px !important;} .fs40{ font-size:40px !important;}
+
+a * {
+    text-decoration:none
+}
+
+.f-blanco {
+    color:#fff !important;
 }

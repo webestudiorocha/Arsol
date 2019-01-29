@@ -23,27 +23,26 @@ $funciones = new Clases\PublicFunction();
 <div class="content">
     <div class="banner about-banner">
         <div class="container">
-            <h1>Portfolio</h1>
+            <h1>Contrataciones</h1>
         </div>
     </div>
     <div  class="text-center header-breadcumb">
         <div class="text-center imagenes" >
             <img style="width: 100%;" src="<?= URL ?>/assets/images/iconos/separador.png">
-            <img class="img-rubro"  src="<?= URL ?>/assets/images/iconos/separador-rubro.png" >
+            <img width="100" class="img-separador"  src="<?= URL ?>/assets/images/iconos/separador-rubro.png" >
         </div>
     </div>
-    <div class="container mt-15 definition">
-        <ul class="filter-items">
+    <div class="container mt-5 definition">
+        <ul class="filter-items mb-10">
             <li><a href="#" id="click" class="active" data-filter="*" onclick="$('#texto').html('')">Todos</a></li>
             <?php foreach ($categoria_data as $cat): ?>
                 <li><a href="#" id="<?php echo $cat['cod']; ?>" data-filter=".<?php echo $cat['cod']; ?>" onclick="$('#texto').html('<?=$cat['titulo'];?>')">
-                        <?php echo $cat['titulo']; ?>
+                <?php echo $cat['titulo']; ?>
                     </a>
                 </li>
             <?php endforeach; ?>
-
         </ul>
-        <h5 class=" h12">  <h1 class="h11">Contrataciones/<span class="texto" id="texto"><?php echo $cat['titulo']; ?></span></h1></h5>
+        <h1 class="h11 mb-30 mt-0 pt-0"><span class="texto" id="texto"></span></h1>
         <div class="projects-container four-columns">
             <?php foreach ($portfolio_data as $port): ?>
                 <?php
@@ -57,7 +56,7 @@ $funciones = new Clases\PublicFunction();
 
                            style=" height: 200px; background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;">
                             <img class="img2" src="assets/images/iconos/separador.png" >
-                            <h3 class="img"><?= ucfirst($port['titulo']); ?></h3>
+                            <h3 class="img fs16 pt-15 pb-15"><?= ucfirst($port['titulo']); ?></h3>
 
                         </div>
                     </a>
@@ -69,13 +68,4 @@ $funciones = new Clases\PublicFunction();
 </div>
 <!-- End content -->
 <?php $template->themeEnd(); ?>
-
-<?php if($categoriaGET != '') { ?>
-    <script>
-        $(document).ready(function(){
-console.log('<?php echo $categoriaGET; ?>');
-            $('#<?php echo $categoriaGET; ?>').trigger('click');
-        });
-    </script>
-<?php } ?>
-
+ 

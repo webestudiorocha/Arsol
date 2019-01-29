@@ -3,9 +3,9 @@ require_once "Config/Autoload.php";
 Config\Autoload::runSitio();
 $template = new Clases\TemplateSite();
 $funciones = new Clases\PublicFunction();
-$template->set("title", TITULO.' | Blogs');
-$template->set("description", "Blogs de ".TITULO);
-$template->set("keywords", "Blogs de ".TITULO);
+$template->set("title", TITULO . ' | Blogs');
+$template->set("description", "Blogs de " . TITULO);
+$template->set("keywords", "Blogs de " . TITULO);
 $template->set("imagen", LOGO);
 $template->themeInit();
 $novedades = new Clases\Novedades();
@@ -43,14 +43,14 @@ $numeroPaginas = $novedades->paginador("", $cantidad);
     </div>
 </div>
 
-<div  class="text-center header-breadcumb">
-    <div class="text-center imagenes" >
+<div class="text-center header-breadcumb">
+    <div class="text-center imagenes">
         <img style="width: 100%;" src="<?= URL ?>/assets/images/iconos/separador.png">
-        <img class="img-general"  src="<?= URL ?>/assets/images/iconos/blog.png" >
+        <img  width="100" class="img-separador"  src="<?= URL ?>/assets/images/iconos/separador-blog.png">
     </div>
 </div>
 <div class="content">
-    <div class="container" >
+    <div class="container">
         <section class="blog">
             <div class="row">
                 <?php
@@ -59,44 +59,46 @@ $numeroPaginas = $novedades->paginador("", $cantidad);
                     $img = $imagenes->view();
                     ?>
                     <div class="col-md-4 project-post">
-                        <a href="<?= URL .'/blog/'. $funciones->normalizar_link($nov['titulo']).'/'. $funciones->normalizar_link($nov['cod'])?>">
+                        <a href="<?= URL . '/blog/' . $funciones->normalizar_link($nov['titulo']) . '/' . $funciones->normalizar_link($nov['cod']) ?>">
                             <div class="project-photo"
-                                 style=" height: 300px; background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;">
-                                <img class="img4" src="assets/images/iconos/separador.png" >
-                                <h3 class="img3">Leer Más</h3>
-
+                                 style=" height: 320px; background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;">
+                                <img class="img4" src="assets/images/iconos/separador.png">
+                                <div class="img3">
+                                    <h1 class="fs14 f-blanco mt-0 mb-0 pt-10"><b><?= mb_strtoupper($nov['titulo']); ?></b></h1>
+                                    <h3 class="fs13 f-blanco mt-0 mb-0  pb-20">Leer Más</h3>
+                                </div>
                             </div>
                         </a>
-                        <a href="<?= URL .'/blog/'. $funciones->normalizar_link($nov['titulo']).'/'. $funciones->normalizar_link($nov['cod'])?>"></a>
+                        <a href="<?= URL . '/blog/' . $funciones->normalizar_link($nov['titulo']) . '/' . $funciones->normalizar_link($nov['cod']) ?>"></a>
                     </div>
                     <?php
                 }
                 ?>
 
             </div>
-                <?php if ($numeroPaginas > 1): ?>
-                    <div class="col-xs-12">
-                        <div class="important-pagination  text-center">
-                            <ul class="pagination ">
-                                <?php if (($pagina + 1) > 1): ?>
-                                    <li><a href="<?= $url ?><?= $anidador ?>pagina=<?= $pagina ?>"><i
-                                                    class="fa fa-angle-left" ></i></a></li>
-                                <?php endif; ?>
+            <?php if ($numeroPaginas > 1): ?>
+                <div class="col-xs-12">
+                    <div class="important-pagination  text-center">
+                        <ul class="pagination ">
+                            <?php if (($pagina + 1) > 1): ?>
+                                <li><a href="<?= $url ?><?= $anidador ?>pagina=<?= $pagina ?>"><i
+                                                class="fa fa-angle-left"></i></a></li>
+                            <?php endif; ?>
 
-                                <?php for ($i = 1; $i <= $numeroPaginas; $i++): ?>
-                                    <li class="<?php if ($i == $pagina + 1) {
-                                        echo "active";
-                                    } ?>"><a href="<?= $url ?><?= $anidador ?>pagina=<?= $i ?>"><?= $i ?></a></li>
-                                <?php endfor; ?>
+                            <?php for ($i = 1; $i <= $numeroPaginas; $i++): ?>
+                                <li class="<?php if ($i == $pagina + 1) {
+                                    echo "active";
+                                } ?>"><a href="<?= $url ?><?= $anidador ?>pagina=<?= $i ?>"><?= $i ?></a></li>
+                            <?php endfor; ?>
 
-                                <?php if (($pagina + 2) <= $numeroPaginas): ?>
-                                    <li><a href="<?= $url ?><?= $anidador ?>pagina=<?= ($pagina + 2) ?>"><i
-                                                    class="fa fa-angle-right" ></i></a></li>
-                                <?php endif; ?>
-                            </ul>
-                        </div>
+                            <?php if (($pagina + 2) <= $numeroPaginas): ?>
+                                <li><a href="<?= $url ?><?= $anidador ?>pagina=<?= ($pagina + 2) ?>"><i
+                                                class="fa fa-angle-right"></i></a></li>
+                            <?php endif; ?>
+                        </ul>
                     </div>
-                <?php endif; ?>
+                </div>
+            <?php endif; ?>
         </section>
     </div>
 </div>

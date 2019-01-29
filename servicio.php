@@ -27,7 +27,7 @@ $template->themeInit();
     <div  class="text-center header-breadcumb">
         <div class="text-center imagenes" >
             <img style="width: 100%;" src="<?= URL ?>/assets/images/iconos/separador.png">
-            <img class="img-rubro" style="background: white;" src="<?= URL ?>/assets/images/iconos/servicios.png" >
+            <img width="100" class="img-separador"   src="<?= URL ?>/assets/images/iconos/separador-servicios.png" >
         </div>
     </div>
     <div class="container mt-15">

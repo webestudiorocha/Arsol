@@ -30,15 +30,15 @@ $template->themeInit();
     <div  class="text-center header-breadcumb">
         <div class="text-center imagenes" >
             <img style="width: 100%;" src="<?= URL ?>/assets/images/iconos/separador.png">
-            <img class="img-rubro"  src="<?= URL ?>/assets/images/iconos/separador-rubro.png" >
+            <img width="100" class="img-separador"  src="<?= URL ?>/assets/images/iconos/separador-rubro.png" >
         </div>
     </div>
-    <div class="container mt-15">
+    <div class="container">
         <div class="row single-project">
-            <h5 class=" h12">  <h1 class="h11">Contrataciones/<span class="texto3" id="texto3"><?php echo $categoriaData['titulo']; ?></span>
+            <h5 class=" h12">  <h1 class="h11 fs35">Contrataciones/<span class="texto3" id="texto3"><?php echo $categoriaData['titulo']; ?></span>
                     /<span class="texto" id="texto"><?php echo $portfolioData['titulo']; ?></span></h1></h5>
-            <div class="col-md-6">
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="col-md-8 mt-20">
+                <div id="carouselExampleControls" class="carousel slide mb-20" data-ride="carousel">
                     <div class="carousel-inner">
                         <?php
                         $activo = 0;
@@ -64,15 +64,16 @@ $template->themeInit();
                 </div>
 
             </div>
-            <div class="col-md-6">
-
+            <div class="col-md-4 mt-20">
+            <?php include("assets/inc/formulario.inc.php"); ?>
             </div>
             <div class="col-md-12">
+                <hr/>
                 <?= ucfirst($portfolioData['desarrollo']); ?>
-            </div>
-            <button type="button" class="look-all" data-toggle="modal" data-target="#myModal">
+            <button type="button" class="look-all mt-20 mb-20" data-toggle="modal" data-target="#myModal">
                Contratar
             </button>
+            </div>
             <div class="modal" id="myModal">
                 <div class="modal-dialog">
                     <div class="modal-content">

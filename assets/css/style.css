@@ -116,8 +116,7 @@ ol, ul {
     color: #7281a1;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 700;
-    text-shadow: none;
-    padding: 25px 15px 26px 30px;
+    text-shadow: none; 
 }
 
 .nav-collapse .nav > li {
@@ -481,9 +480,7 @@ section.what-we-do {
     border-radius: 8px;
     font-size: 18px;
     font-family: 'Noto Sans', sans-serif;
-    padding: 10px 10px !important;
-    margin-top: 20px !important;
-    margin-left: 170px !important;
+    padding: 10px 10px !important; 
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8b278f+0,d5158e+100 */
     background: #8b278f; /* Old browsers */
     background: -moz-linear-gradient(left, #8b278f 0%, #d5158e 100%); /* FF3.6-15 */
@@ -513,14 +510,12 @@ section.what-we-do {
     text-align: center;
 }
 
-.titulos {
-    margin-top: 20px;
+.titulos { 
     background: linear-gradient(#9D006B, #D8138E);
     -webkit-background-clip: text;
     color: transparent;
     font-size: inherit;
-    font-weight: bold;
-    margin-left: 800px;
+    font-weight: bold; 
 
 }
 
@@ -652,6 +647,7 @@ section.what-we-do {
 }
 
 .img {
+    border-radius: none;
     text-align: center;
     margin-top: 0 !important;
     margin-right: 0 !important;
@@ -661,6 +657,7 @@ section.what-we-do {
 }
 
 .img3 {
+    border-radius: none;
     text-align: center;
     margin-top: 0 !important;
     margin-right: 0 !important;
@@ -670,6 +667,7 @@ section.what-we-do {
 }
 
 .img4 {
+    border-radius: none;
     margin-bottom: -6px !important;
     height: 5px;
     width: 100%;
@@ -677,6 +675,7 @@ section.what-we-do {
 }
 
 .img2 {
+    border-radius: none;
     margin-bottom: -6px !important;
     height: 5px;
     width: 100%;
@@ -772,7 +771,8 @@ ul.project-tags li a {
 
 .banner h1 {
     color: #fff;
-    font-size: 40px;
+    text-transform: uppercase;
+    font-size: 32px;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 700;
     line-height: 40px;
@@ -787,11 +787,7 @@ ul.project-tags li a {
     padding: 15px 58px;
     text-transform: uppercase;
     background: rgba(255, 255, 255, 0.1);
-    border: 1px solid #fff;
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -o-border-radius: 2px;
+    border: 1px solid #fff; 
     margin-bottom: 25px;
 }
 
@@ -3675,6 +3671,7 @@ ul.tab-list li {
     background: #333;
     height: 40px;
     margin-top: -24px;
+    z-index: 2 !important;
     margin-bottom: 40px;
 }
 
@@ -3689,9 +3686,27 @@ ul.tab-list li {
     top: 23px
 }
 
-.img-general {
+.img-separador {
     left: 10px;
-    margin-top: -55px;
-    z-index: 900;
-    background: white;
+    margin-top: -75px;
+    z-index: 900; 
+}
+
+.project-post a {
+    text-decoration:none !important;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+.img-nav {
+    vertical-align: middle;
+    margin-right:5px;
+}
+
+@media screen and (max-width:800px) {
+    #carouselExampleControls .carousel-item {
+        height:300px !important;
+    }
 }

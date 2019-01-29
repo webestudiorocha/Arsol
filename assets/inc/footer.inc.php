@@ -9,22 +9,35 @@ $funciones = new Clases\PublicFunction();
         <div class="row footer-data">
             <div class="col-md-4 contact-info ">
                 <ul>
-                    <li class="sociales"><a target="_blank" class="whatsaps "><i class="fa "></i></a>(3564)513448
+                    <li class="sociales mt-20" >
+                        <a href="https://wa.me/543564513448" target="_blank" class="f-blanco">
+                            <img src="<?= URL ?>/assets/images/iconos/whatsapp.png" width="50" class="img-nav" />
+                            (3564)513448
+                        </a>
                     </li>
-                    <li class="sociales"><a target="_blank" class="emails "><i class="fa"></i></a>
+                    <li class="sociales mt-20" >
+                        <a target="_blank" class="f-blanco">
+                        <img src="<?= URL ?>/assets/images/iconos/email.png" width="50" class="img-nav" />
                         ariel@arsolproducciones.com.ar
+                        </a>
                     </li>
-                    <li class="sociales"><a href="https://www.facebook.com/arsolproducciones/" target="_blank"
-                                            class=" facebook "><i class="fa "></i></a>@arsol
-                        Producciones
+                    <li class="sociales mt-20" >
+                        <a href="https://www.facebook.com/arsolproducciones/" target="_blank" class="f-blanco">
+                        <img src="<?= URL ?>/assets/images/iconos/facebook.png" width="50" class="img-nav" />
+                        @arsol Producciones
+                        </a>
                     </li>
-                    <li class="sociales"><a href="https://www.instagram.com/arsolproducciones/" target="_blank"
-                                            class="instagrams"><i class="fa "></i></a>
+                    <li class="sociales mt-20" >
+                        <a href="https://www.instagram.com/arsolproducciones/" target="_blank" class="f-blanco">
+                        <img src="<?= URL ?>/assets/images/iconos/instagram.png" width="50" class="img-nav" />
                         @arsolproducciones
+                        </a>
                     </li>
-                    <li class="sociales"><a href="https://www.linkedin.com/arsolproducciones" target="_blank"
-                                            class="linkiu "><i class="fa "></i></a>
+                    <li class="sociales mt-20" >
+                        <a href="https://www.linkedin.com/arsolproducciones" target="_blank" class="f-blanco">
+                        <img src="<?= URL ?>/assets/images/iconos/linkedin.png" width="50" class="img-nav" />
                         /arsolproducciones
+                        </a>
                     </li>
 
 

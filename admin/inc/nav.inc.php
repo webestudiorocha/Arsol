@@ -1,6 +1,5 @@
 <?php
-$pages = ["contenidos", "multimedia", "servicios", "portfolio", "configuracion", "categorias"];
-$subpages = ["novedades", "videos","sliders"];
+$pages = ["contenidos", "novedades", "multimedia", "usuarios","portfolio", "configuracion", "categorias", "marketing"];
 ?>
 <nav class="navbar navbar-expand-lg navbar-light bg-light mb-30">
     <div class="col-md-12">
@@ -37,17 +36,20 @@ $subpages = ["novedades", "videos","sliders"];
                         Multimedia
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item <?php if (!in_array('novedades', $subpages)) {echo 'd-none';}?>" href="<?=URL?>/index.php?op=novedades&accion=ver">
+                        <a class="dropdown-item" href="<?=URL?>/index.php?op=novedades&accion=ver">
                             Novedades
                         </a>
-                        <a class="dropdown-item <?php if (!in_array('videos', $subpages)) {echo 'd-none';}?>" href="<?=URL?>/index.php?op=videos&accion=ver">
+                        <!--<a class="dropdown-item" href="<?=URL?>/index.php?op=videos&accion=ver">
                             Videos
-                        </a>
-                        <a class="dropdown-item <?php if (!in_array('sliders', $subpages)) {echo 'd-none';}?>" href="<?=URL?>/index.php?op=sliders&accion=ver">
+                        </a>-->
+                        <a class="dropdown-item" href="<?=URL?>/index.php?op=sliders&accion=ver">
                             Sliders
                         </a>
-                        <a class="dropdown-item <?php if (!in_array('galerias', $subpages)) {echo 'd-none';}?>" href="<?=URL?>/index.php?op=galerias&accion=ver">
+                        <!--<a class="dropdown-item" href="<?=URL?>/index.php?op=galerias&accion=ver">
                             Galerias
+                        </a>-->
+                        <a class="dropdown-item" href="<?=URL?>/index.php?op=banners&accion=ver">
+                            Banners
                         </a>
                     </div>
                 </li>
@@ -87,6 +89,35 @@ $subpages = ["novedades", "videos","sliders"];
                         </a>
                         <a class="dropdown-item" href="<?=URL?>/index.php?op=servicios&accion=agregar">
                             Agregar Servicios
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown <?php if (!in_array('ecommerce', $pages)) {echo 'd-none';}?>">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                        Ecommerce
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="<?=URL?>/index.php?op=pedidos&accion=ver">
+                            Pedidos
+                        </a>
+                        <a class="dropdown-item" href="<?=URL?>/index.php?op=envios&accion=ver">
+                            Métodos de Envios
+                        </a>
+                        <a class="dropdown-item" href="<?=URL?>/index.php?op=pagos&accion=ver">
+                            Métodos de Pagos
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown <?php if (!in_array('marketing', $pages)) {echo 'd-none';}?>">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                        Marketing
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="<?=URL?>/index.php?op=landing&accion=ver">
+                            Landing Page
+                        </a>
+                        <a class="dropdown-item" href="<?=URL?>/index.php?op=analitica&accion=ver">
+                            Analítica
                         </a>
                     </div>
                 </li>

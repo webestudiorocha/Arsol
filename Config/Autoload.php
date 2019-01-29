@@ -31,7 +31,7 @@ class autoload
     public static function runAdmin()
     {
         session_start();
-        define('URLSITE',"http://".$_SERVER['HTTP_HOST']."/Arsol/admin");
+        define('URLSITE',"http://".$_SERVER['HTTP_HOST']."/Arsol/");
         define('URL', "http://".$_SERVER['HTTP_HOST']."/Arsol/admin");
         require_once "../Clases/Zebra_Image.php";
         spl_autoload_register(

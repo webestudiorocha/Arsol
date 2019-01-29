@@ -9,15 +9,15 @@ $mensaje = '';
 if (strpos($ruta, 'servicio') !== false) {
     $servicios->set("cod", $codSide);
     $serv = $servicios->view();
-    $mensaje = "este servicio de " . ucfirst($serv['titulo']) . "?";
+    $mensaje = "este servicio de " . ucfirst($serv['titulo']) ;
 } elseif (strpos($ruta, 'portfolio') !== false) {
     $portfolios->set("cod", $codSide);
     $port = $portfolios->view();
-    $mensaje = "a " . ucfirst($port['titulo']) . "?";
+    $mensaje = "a " . ucfirst($port['titulo']) ;
 }
 ?>
 <div class="col-md-12 project-item-content">
-    <h3 class="texto1">¿Te gustaría contratar <?= $mensaje ?></h3>
+    <h3 class="texto1 mb-0 mb-10">Contratar a <?= $mensaje ?></h3>
     <?php if (isset($_POST["enviar_side"])):
         $nombre = $funciones->antihack_mysqli(isset($_POST["nombre"]) ? $_POST["nombre"] : '');
         $email = $funciones->antihack_mysqli(isset($_POST["email"]) ? $_POST["email"] : '');
@@ -71,6 +71,6 @@ if (strpos($ruta, 'servicio') !== false) {
             <label for="comment"class="h112" >Mensaje:</label>
             <textarea class="form-control" rows="4" name="consulta"></textarea>
         </div>
-        <button type="submit" name="enviar_side" class="boton">Enviar</button>
+        <button type="submit" name="enviar_side" class="boton mt-5 fs15 f-blanco pull-right">Enviar Formulario</button>
     </form>
 </div>

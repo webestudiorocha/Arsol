@@ -71,7 +71,7 @@ if (strpos($ruta, 'servicio') !== false) {
             <label for="comment">Mensaje:</label>
             <textarea class="form-control" rows="4" name="consulta"></textarea>
         </div>
-        <button type="submit" name="enviar_side" class="boton">Enviar</button>
+        <button type="submit" name="enviar_side" class="boton f-blanco">Enviar</button>
     </form>
     <br>
     <div class="a2a_kit a2a_kit_size_32 a2a_default_style nav-derecha mt-20">
@@ -84,7 +84,7 @@ if (strpos($ruta, 'servicio') !== false) {
         <br>
         <br>
         <div>
-            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Farsolproducciones%2F&tabs&width=340&height=197&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Farsolproducciones%2F&tabs&height=197&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
                     width="100%" height="197" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
                     allowTransparency="true" allow="encrypted-media"></iframe>
         </div>

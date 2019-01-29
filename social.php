@@ -17,7 +17,7 @@ $template->themeInit();
     <div  class="text-center header-breadcumb">
         <div class="text-center imagenes" >
             <img style="width: 100%;" src="<?= URL ?>/assets/images/iconos/separador.png">
-            <img class="img-general"  src="<?= URL ?>/assets/images/iconos/contacto.png" >
+            <img width="100" class="img-separador"  src="<?= URL ?>/assets/images/iconos/separador-contacto.png" >
         </div>
     </div>
 <!-- Place <div> tag where you want the feed to appear -->

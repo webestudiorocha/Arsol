@@ -1,8 +1,7 @@
 @media (min-width: 980px) and (max-width: 1200px) {
 	.nav-collapse .nav li a {
 		background: none !important;
-		padding: 25px 15px 26px;
-	}
+ 	}
 
 	#search-bar input[type="text"] {
 		width: 188px;
@@ -63,12 +62,11 @@
 	}
 
 	.nav-collapse .nav li a {
-		padding: 10px 15px 10px 30px;
-	}
+ 	}
 
 	.nav-collapse .nav > li:first-child {
 		border-top: 1px solid #7f46a7;
-		margin-top: 5px;
+		padding-top: 10px;
 	}
 
 	ul.dropdown {

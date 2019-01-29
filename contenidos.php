@@ -25,15 +25,14 @@ $template->themeInit();
 <div  class="text-center header-breadcumb">
     <div class="text-center imagenes" >
         <img style="width: 100%;" src="<?= URL ?>/assets/images/iconos/separador.png">
-        <img class="img-general" src="<?= URL ?>/assets/images/iconos/empresa.png" >
+        <img width="100" class="img-separador"src="<?= URL ?>/assets/images/iconos/separador-empresa.png" >
     </div>
 </div>
 <div class="content">
 
     <div class="container">
-
-        <section class="about-us">
-            <div class="row-fluid our-description">
+        <section class=" ">
+            <div class="row-fluid  ">
                 <?= $contenidoData['contenido']; ?>
             </div>
         </section>
